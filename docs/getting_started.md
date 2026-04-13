@@ -2,17 +2,29 @@
 
 ## What you need
 
-| Item | Purpose | Where to get it |
+| Item | Purpose |
+|---|---|
+| Python 3.10+ | Running the probe |
+| API key(s) for the models you plan to use | PUPIL, TUTOR, and VALIDATOR calls |
+
+PatchBench uses three model roles:
+
+| Role | When called | Default model |
 |---|---|---|
-| Python 3.10+ | Running the probe | python.org |
-| API key for your PUPIL model | Running your model | Your model provider |
-| API key for your VALIDATOR model | VALIDATOR scoring (Step 2) | Your model provider |
+| **PUPIL** | Every run — this is the model under test | *(you choose)* |
+| **TUTOR** | Only with `--recompute-tutor`; otherwise served from pre-committed manifest | `claude-opus-4-6` |
+| **VALIDATOR** | Step 2 (vocabulary overlap) every run; Steps 1+3 only with `--recompute-tutor` | `claude-sonnet-4-6` |
 
-The default VALIDATOR is an Anthropic model, so by default you need an
-`ANTHROPIC_API_KEY`. You can substitute any model with `--validator-model`.
+The defaults (`claude-opus-4-6` / `claude-sonnet-4-6`) are Anthropic models and
+require `ANTHROPIC_API_KEY`. Any model can be substituted via `--tutor-model`
+and `--validator-model` — including local models served on an OpenAI-compatible
+endpoint. See [Custom model backends](#custom-model-backends) for details.
 
-If you want to test a local model or use a different API, see
-[Custom model backends](#custom-model-backends) below.
+The runner picks up API keys from environment variables:
+- `ANTHROPIC_API_KEY` — for Anthropic models
+- `OPENROUTER_API_KEY` — for models accessed via [OpenRouter](https://openrouter.ai)
+
+Or pass them explicitly with `--anthropic-key` / `--openrouter-key`.
 
 ---
 
@@ -32,10 +44,11 @@ No dataset download needed. The benchmark images are already in
 ## Run your first probe
 
 ```bash
-export ANTHROPIC_API_KEY=sk-ant-...
-export OPENROUTER_API_KEY=sk-or-...
+# Set keys for whichever model providers you are using
+export ANTHROPIC_API_KEY=...      # needed for default VALIDATOR (claude-sonnet-4-6)
+export OPENROUTER_API_KEY=...     # needed if your PUPIL is on OpenRouter
 
-python run_probe.py --pupil-model qwen/qwen3-vl-8b-instruct
+python run_probe.py --pupil-model your-org/your-model
 ```
 
 Expected output:

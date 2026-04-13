@@ -5,14 +5,21 @@ Tests whether your VLM can be patched with expert rules for a given domain.
 
 Quick start:
   pip install -r runner/requirements.txt
-  export ANTHROPIC_API_KEY=sk-ant-...
-  export OPENROUTER_API_KEY=sk-or-...
-  python run_probe.py --pupil-model qwen/qwen3-vl-8b-instruct
+
+  # Set API keys for the models you plan to use.
+  # The default TUTOR and VALIDATOR are Anthropic models (see DEFAULT_TUTOR /
+  # DEFAULT_VALIDATOR below); substitute any model you have access to via
+  # --tutor-model / --validator-model.  Local models are supported too —
+  # see runner/models.py for the OpenAI-compatible backend.
+  export ANTHROPIC_API_KEY=...      # if using Anthropic models for TUTOR/VALIDATOR
+  export OPENROUTER_API_KEY=...     # if using OpenRouter for PUPIL (or TUTOR/VALIDATOR)
+
+  python run_probe.py --pupil-model your-org/your-model
 
 More options:
   python run_probe.py --list-benchmarks
   python run_probe.py --pupil-model your/model --benchmark benchmarks/road_surface/dry_vs_wet/probe_v1/manifest.json
-  python run_probe.py --pupil-model your/model --recompute-tutor --tutor-model claude-opus-4-6
+  python run_probe.py --pupil-model your/model --recompute-tutor --tutor-model your-tutor --validator-model your-validator
   python run_probe.py --clear-cache
 
 Submit your result:
