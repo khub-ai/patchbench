@@ -1,0 +1,7 @@
+# PatchBench runner dependencies
+# Minimal — intentionally kept small.
+
+anthropic>=0.40.0        # TUTOR / VALIDATOR (Claude models)
+openai>=1.0.0            # OpenRouter-compatible PUPIL models
+pillow>=10.0.0           # image loading / validation
+rich>=13.0.0             # terminal output

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Cache
+.cache/
+
+# Secrets
+.env
+*.env
+api_keys*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Leaderboard generated files (rebuilt from results/ by leaderboard/generate.py)
+leaderboard/leaderboard.json
+leaderboard/leaderboard.md
