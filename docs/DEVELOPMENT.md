@@ -74,11 +74,12 @@ Key additions vs KF manifest:
 ```bash
 # In PatchBench repo:
 python run_probe.py \
-    --pupil-model claude-haiku-4  \  # cheapest Anthropic model — doesn't matter
+    --pupil-model <any-model> \
     --benchmark benchmarks/<domain>/<pair>/probe_v1/manifest.json \
     --recompute-tutor \
-    --tutor-model claude-opus-4-6 \
-    --validator-model claude-sonnet-4-6
+    --tutor-model <your-tutor-model> \
+    --validator-model <your-validator-model> \
+    --save-precomputed   # writes outputs back into manifest.json (P0 — not yet implemented)
 ```
 
 The result JSON contains TUTOR descriptions, feature queries, and VALIDATOR
@@ -151,17 +152,18 @@ These are the things a new session should tackle first, in priority order:
 
 ### P0 — Must fix before benchmark is usable
 
-**1. Populate `precomputed{}` in road_surface probe_v1 manifest**
-Run `--recompute-tutor` and commit TUTOR descriptions, feature queries,
-VALIDATOR answers, and seed rule into `manifest.json`. Until this is done,
-every contributor must supply their own Anthropic API key and pay for
-TUTOR+VALIDATOR calls that should be pre-committed.
-
-**2. Add `--save-precomputed` flag to runner**
+**1. Add `--save-precomputed` flag to runner**
 `run_probe.py --recompute-tutor --save-precomputed manifest.json` should
 write the TUTOR/VALIDATOR outputs back into the manifest file automatically.
-Currently there is no way to do this without manually extracting from the
-result JSON (which doesn't contain them).
+Currently there is no automated path to populate `precomputed{}` — the runner
+saves the final ProbeResult but not the intermediate TUTOR/VALIDATOR outputs
+needed to fill the manifest. This is a runner feature, not domain-specific.
+
+**2. Populate `precomputed{}` in all committed manifests**
+Once `--save-precomputed` is implemented, run it for each benchmark manifest
+and commit the result. Until this is done for a given benchmark, contributors
+running that benchmark must supply credentials for both TUTOR and VALIDATOR
+models in addition to their PUPIL model.
 
 ### P1 — Important for usability
 

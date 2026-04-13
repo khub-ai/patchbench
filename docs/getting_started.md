@@ -5,8 +5,11 @@
 | Item | Purpose | Where to get it |
 |---|---|---|
 | Python 3.10+ | Running the probe | python.org |
-| `ANTHROPIC_API_KEY` | VALIDATOR scoring (Claude Sonnet) | [Anthropic Console](https://console.anthropic.com) |
-| `OPENROUTER_API_KEY` | Your PUPIL model calls | [OpenRouter](https://openrouter.ai/keys) |
+| API key for your PUPIL model | Running your model | Your model provider |
+| API key for your VALIDATOR model | VALIDATOR scoring (Step 2) | Your model provider |
+
+The default VALIDATOR is an Anthropic model, so by default you need an
+`ANTHROPIC_API_KEY`. You can substitute any model with `--validator-model`.
 
 If you want to test a local model or use a different API, see
 [Custom model backends](#custom-model-backends) below.
@@ -83,37 +86,40 @@ python run_probe.py --list-benchmarks
 
 ---
 
-## Running without Anthropic key
+## Choosing your VALIDATOR model
 
-If TUTOR/VALIDATOR outputs are already pre-committed in the manifest (they are
-for all official benchmarks), you only need your PUPIL model key. The VALIDATOR
-scoring step still requires an Anthropic key to compute vocabulary overlap in
-Step 2. If you want to skip that:
+When TUTOR/VALIDATOR outputs are already pre-committed in the manifest, the
+VALIDATOR is only used for Step 2 (vocabulary overlap scoring). You can
+substitute any model you have access to:
 
 ```bash
-# Use a cheaper validator (the score will differ from official results)
 python run_probe.py \
     --pupil-model your/model \
-    --validator-model claude-haiku-4
+    --validator-model your-preferred-validator
 ```
+
+Note: scores are not directly comparable across different VALIDATOR models.
+Official leaderboard results use the VALIDATOR recorded in the manifest's
+`precomputed.validator_model` field.
 
 ---
 
 ## Regenerating TUTOR outputs
 
 If you want to verify or regenerate the pre-committed TUTOR/VALIDATOR outputs
-from scratch (requires both API keys):
+from scratch, use `--recompute-tutor` and specify your preferred models:
 
 ```bash
 python run_probe.py \
     --pupil-model your/model \
     --recompute-tutor \
-    --tutor-model claude-opus-4-6 \
-    --validator-model claude-sonnet-4-6
+    --tutor-model your-preferred-tutor \
+    --validator-model your-preferred-validator
 ```
 
-This incurs additional TUTOR calls but is useful for auditing or
-adapting the benchmark to a new TUTOR model.
+This is useful for auditing the pre-committed outputs or experimenting with
+a different TUTOR model. Results will differ from the official leaderboard
+if different TUTOR/VALIDATOR models are used.
 
 ---
 

@@ -38,8 +38,8 @@ API cost. The probe diagnoses capability *before* DD begins.
 
 The probe has four steps. Steps 1–3 ground truth (TUTOR descriptions, feature
 queries, VALIDATOR answers) are **pre-committed** in the benchmark manifest —
-contributors only pay for their own PUPIL model calls. Steps 1–3 can also be
-regenerated from scratch with `--recompute-tutor`.
+contributors only need API credentials for their PUPIL model. Steps 1–3 can
+also be regenerated from scratch with `--recompute-tutor`.
 
 ### Step 1 — Expert Descriptions + Feature Queries  *(TUTOR + VALIDATOR, cached)*
 
@@ -173,8 +173,8 @@ The `precomputed` section of each manifest contains:
 
 ```json
 {
-  "tutor_model":         "claude-opus-4-6",
-  "validator_model":     "claude-sonnet-4-6",
+  "tutor_model":         "<model used to generate descriptions>",
+  "validator_model":     "<model used for ground truth answers>",
   "generated":           "2026-04-13",
   "tutor_descriptions":  {"image_id": "expert description..."},
   "feature_queries":     [{"feature_id": "...", "question": "...", ...}],
@@ -194,8 +194,8 @@ are all empty dicts/lists. To populate it, a maintainer must run:
 python run_probe.py \
     --pupil-model any/model \
     --recompute-tutor \
-    --tutor-model claude-opus-4-6 \
-    --validator-model claude-sonnet-4-6
+    --tutor-model <your-tutor-model> \
+    --validator-model <your-validator-model>
 ```
 
 Then copy the TUTOR/VALIDATOR outputs from the result JSON back into the
