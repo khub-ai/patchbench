@@ -4,10 +4,10 @@
 
 Sorted by perception score descending. See [CONTRIBUTING.md](../CONTRIBUTING.md) to submit your model's results.
 
-| Verdict | Model | Domain | Pair | Percep. | VocabΔ | ZeroShot | RuleDelta | Consist. |
+| Verdict | Model | Domain | Confusable pair | Percep. | VocabΔ | ZeroShot | RuleDelta | Consist. |
 |---|---|---|---|---|---|---|---|---|
-| 🟡 partial ⚠ | `qwen/qwen3-vl-8b-instruct` | [birds](https://www.vision.caltech.edu/datasets/cub_200_2011/) | bronzed vs shiny cowbird | N/A | N/A | 0.33 | +0.50 | N/A |
-| 🟡 partial ⚠ | `qwen/qwen3-vl-8b-instruct` | [dermatology](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) | melanoma vs nevus | N/A | N/A | 0.55 | +0.22 | N/A |
+| 🟡 partial ⚠ | `qwen/qwen3-vl-8b-instruct` | [birds](https://www.vision.caltech.edu/datasets/cub_200_2011/) | [bronzed vs shiny cowbird](https://github.com/khub-ai/khub-knowledge-fabric/tree/main/usecases/image-classification/birds) | N/A | N/A | 0.33 | +0.50 | N/A |
+| 🟡 partial ⚠ | `qwen/qwen3-vl-8b-instruct` | [dermatology](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) | [melanoma vs nevus](https://github.com/khub-ai/khub-knowledge-fabric/tree/main/usecases/image-classification/dermatology) | N/A | N/A | 0.55 | +0.22 | N/A |
 
 ## Column definitions
 

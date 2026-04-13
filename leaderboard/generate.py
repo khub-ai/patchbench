@@ -20,6 +20,34 @@ _RESULTS = _ROOT / "results"
 
 VERDICT_COLOUR = {"go": "🟢", "partial": "🟡", "no-go": "🔴"}
 
+# KF usecase subdirectory per domain — used as fallback pair link when
+# no PatchBench benchmark manifest exists yet for that pair.
+_KF_BASE = "https://github.com/khub-ai/khub-knowledge-fabric/tree/main"
+KF_USECASE_PATH = {
+    "road_surface": f"{_KF_BASE}/usecases/image-classification/road-surface",
+    "birds":        f"{_KF_BASE}/usecases/image-classification/birds",
+    "dermatology":  f"{_KF_BASE}/usecases/image-classification/dermatology",
+}
+
+_PB_BASE = "https://github.com/khub-ai/patchbench/tree/main"
+
+
+def _pair_url(domain: str, pair_id: str) -> str:
+    """Return the best available URL for a (domain, pair_id) combination.
+
+    Priority:
+    1. PatchBench benchmark directory — if benchmarks/<domain>/<pair_id>/ exists
+       (committed manifest + images → stable public reference).
+    2. KF usecase directory — for pre-manifest DD session results where only
+       the research repo holds the experiment artefacts.
+    3. Empty string — no link available.
+    """
+    pb_dir = _ROOT / "benchmarks" / domain / pair_id
+    if pb_dir.is_dir():
+        return f"{_PB_BASE}/benchmarks/{domain}/{pair_id}"
+    return KF_USECASE_PATH.get(domain, "")
+
+
 # Source dataset links per domain — shown in the leaderboard table and data sources section.
 DOMAIN_DATASET = {
     "road_surface": {
@@ -106,26 +134,27 @@ def write_markdown(rows: list) -> None:
         "Sorted by perception score descending. "
         "See [CONTRIBUTING.md](../CONTRIBUTING.md) to submit your model's results.",
         "",
-        "| Verdict | Model | Domain | Pair | Percep. | VocabΔ | ZeroShot | RuleDelta | Consist. |",
+        "| Verdict | Model | Domain | Confusable pair | Percep. | VocabΔ | ZeroShot | RuleDelta | Consist. |",
         "|---|---|---|---|---|---|---|---|---|",
     ]
     for r in rows:
         v    = VERDICT_COLOUR.get(r["verdict"], r["verdict"])
-        pair = r["pair_id"].replace("_", " ")
+        pair_label = r["pair_id"].replace("_", " ")
         note = " ⚠" if r.get("notes") else ""
 
-        # Link domain name to its source dataset
+        # Domain cell: links to source dataset
         ds = DOMAIN_DATASET.get(r["domain"])
-        if ds:
-            domain_cell = f"[{r['domain']}]({ds['url']})"
-        else:
-            domain_cell = r["domain"]
+        domain_cell = f"[{r['domain']}]({ds['url']})" if ds else r["domain"]
+
+        # Pair cell: links to PatchBench benchmark dir if committed, else KF usecase
+        pair_url = _pair_url(r["domain"], r["pair_id"])
+        pair_cell = f"[{pair_label}]({pair_url})" if pair_url else pair_label
 
         lines.append(
             f"| {v} {r['verdict']}{note} "
             f"| `{r['model']}` "
             f"| {domain_cell} "
-            f"| {pair} "
+            f"| {pair_cell} "
             f"| {_fmt(r['perception'])} "
             f"| {_fmt(r['vocab_overlap'])} "
             f"| {r['zero_shot']:.2f} "
