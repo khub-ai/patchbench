@@ -20,6 +20,28 @@ _RESULTS = _ROOT / "results"
 
 VERDICT_COLOUR = {"go": "🟢", "partial": "🟡", "no-go": "🔴"}
 
+# Source dataset links per domain — shown in the leaderboard table and data sources section.
+DOMAIN_DATASET = {
+    "road_surface": {
+        "name":    "RSCD",
+        "url":     "https://github.com/ztsrxh/RSCD-Road_Surface_Classification_Dataset",
+        "credit":  "Tsinghua University",
+        "license": "CC BY-NC-SA 4.0",
+    },
+    "birds": {
+        "name":    "CUB-200-2011",
+        "url":     "https://www.vision.caltech.edu/datasets/cub_200_2011/",
+        "credit":  "Caltech",
+        "license": "Research use",
+    },
+    "dermatology": {
+        "name":    "HAM10000",
+        "url":     "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T",
+        "credit":  "ViDIR Group, Medical University of Vienna",
+        "license": "CC BY-NC-SA 4.0",
+    },
+}
+
 
 def _fmt(value, fmt=".2f") -> str:
     """Format a score or return 'N/A' if None."""
@@ -82,7 +104,7 @@ def write_markdown(rows: list) -> None:
         f"{len(rows)} result(s)",
         "",
         "Sorted by perception score descending. "
-        "See [CONTRIBUTING.md](../CONTRIBUTING.md) to add your model.",
+        "See [CONTRIBUTING.md](../CONTRIBUTING.md) to submit your model's results.",
         "",
         "| Verdict | Model | Domain | Pair | Percep. | VocabΔ | ZeroShot | RuleDelta | Consist. |",
         "|---|---|---|---|---|---|---|---|---|",
@@ -91,10 +113,18 @@ def write_markdown(rows: list) -> None:
         v    = VERDICT_COLOUR.get(r["verdict"], r["verdict"])
         pair = r["pair_id"].replace("_", " ")
         note = " ⚠" if r.get("notes") else ""
+
+        # Link domain name to its source dataset
+        ds = DOMAIN_DATASET.get(r["domain"])
+        if ds:
+            domain_cell = f"[{r['domain']}]({ds['url']})"
+        else:
+            domain_cell = r["domain"]
+
         lines.append(
             f"| {v} {r['verdict']}{note} "
             f"| `{r['model']}` "
-            f"| {r['domain']} "
+            f"| {domain_cell} "
             f"| {pair} "
             f"| {_fmt(r['perception'])} "
             f"| {_fmt(r['vocab_overlap'])} "
@@ -128,6 +158,48 @@ def write_markdown(rows: list) -> None:
         "RuleDelta and ZeroShot are from expanded validation runs; "
         "Percep, VocabΔ, and Consist were not measured. "
         "These results demonstrate DD effectiveness but cannot produce a full patchability verdict.",
+        "",
+        "---",
+        "",
+        "## Image data sources",
+        "",
+        "Benchmark images are curated subsets from publicly available datasets.",
+        "See [DATA_LICENSE.md](../DATA_LICENSE.md) for full attribution and license text.",
+        "",
+        "| Domain | Dataset | Credit | License |",
+        "|---|---|---|---|",
+    ]
+
+    # Emit one row per domain in DOMAIN_DATASET.
+    # Mark as "images pending" only when the benchmarks/<domain>/ directory does not exist.
+    benchmarks_dir = _ROOT / "benchmarks"
+    for domain, ds in DOMAIN_DATASET.items():
+        has_images = (benchmarks_dir / domain).is_dir()
+        marker = "" if has_images else " *(images pending)*"
+        lines.append(
+            f"| {domain}{marker} "
+            f"| [{ds['name']}]({ds['url']}) "
+            f"| {ds['credit']} "
+            f"| {ds['license']} |"
+        )
+
+    lines += [
+        "",
+        "---",
+        "",
+        "## Research context",
+        "",
+        "PatchBench measures **Dialogic Distillation (DD)** patchability — "
+        "whether a small VLM can be improved by injecting expert-authored visual "
+        "rules at inference time, without any retraining.",
+        "",
+        "| Resource | Link |",
+        "|---|---|",
+        "| Benchmark repo | [khub-ai/patchbench](https://github.com/khub-ai/patchbench) |",
+        "| DD research system | [khub-ai/khub-knowledge-fabric](https://github.com/khub-ai/khub-knowledge-fabric) |",
+        "| Probe design | [docs/probe_design.md](../docs/probe_design.md) |",
+        "| Patchability theory | [docs/patchability.md](../docs/patchability.md) |",
+        "| How to contribute | [CONTRIBUTING.md](../CONTRIBUTING.md) |",
     ]
 
     path = _HERE / "leaderboard.md"
