@@ -1,0 +1,35 @@
+name: Validate result JSON
+
+on:
+  pull_request:
+    paths:
+      - "results/**/*.json"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Find changed result files
+        id: changed
+        run: |
+          # List result JSONs added or modified in this PR
+          git fetch origin ${{ github.base_ref }} --depth=1
+          FILES=$(git diff --name-only --diff-filter=AM \
+                  origin/${{ github.base_ref }}...HEAD \
+                  -- 'results/**/*.json' | tr '\n' ' ')
+          echo "files=$FILES" >> "$GITHUB_OUTPUT"
+
+      - name: Validate result files
+        if: steps.changed.outputs.files != ''
+        run: |
+          python scripts/validate_result.py ${{ steps.changed.outputs.files }}
+
+      - name: No result files changed
+        if: steps.changed.outputs.files == ''
+        run: echo "No result JSON files changed in this PR."

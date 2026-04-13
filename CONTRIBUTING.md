@@ -47,20 +47,17 @@ python run_probe.py \
     --benchmark benchmarks/road_surface/dry_vs_wet/probe_v1/manifest.json
 ```
 
-**3. Verify your result file**
+**3. Validate your result file**
 
 The result is saved to `results/<domain>/<pair_id>/<model_tag>.json`.
-Check it looks reasonable:
+Run the local validator before opening a PR:
 
 ```bash
-cat results/road_surface/dry_vs_wet/your_model_tag.json | python -m json.tool | head -30
+python scripts/validate_result.py results/road_surface/dry_vs_wet/your_model_tag.json
 ```
 
-The result must include:
-- `verdict`: `"go"` / `"partial"` / `"no-go"`
-- `benchmark_id` matching the manifest
-- `submitted` timestamp
-- `pupil_model` matching what you ran
+This checks required fields, numeric ranges, verdict values, and that the
+`benchmark_id` matches a committed manifest. Fix any errors before proceeding.
 
 **4. Open a PR**
 
@@ -68,16 +65,21 @@ The result must include:
 git checkout -b result/road-surface-your-model
 git add results/road_surface/dry_vs_wet/your_model_tag.json
 git commit -m "Add probe result: your-model on road_surface dry_vs_wet"
-gh pr create --title "Result: your-model on road_surface dry_vs_wet" \
-    --body "Verdict: go/partial/no-go. Perception: 0.XX. Notes: ..."
+gh pr create --title "Result: your-model on road_surface dry_vs_wet"
 ```
+
+The PR template will prompt you for verdict scores and a reproducibility
+checklist. CI will re-run `validate_result.py` on the changed files automatically.
+
+After the PR is merged, the leaderboard is regenerated automatically by CI
+and committed back to `main` within a few minutes.
 
 ### PR checklist
 
-- [ ] Result JSON validates against the schema (CI checks this automatically)
+- [ ] `python scripts/validate_result.py <file>` passes with no errors
 - [ ] `pupil_model` field exactly matches the model ID used
 - [ ] `benchmark_id` and `benchmark_version` match the manifest
-- [ ] No image files or API keys included in the commit
+- [ ] No image files, API keys, or `.cache/` files included in the commit
 - [ ] PR title follows format: `Result: <model> on <domain> <pair>`
 
 ### Cost estimate

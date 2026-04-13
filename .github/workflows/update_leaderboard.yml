@@ -1,0 +1,39 @@
+name: Update leaderboard
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "results/**/*.json"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to push the updated leaderboard.md
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Fetch full history so generate.py can see all result files
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Regenerate leaderboard
+        run: python leaderboard/generate.py
+
+      - name: Commit updated leaderboard if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add leaderboard/leaderboard.md
+          if git diff --staged --quiet; then
+            echo "Leaderboard unchanged — nothing to commit."
+          else
+            git commit -m "Auto-update leaderboard [skip ci]"
+            git push
+          fi
