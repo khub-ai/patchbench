@@ -178,7 +178,19 @@ class BenchmarkManifest:
 
 @dataclass
 class ProbeResult:
-    """Probe result for one PUPIL model against one benchmark manifest."""
+    """Probe result for one PUPIL model against one benchmark manifest.
+
+    Fields that require specific probe steps may be None when results were
+    derived from a pre-manifest DD session (import_dd_session.py) rather
+    than a full 4-step probe run:
+      - perception_score         (Step 3 — feature detection, PUPIL vs VALIDATOR GT)
+      - vocabulary_overlap       (Step 2 — PUPIL free-description vs TUTOR vocabulary)
+      - consistency_score        (Step 4b — repeated runs on same images)
+      - feature_detection_by_difficulty / feature_profile  (Step 3 detail)
+
+    When these are None the leaderboard shows "N/A".  The verdict is set to
+    "partial" and the notes field explains what data source was used.
+    """
     benchmark_id:            str
     benchmark_version:       str
     schema_version:          str
@@ -187,14 +199,15 @@ class ProbeResult:
     tutor_model:             str
     validator_model:         str
     verdict:                 str       # "go" | "partial" | "no-go"
-    perception_score:        float
-    vocabulary_overlap:      float
+    # Core scores — None when not measured (pre-manifest DD session imports)
+    perception_score:        Optional[float]
+    vocabulary_overlap:      Optional[float]
     zero_shot_accuracy:      float
     rule_aided_accuracy:     float
     rule_comprehension_delta: float
-    consistency_score:       float
-    feature_detection_by_difficulty: Dict[str, Optional[float]]
-    feature_profile:         Dict[str, float]
+    consistency_score:       Optional[float]
+    feature_detection_by_difficulty: Optional[Dict[str, Optional[float]]]
+    feature_profile:         Optional[Dict[str, float]]
     weak_points:             List[str]
     recommendations:         List[str]
     costs:                   Dict[str, dict]

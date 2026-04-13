@@ -11,7 +11,7 @@ Output:
 from __future__ import annotations
 
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 _HERE    = Path(__file__).resolve().parent
@@ -19,6 +19,19 @@ _ROOT    = _HERE.parent
 _RESULTS = _ROOT / "results"
 
 VERDICT_COLOUR = {"go": "🟢", "partial": "🟡", "no-go": "🔴"}
+
+
+def _fmt(value, fmt=".2f") -> str:
+    """Format a score or return 'N/A' if None."""
+    if value is None:
+        return "N/A"
+    return format(value, fmt)
+
+
+def _sort_key(r: dict):
+    """Sort: measured perception descending, then unmeasured, then model name."""
+    p = r["perception"]
+    return (0 if p is None else -p, r["model"])
 
 
 def collect_results() -> list:
@@ -33,24 +46,25 @@ def collect_results() -> list:
                 "benchmark_id":       data["benchmark_id"],
                 "benchmark_version":  data["benchmark_version"],
                 "verdict":            data["verdict"],
-                "perception":         data["perception_score"],
-                "vocab_overlap":      data["vocabulary_overlap"],
+                "perception":         data.get("perception_score"),
+                "vocab_overlap":      data.get("vocabulary_overlap"),
                 "zero_shot":          data["zero_shot_accuracy"],
                 "rule_aided":         data["rule_aided_accuracy"],
                 "rule_delta":         data["rule_comprehension_delta"],
-                "consistency":        data["consistency_score"],
+                "consistency":        data.get("consistency_score"),
                 "total_cost_usd":     data["total_cost_usd"],
                 "submitted":          data["submitted"],
                 "result_file":        str(json_path.relative_to(_ROOT)),
+                "notes":              data.get("notes", ""),
             })
         except Exception as e:
             print(f"  Warning: could not parse {json_path}: {e}")
-    return sorted(rows, key=lambda r: (-r["perception"], r["model"]))
+    return sorted(rows, key=_sort_key)
 
 
 def write_json(rows: list) -> None:
     out = {
-        "generated": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "n_results": len(rows),
         "results":   rows,
     }
@@ -64,7 +78,7 @@ def write_markdown(rows: list) -> None:
     lines = [
         "# PatchBench Leaderboard",
         "",
-        f"> Generated {datetime.utcnow().strftime('%Y-%m-%d')} · "
+        f"> Generated {datetime.now(timezone.utc).strftime('%Y-%m-%d')} · "
         f"{len(rows)} result(s)",
         "",
         "Sorted by perception score descending. "
@@ -76,16 +90,17 @@ def write_markdown(rows: list) -> None:
     for r in rows:
         v    = VERDICT_COLOUR.get(r["verdict"], r["verdict"])
         pair = r["pair_id"].replace("_", " ")
+        note = " ⚠" if r.get("notes") else ""
         lines.append(
-            f"| {v} {r['verdict']} "
+            f"| {v} {r['verdict']}{note} "
             f"| `{r['model']}` "
             f"| {r['domain']} "
             f"| {pair} "
-            f"| {r['perception']:.2f} "
-            f"| {r['vocab_overlap']:.2f} "
+            f"| {_fmt(r['perception'])} "
+            f"| {_fmt(r['vocab_overlap'])} "
             f"| {r['zero_shot']:.2f} "
             f"| {r['rule_delta']:+.2f} "
-            f"| {r['consistency']:.2f} |"
+            f"| {_fmt(r['consistency'])} |"
         )
 
     lines += [
@@ -107,6 +122,12 @@ def write_markdown(rows: list) -> None:
         "| 🟢 go | Percep ≥ 0.60 AND RuleDelta ≥ 0.15 AND Consist ≥ 0.75 |",
         "| 🟡 partial | Above no-go floors but not all go thresholds met |",
         "| 🔴 no-go | Percep < 0.30 OR Consist < 0.50 |",
+        "",
+        "> ⚠ Results with N/A scores were derived from pre-manifest DD session data "
+        "(Steps 2 and 3 not run). "
+        "RuleDelta and ZeroShot are from expanded validation runs; "
+        "Percep, VocabΔ, and Consist were not measured. "
+        "These results demonstrate DD effectiveness but cannot produce a full patchability verdict.",
     ]
 
     path = _HERE / "leaderboard.md"

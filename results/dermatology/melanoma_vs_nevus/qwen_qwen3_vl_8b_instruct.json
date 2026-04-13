@@ -1,0 +1,29 @@
+{
+  "benchmark_id": "dermatology_melanoma_vs_nevus_dd_session_v0",
+  "benchmark_version": "0.0.0",
+  "schema_version": "1.0",
+  "submitted": "2026-04-13T02:04:47Z",
+  "pupil_model": "qwen/qwen3-vl-8b-instruct",
+  "tutor_model": "claude-opus-4-6",
+  "validator_model": "claude-sonnet-4-6",
+  "verdict": "partial",
+  "perception_score": null,
+  "vocabulary_overlap": null,
+  "zero_shot_accuracy": 0.55,
+  "rule_aided_accuracy": 0.7667,
+  "rule_comprehension_delta": 0.2167,
+  "consistency_score": null,
+  "feature_detection_by_difficulty": null,
+  "feature_profile": null,
+  "weak_points": [],
+  "recommendations": [
+    "Run full probe_v1 to measure perception score and consistency.",
+    "Rule comprehension delta is strong (+0.22) — high DD potential confirmed.",
+    "3 accepted DD rules available; strongest is r_dialogic_002 (multi-color chaos pattern with gray-brown specks and white-pink patches)."
+  ],
+  "costs": {},
+  "total_cost_usd": 0.0,
+  "per_image_zero_shot": [],
+  "per_image_rule_aided": [],
+  "notes": "Partial probe — Steps 2 (vocabulary overlap) and 3 (feature detection) not run. Zero-shot accuracy from expanded_baseline_qwen_mel_nev.json (60-image HAM10000 mel/nev set, qwen/qwen3-vl-8b-instruct). Rule-aided accuracy from dialogic_expanded_results.json: 3 DD rules (r_dialogic_001/002/003) applied to same 60-image set, fixing 13 of 27 failures. Source: khub-ai/khub-knowledge-fabric usecases/image-classification/dermatology/python/. Formal benchmark manifest (dermatology_melanoma_vs_nevus_probe_v1) not yet published."
+}
