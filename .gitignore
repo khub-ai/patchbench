@@ -22,6 +22,5 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Leaderboard generated files (rebuilt from results/ by leaderboard/generate.py)
+# Leaderboard JSON (machine-readable, rebuilt from leaderboard.md)
 leaderboard/leaderboard.json
-leaderboard/leaderboard.md
