@@ -69,7 +69,7 @@ Key additions vs KF manifest:
 - `"images_dir": "images/"`
 - `"precomputed": { ... }` skeleton (populated in next step)
 
-### 4. Pre-computed outputs generated (maintainer, ~$0.15 one-time cost)
+### 4. Pre-computed outputs generated (maintainer, one-time)
 
 ```bash
 # In PatchBench repo:
@@ -154,7 +154,8 @@ These are the things a new session should tackle first, in priority order:
 **1. Populate `precomputed{}` in road_surface probe_v1 manifest**
 Run `--recompute-tutor` and commit TUTOR descriptions, feature queries,
 VALIDATOR answers, and seed rule into `manifest.json`. Until this is done,
-every contributor must have an Anthropic API key and pays ~$0.15 extra.
+every contributor must supply their own Anthropic API key and pay for
+TUTOR+VALIDATOR calls that should be pre-committed.
 
 **2. Add `--save-precomputed` flag to runner**
 `run_probe.py --recompute-tutor --save-precomputed manifest.json` should

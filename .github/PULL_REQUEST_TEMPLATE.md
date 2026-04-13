@@ -20,7 +20,6 @@
 | Perception score | <!-- 0.XX or N/A --> |
 | Rule delta | <!-- +0.XX --> |
 | Consistency | <!-- 0.XX or N/A --> |
-| Approx. cost | <!-- e.g. $0.01 --> |
 
 **Result file:** `results/<domain>/<pair_id>/<model_tag>.json`
 

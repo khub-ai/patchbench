@@ -72,7 +72,7 @@ The PR template will prompt you for verdict scores and a reproducibility
 checklist. CI will re-run `validate_result.py` on the changed files automatically.
 
 After the PR is merged, the leaderboard is regenerated automatically by CI
-and committed back to `main` within a few minutes.
+and committed back to `main`.
 
 ### PR checklist
 
@@ -81,17 +81,6 @@ and committed back to `main` within a few minutes.
 - [ ] `benchmark_id` and `benchmark_version` match the manifest
 - [ ] No image files, API keys, or `.cache/` files included in the commit
 - [ ] PR title follows format: `Result: <model> on <domain> <pair>`
-
-### Cost estimate
-
-| PUPIL model | Estimated cost | API |
-|---|---|---|
-| Qwen3-VL-8B (OpenRouter) | ~$0.01 | OpenRouter |
-| LLaVA-1.5-7B (OpenRouter) | ~$0.01 | OpenRouter |
-| GPT-4o (OpenAI) | ~$0.30 | OpenAI |
-| Claude Sonnet (Anthropic) | ~$0.15 | Anthropic |
-
-VALIDATOR calls (Sonnet) add ~$0.03. TUTOR calls are pre-committed and free.
 
 ---
 

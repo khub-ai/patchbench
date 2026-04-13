@@ -199,8 +199,8 @@ python run_probe.py \
 ```
 
 Then copy the TUTOR/VALIDATOR outputs from the result JSON back into the
-manifest's `precomputed` section and commit. This is a **one-time setup cost**
-of ~$0.15. After that, all future contributors get these for free.
+manifest's `precomputed` section and commit. This is a one-time operation.
+After that, all future contributors get these for free.
 
 ---
 
@@ -222,20 +222,18 @@ python run_probe.py --clear-cache
 
 ---
 
-## Cost Profile
+## API call profile
 
 For a standard 24-image probe run:
 
-| Role | API calls | Typical cost | Cached after? |
-|---|---|---|---|
-| TUTOR (Claude Opus) | 25 | ~$0.10 | Yes — pre-committed |
-| VALIDATOR (Claude Sonnet) | 122 | ~$0.05 | Yes — pre-committed |
-| PUPIL (Qwen3-VL-8B) | ~175 | ~$0.01 | Never |
-| **Total (first contributor)** | | **~$0.01** | |
-| **Total (subsequent contributors)** | | **~$0.01** | |
+| Role | API calls | Cached after? |
+|---|---|---|
+| TUTOR (Claude Opus) | 25 | Yes — pre-committed |
+| VALIDATOR (Claude Sonnet) | 122 | Yes — pre-committed |
+| PUPIL (your model) | ~175 | Never |
 
-Once precomputed outputs are committed, TUTOR and VALIDATOR costs are $0 for
-all subsequent contributors.
+Once precomputed outputs are committed, TUTOR and VALIDATOR calls are skipped
+for all subsequent contributors — only PUPIL calls are made live.
 
 ---
 

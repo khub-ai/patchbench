@@ -112,7 +112,7 @@ python run_probe.py \
     --validator-model claude-sonnet-4-6
 ```
 
-This costs ~$0.10–0.15 extra (TUTOR calls) but is useful for auditing or
+This incurs additional TUTOR calls but is useful for auditing or
 adapting the benchmark to a new TUTOR model.
 
 ---

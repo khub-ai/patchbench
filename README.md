@@ -29,7 +29,7 @@ python run_probe.py --pupil-model qwen/qwen3-vl-8b-instruct
 
 That's it. The benchmark images and pre-computed expert outputs are already
 in the repo — no dataset download required. You only pay for your own model's
-API calls (~$0.01 for Qwen3-VL-8B on the road surface probe).
+API calls.
 
 ---
 
