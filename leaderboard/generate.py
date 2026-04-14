@@ -236,10 +236,149 @@ def write_markdown(rows: list) -> None:
     print(f"  Written: {path.name}")
 
 
+def write_html(rows: list) -> None:
+    """Write leaderboard.html — a self-contained filterable HTML leaderboard."""
+
+    VERDICT_HTML = {"go": "🟢", "partial": "🟡", "no-go": "🔴"}
+
+    def row_html(r: dict) -> str:
+        v         = VERDICT_HTML.get(r["verdict"], r["verdict"])
+        pair_label = r["pair_id"].replace("_", " ")
+        pair_url  = _pair_url(r["domain"], r["pair_id"])
+        pair_cell = f'<a href="{pair_url}">{pair_label}</a>' if pair_url else pair_label
+        ds        = DOMAIN_DATASET.get(r["domain"])
+        dom_cell  = f'<a href="{ds["url"]}">{r["domain"]}</a>' if ds else r["domain"]
+        note      = " ⚠" if r.get("notes") else ""
+        delta_cls = "positive" if r["rule_delta"] > 0 else ("negative" if r["rule_delta"] < 0 else "")
+        return (
+            f'<tr>'
+            f'<td>{v} {r["verdict"]}{note}</td>'
+            f'<td><code>{r["model"]}</code></td>'
+            f'<td>{dom_cell}</td>'
+            f'<td>{pair_cell}</td>'
+            f'<td>{_fmt(r["perception"])}</td>'
+            f'<td>{_fmt(r["vocab_overlap"])}</td>'
+            f'<td>{r["zero_shot"]:.2f}</td>'
+            f'<td class="{delta_cls}">{r["rule_delta"]:+.2f}</td>'
+            f'<td>{_fmt(r["consistency"])}</td>'
+            f'</tr>'
+        )
+
+    generated = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    table_rows = "\n".join(row_html(r) for r in rows)
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PatchBench Leaderboard</title>
+<style>
+  body {{ font-family: system-ui, sans-serif; max-width: 1100px; margin: 2rem auto; padding: 0 1rem; color: #222; }}
+  h1 {{ font-size: 1.6rem; margin-bottom: 0.25rem; }}
+  .meta {{ color: #666; font-size: 0.9rem; margin-bottom: 1.5rem; }}
+  #filter-wrap {{ margin-bottom: 1rem; }}
+  #filter {{ width: 100%; max-width: 420px; padding: 0.45rem 0.7rem; font-size: 1rem;
+             border: 1px solid #ccc; border-radius: 4px; }}
+  #filter-count {{ margin-left: 0.75rem; color: #666; font-size: 0.9rem; }}
+  table {{ border-collapse: collapse; width: 100%; font-size: 0.9rem; }}
+  th {{ background: #f4f4f4; text-align: left; padding: 0.5rem 0.75rem;
+        border-bottom: 2px solid #ddd; white-space: nowrap; cursor: pointer; user-select: none; }}
+  th:hover {{ background: #e8e8e8; }}
+  td {{ padding: 0.4rem 0.75rem; border-bottom: 1px solid #eee; }}
+  tr:hover td {{ background: #fafafa; }}
+  tr.hidden {{ display: none; }}
+  code {{ background: #f0f0f0; padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.85rem; }}
+  .positive {{ color: #1a7f37; font-weight: 600; }}
+  .negative {{ color: #cf222e; font-weight: 600; }}
+  a {{ color: #0969da; text-decoration: none; }}
+  a:hover {{ text-decoration: underline; }}
+  .legend {{ margin-top: 2rem; font-size: 0.85rem; color: #555; }}
+  .legend table {{ width: auto; }}
+  .legend td, .legend th {{ padding: 0.25rem 0.6rem; }}
+</style>
+</head>
+<body>
+<h1>PatchBench Leaderboard</h1>
+<p class="meta">Generated {generated} &middot; {len(rows)} result(s) &middot;
+  <a href="https://github.com/khub-ai/patchbench">khub-ai/patchbench</a></p>
+
+<div id="filter-wrap">
+  <input id="filter" type="search" placeholder="Filter by model, domain, verdict&hellip;" autofocus>
+  <span id="filter-count"></span>
+</div>
+
+<table id="lb">
+<thead>
+<tr>
+  <th>Verdict</th>
+  <th>Model</th>
+  <th>Domain</th>
+  <th>Confusable pair</th>
+  <th>Percep.</th>
+  <th>VocabΔ</th>
+  <th>ZeroShot</th>
+  <th>RuleDelta</th>
+  <th>Consist.</th>
+</tr>
+</thead>
+<tbody id="lb-body">
+{table_rows}
+</tbody>
+</table>
+
+<div class="legend">
+  <p><strong>Column definitions</strong></p>
+  <table>
+    <tr><td><strong>Percep.</strong></td><td>Feature detection accuracy (PUPIL vs VALIDATOR ground truth)</td></tr>
+    <tr><td><strong>VocabΔ</strong></td><td>Vocabulary overlap with expert descriptions</td></tr>
+    <tr><td><strong>ZeroShot</strong></td><td>Classification accuracy without rules injected</td></tr>
+    <tr><td><strong>RuleDelta</strong></td><td>Accuracy gain from rule injection (higher = more patchable)</td></tr>
+    <tr><td><strong>Consist.</strong></td><td>Fraction of images where repeated runs give the same answer</td></tr>
+  </table>
+  <p><strong>Verdict thresholds</strong></p>
+  <table>
+    <tr><td>🟢 go</td><td>Percep ≥ 0.60 AND RuleDelta ≥ 0.15 AND Consist ≥ 0.75</td></tr>
+    <tr><td>🟡 partial</td><td>Above no-go floors but not all go thresholds met</td></tr>
+    <tr><td>🔴 no-go</td><td>Percep &lt; 0.30 OR Consist &lt; 0.50</td></tr>
+  </table>
+</div>
+
+<script>
+(function () {{
+  const input   = document.getElementById('filter');
+  const body    = document.getElementById('lb-body');
+  const counter = document.getElementById('filter-count');
+  const rows    = Array.from(body.querySelectorAll('tr'));
+
+  function update() {{
+    const q = input.value.trim().toLowerCase();
+    let visible = 0;
+    rows.forEach(function (tr) {{
+      const match = !q || tr.textContent.toLowerCase().includes(q);
+      tr.classList.toggle('hidden', !match);
+      if (match) visible++;
+    }});
+    counter.textContent = q ? visible + ' of ' + rows.length + ' shown' : '';
+  }}
+
+  input.addEventListener('input', update);
+  update();
+}})();
+</script>
+</body>
+</html>"""
+
+    path = _HERE / "leaderboard.html"
+    path.write_text(html, encoding="utf-8")
+    print(f"  Written: {path.name}")
+
+
 if __name__ == "__main__":
     print("Collecting results...")
     rows = collect_results()
     print(f"  Found {len(rows)} result(s)")
     write_json(rows)
     write_markdown(rows)
+    write_html(rows)
     print("Done.")

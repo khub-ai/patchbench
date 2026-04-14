@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PatchBench Leaderboard</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 1100px; margin: 2rem auto; padding: 0 1rem; color: #222; }
+  h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+  .meta { color: #666; font-size: 0.9rem; margin-bottom: 1.5rem; }
+  #filter-wrap { margin-bottom: 1rem; }
+  #filter { width: 100%; max-width: 420px; padding: 0.45rem 0.7rem; font-size: 1rem;
+             border: 1px solid #ccc; border-radius: 4px; }
+  #filter-count { margin-left: 0.75rem; color: #666; font-size: 0.9rem; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+  th { background: #f4f4f4; text-align: left; padding: 0.5rem 0.75rem;
+        border-bottom: 2px solid #ddd; white-space: nowrap; cursor: pointer; user-select: none; }
+  th:hover { background: #e8e8e8; }
+  td { padding: 0.4rem 0.75rem; border-bottom: 1px solid #eee; }
+  tr:hover td { background: #fafafa; }
+  tr.hidden { display: none; }
+  code { background: #f0f0f0; padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.85rem; }
+  .positive { color: #1a7f37; font-weight: 600; }
+  .negative { color: #cf222e; font-weight: 600; }
+  a { color: #0969da; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .legend { margin-top: 2rem; font-size: 0.85rem; color: #555; }
+  .legend table { width: auto; }
+  .legend td, .legend th { padding: 0.25rem 0.6rem; }
+</style>
+</head>
+<body>
+<h1>PatchBench Leaderboard</h1>
+<p class="meta">Generated 2026-04-14 &middot; 6 result(s) &middot;
+  <a href="https://github.com/khub-ai/patchbench">khub-ai/patchbench</a></p>
+
+<div id="filter-wrap">
+  <input id="filter" type="search" placeholder="Filter by model, domain, verdict&hellip;" autofocus>
+  <span id="filter-count"></span>
+</div>
+
+<table id="lb">
+<thead>
+<tr>
+  <th>Verdict</th>
+  <th>Model</th>
+  <th>Domain</th>
+  <th>Confusable pair</th>
+  <th>Percep.</th>
+  <th>VocabΔ</th>
+  <th>ZeroShot</th>
+  <th>RuleDelta</th>
+  <th>Consist.</th>
+</tr>
+</thead>
+<tbody id="lb-body">
+<tr><td>🔴 no-go</td><td><code>openai/gpt-4o</code></td><td><a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T">dermatology</a></td><td><a href="https://github.com/khub-ai/patchbench/tree/main/benchmarks/dermatology/melanoma_vs_nevus">melanoma vs nevus</a></td><td>0.81</td><td>0.22</td><td>0.79</td><td class="positive">+0.04</td><td>0.40</td></tr>
+<tr><td>🟢 go</td><td><code>qwen/qwen3-vl-8b-instruct</code></td><td><a href="https://github.com/ztsrxh/RSCD-Road_Surface_Classification_Dataset">road_surface</a></td><td><a href="https://github.com/khub-ai/patchbench/tree/main/benchmarks/road_surface/dry_vs_wet">dry vs wet</a></td><td>0.78</td><td>0.32</td><td>0.62</td><td class="positive">+0.33</td><td>1.00</td></tr>
+<tr><td>🟡 partial</td><td><code>qwen/qwen3-vl-8b-instruct</code></td><td><a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T">dermatology</a></td><td><a href="https://github.com/khub-ai/patchbench/tree/main/benchmarks/dermatology/melanoma_vs_nevus">melanoma vs nevus</a></td><td>0.75</td><td>0.44</td><td>0.67</td><td class="negative">-0.12</td><td>1.00</td></tr>
+<tr><td>🟡 partial</td><td><code>openai/gpt-4o</code></td><td><a href="https://github.com/ztsrxh/RSCD-Road_Surface_Classification_Dataset">road_surface</a></td><td><a href="https://github.com/khub-ai/patchbench/tree/main/benchmarks/road_surface/dry_vs_wet">dry vs wet</a></td><td>0.72</td><td>0.26</td><td>0.54</td><td class="positive">+0.08</td><td>0.60</td></tr>
+<tr><td>🟡 partial</td><td><code>openai/gpt-4o</code></td><td><a href="https://www.vision.caltech.edu/datasets/cub_200_2011/">birds</a></td><td><a href="https://github.com/khub-ai/patchbench/tree/main/benchmarks/birds/bronzed_vs_shiny_cowbird">bronzed vs shiny cowbird</a></td><td>0.61</td><td>0.28</td><td>0.79</td><td class="positive">+0.12</td><td>1.00</td></tr>
+<tr><td>🟢 go</td><td><code>qwen/qwen3-vl-8b-instruct</code></td><td><a href="https://www.vision.caltech.edu/datasets/cub_200_2011/">birds</a></td><td><a href="https://github.com/khub-ai/patchbench/tree/main/benchmarks/birds/bronzed_vs_shiny_cowbird">bronzed vs shiny cowbird</a></td><td>0.60</td><td>0.29</td><td>0.42</td><td class="positive">+0.33</td><td>1.00</td></tr>
+</tbody>
+</table>
+
+<div class="legend">
+  <p><strong>Column definitions</strong></p>
+  <table>
+    <tr><td><strong>Percep.</strong></td><td>Feature detection accuracy (PUPIL vs VALIDATOR ground truth)</td></tr>
+    <tr><td><strong>VocabΔ</strong></td><td>Vocabulary overlap with expert descriptions</td></tr>
+    <tr><td><strong>ZeroShot</strong></td><td>Classification accuracy without rules injected</td></tr>
+    <tr><td><strong>RuleDelta</strong></td><td>Accuracy gain from rule injection (higher = more patchable)</td></tr>
+    <tr><td><strong>Consist.</strong></td><td>Fraction of images where repeated runs give the same answer</td></tr>
+  </table>
+  <p><strong>Verdict thresholds</strong></p>
+  <table>
+    <tr><td>🟢 go</td><td>Percep ≥ 0.60 AND RuleDelta ≥ 0.15 AND Consist ≥ 0.75</td></tr>
+    <tr><td>🟡 partial</td><td>Above no-go floors but not all go thresholds met</td></tr>
+    <tr><td>🔴 no-go</td><td>Percep &lt; 0.30 OR Consist &lt; 0.50</td></tr>
+  </table>
+</div>
+
+<script>
+(function () {
+  const input   = document.getElementById('filter');
+  const body    = document.getElementById('lb-body');
+  const counter = document.getElementById('filter-count');
+  const rows    = Array.from(body.querySelectorAll('tr'));
+
+  function update() {
+    const q = input.value.trim().toLowerCase();
+    let visible = 0;
+    rows.forEach(function (tr) {
+      const match = !q || tr.textContent.toLowerCase().includes(q);
+      tr.classList.toggle('hidden', !match);
+      if (match) visible++;
+    });
+    counter.textContent = q ? visible + ' of ' + rows.length + ' shown' : '';
+  }
+
+  input.addEventListener('input', update);
+  update();
+})();
+</script>
+</body>
+</html>
