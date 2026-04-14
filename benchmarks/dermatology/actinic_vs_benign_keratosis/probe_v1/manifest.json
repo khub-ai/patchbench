@@ -1,0 +1,326 @@
+{
+  "benchmark_id": "dermatology_actinic_vs_benign_keratosis_probe_v1",
+  "schema_version": "1.0",
+  "version": "1.0.0",
+  "domain": "dermatology",
+  "created": "2026-04-14",
+  "pair_id": "actinic_vs_benign_keratosis",
+  "class_a": "Actinic Keratosis",
+  "class_b": "Benign Keratosis",
+  "description": "Confusable pair: Actinic Keratosis (precancerous, dx=akiec) vs Benign Keratosis (dx=bkl). Both present as rough, scaly skin lesions but differ critically in malignant potential. Images sourced from HAM10000 (ISIC Archive).",
+  "images_dir": "images/",
+  "images": [
+    {
+      "image_id": "ISIC_0024562",
+      "filename": "ISIC_0024562.jpg",
+      "true_class": "Actinic Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "akiec",
+        "localization": "chest",
+        "age": "75.0",
+        "sex": "male"
+      }
+    },
+    {
+      "image_id": "ISIC_0025178",
+      "filename": "ISIC_0025178.jpg",
+      "true_class": "Actinic Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "akiec",
+        "localization": "lower extremity",
+        "age": "65.0",
+        "sex": "male"
+      }
+    },
+    {
+      "image_id": "ISIC_0029360",
+      "filename": "ISIC_0029360.jpg",
+      "true_class": "Actinic Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "akiec",
+        "localization": "upper extremity",
+        "age": "70.0",
+        "sex": "male"
+      }
+    },
+    {
+      "image_id": "ISIC_0026411",
+      "filename": "ISIC_0026411.jpg",
+      "true_class": "Actinic Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "akiec",
+        "localization": "hand",
+        "age": "70.0",
+        "sex": "female"
+      }
+    },
+    {
+      "image_id": "ISIC_0027795",
+      "filename": "ISIC_0027795.jpg",
+      "true_class": "Actinic Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "akiec",
+        "localization": "ear",
+        "age": "70.0",
+        "sex": "male"
+      }
+    },
+    {
+      "image_id": "ISIC_0024913",
+      "filename": "ISIC_0024913.jpg",
+      "true_class": "Actinic Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "akiec",
+        "localization": "back",
+        "age": "85.0",
+        "sex": "male"
+      }
+    },
+    {
+      "image_id": "ISIC_0028644",
+      "filename": "ISIC_0028644.jpg",
+      "true_class": "Actinic Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "akiec",
+        "localization": "abdomen",
+        "age": "65.0",
+        "sex": "female"
+      }
+    },
+    {
+      "image_id": "ISIC_0029041",
+      "filename": "ISIC_0029041.jpg",
+      "true_class": "Actinic Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "akiec",
+        "localization": "scalp",
+        "age": "80.0",
+        "sex": "male"
+      }
+    },
+    {
+      "image_id": "ISIC_0029417",
+      "filename": "ISIC_0029417.jpg",
+      "true_class": "Actinic Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "akiec",
+        "localization": "neck",
+        "age": "80.0",
+        "sex": "female"
+      }
+    },
+    {
+      "image_id": "ISIC_0029915",
+      "filename": "ISIC_0029915.jpg",
+      "true_class": "Actinic Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "akiec",
+        "localization": "face",
+        "age": "50.0",
+        "sex": "female"
+      }
+    },
+    {
+      "image_id": "ISIC_0027334",
+      "filename": "ISIC_0027334.jpg",
+      "true_class": "Actinic Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "akiec",
+        "localization": "trunk",
+        "age": "45.0",
+        "sex": "male"
+      }
+    },
+    {
+      "image_id": "ISIC_0025712",
+      "filename": "ISIC_0025712.jpg",
+      "true_class": "Actinic Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "akiec",
+        "localization": "chest",
+        "age": "70.0",
+        "sex": "female"
+      }
+    },
+    {
+      "image_id": "ISIC_0029396",
+      "filename": "ISIC_0029396.jpg",
+      "true_class": "Benign Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "bkl",
+        "localization": "chest",
+        "age": "85.0",
+        "sex": "female"
+      }
+    },
+    {
+      "image_id": "ISIC_0031753",
+      "filename": "ISIC_0031753.jpg",
+      "true_class": "Benign Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "bkl",
+        "localization": "abdomen",
+        "age": "70.0",
+        "sex": "male"
+      }
+    },
+    {
+      "image_id": "ISIC_0029176",
+      "filename": "ISIC_0029176.jpg",
+      "true_class": "Benign Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "bkl",
+        "localization": "face",
+        "age": "60.0",
+        "sex": "male"
+      }
+    },
+    {
+      "image_id": "ISIC_0030561",
+      "filename": "ISIC_0030561.jpg",
+      "true_class": "Benign Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "bkl",
+        "localization": "foot",
+        "age": "40.0",
+        "sex": "female"
+      }
+    },
+    {
+      "image_id": "ISIC_0032304",
+      "filename": "ISIC_0032304.jpg",
+      "true_class": "Benign Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "bkl",
+        "localization": "genital",
+        "age": "65.0",
+        "sex": "female"
+      }
+    },
+    {
+      "image_id": "ISIC_0029548",
+      "filename": "ISIC_0029548.jpg",
+      "true_class": "Benign Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "bkl",
+        "localization": "hand",
+        "age": "75.0",
+        "sex": "female"
+      }
+    },
+    {
+      "image_id": "ISIC_0025276",
+      "filename": "ISIC_0025276.jpg",
+      "true_class": "Benign Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "bkl",
+        "localization": "trunk",
+        "age": "55.0",
+        "sex": "female"
+      }
+    },
+    {
+      "image_id": "ISIC_0030105",
+      "filename": "ISIC_0030105.jpg",
+      "true_class": "Benign Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "bkl",
+        "localization": "unknown",
+        "age": "80.0",
+        "sex": "female"
+      }
+    },
+    {
+      "image_id": "ISIC_0025837",
+      "filename": "ISIC_0025837.jpg",
+      "true_class": "Benign Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "bkl",
+        "localization": "back",
+        "age": "70.0",
+        "sex": "female"
+      }
+    },
+    {
+      "image_id": "ISIC_0031633",
+      "filename": "ISIC_0031633.jpg",
+      "true_class": "Benign Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "bkl",
+        "localization": "ear",
+        "age": "75.0",
+        "sex": "male"
+      }
+    },
+    {
+      "image_id": "ISIC_0033280",
+      "filename": "ISIC_0033280.jpg",
+      "true_class": "Benign Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "bkl",
+        "localization": "neck",
+        "age": "50.0",
+        "sex": "female"
+      }
+    },
+    {
+      "image_id": "ISIC_0027419",
+      "filename": "ISIC_0027419.jpg",
+      "true_class": "Benign Keratosis",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "dx": "bkl",
+        "localization": "scalp",
+        "age": "80.0",
+        "sex": "male"
+      }
+    }
+  ]
+}
