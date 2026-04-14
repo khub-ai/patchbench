@@ -75,6 +75,7 @@ When choosing models to test, we prioritise:
 - **Accessible via API** — OpenRouter or Anthropic-compatible endpoints, so results are reproducible without local GPU infrastructure
 - **Range of sizes** — to map where the patchability sweet spot lies
 - **Open weights preferred** — results are more useful to the community when others can run, fine-tune, or deploy the same model
+- **Deployment economics** — smaller models are cheaper to run at scale, making them attractive for edge deployment, swarm scenarios, or high-volume inference where a larger model would be cost-prohibitive; DD lets them punch above their weight
 
 Proprietary models are included where they provide a useful reference point. Contributions testing additional models are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 
