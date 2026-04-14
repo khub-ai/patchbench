@@ -2,61 +2,63 @@
   "benchmark_id": "dermatology_melanoma_vs_nevus_probe_v1",
   "benchmark_version": "1.0.0",
   "schema_version": "1.0",
-  "submitted": "2026-04-14T08:40:57",
+  "submitted": "2026-04-14T09:51:59",
   "pupil_model": "openai/gpt-4o",
   "tutor_model": "claude-opus-4-6",
   "validator_model": "claude-sonnet-4-6",
-  "verdict": "partial",
-  "perception_score": 0.85,
-  "vocabulary_overlap": 0.2146,
-  "zero_shot_accuracy": 0.5833,
-  "rule_aided_accuracy": 0.75,
-  "rule_comprehension_delta": 0.1667,
-  "consistency_score": 0.6,
+  "verdict": "no-go",
+  "perception_score": 0.8083,
+  "vocabulary_overlap": 0.2196,
+  "zero_shot_accuracy": 0.7917,
+  "rule_aided_accuracy": 0.8333,
+  "rule_comprehension_delta": 0.0417,
+  "consistency_score": 0.4,
   "feature_detection_by_difficulty": {
-    "easy": 1.0,
-    "medium": 0.95,
-    "hard": 0.6
+    "easy": 0.95,
+    "medium": 0.775,
+    "hard": 0.7
   },
   "feature_profile": {
     "asymmetric_shape_easy": 1.0,
-    "multiple_colors_easy": 1.0,
-    "uniform_color_easy": 1.0,
-    "regular_round_border_easy": 1.0,
-    "irregular_border_medium": 0.9,
-    "blue_white_veil_medium": 0.9,
-    "diameter_over_6mm_medium": 1.0,
+    "multiple_colors_easy": 0.9,
+    "uniform_color_easy": 0.9,
+    "regular_border_easy": 1.0,
+    "irregular_streaks_medium": 0.7,
+    "blue_white_veil_medium": 0.6,
     "symmetric_pigment_network_medium": 1.0,
-    "atypical_pigment_network_hard": 0.3,
-    "regression_structures_hard": 0.3,
-    "irregular_dots_globules_hard": 0.9,
-    "cobblestone_globular_pattern_hard": 0.9
+    "diameter_over_6mm_medium": 0.8,
+    "regression_structures_hard": 0.7,
+    "atypical_pigment_network_hard": 0.5,
+    "negative_pigment_network_hard": 0.7,
+    "symmetric_globular_pattern_hard": 0.9
   },
-  "weak_points": [],
+  "weak_points": [
+    "Consistency score 0.40 below 0.5 — PUPIL responses are unstable on this domain"
+  ],
   "recommendations": [
-    "Use temperature=0 for PUPIL calls if available."
+    "Try a PUPIL model with a stronger visual backbone, or fine-tune the visual encoder on domain images."
   ],
   "costs": {
     "TUTOR": {
-      "input_tokens": 11433,
-      "output_tokens": 6948,
-      "api_calls": 26,
-      "cost_usd": 0.6925950000000001
+      "input_tokens": 15540,
+      "output_tokens": 7583,
+      "api_calls": 28,
+      "cost_usd": 0.8018249999999999
     },
     "VALIDATOR": {
-      "input_tokens": 62679,
-      "output_tokens": 14913,
-      "api_calls": 144,
-      "cost_usd": 0.4117319999999999
+      "input_tokens": 60625,
+      "output_tokens": 14517,
+      "api_calls": 139,
+      "cost_usd": 0.39963
     },
     "PUPIL": {
-      "input_tokens": 95532,
-      "output_tokens": 8095,
+      "input_tokens": 97624,
+      "output_tokens": 8410,
       "api_calls": 207,
       "cost_usd": 0.0
     }
   },
-  "total_cost_usd": 1.104327,
+  "total_cost_usd": 1.201455,
   "per_image_zero_shot": [
     {
       "image_id": "ISIC_0024315",
@@ -66,12 +68,12 @@
     {
       "image_id": "ISIC_0024333",
       "true": "Melanoma",
-      "predicted": "Melanocytic Nevus"
+      "predicted": "Melanoma"
     },
     {
       "image_id": "ISIC_0024400",
       "true": "Melanoma",
-      "predicted": "Melanoma"
+      "predicted": "Melanocytic Nevus"
     },
     {
       "image_id": "ISIC_0025964",
@@ -101,7 +103,7 @@
     {
       "image_id": "ISIC_0028412",
       "true": "Melanoma",
-      "predicted": "Melanocytic Nevus"
+      "predicted": "Melanoma"
     },
     {
       "image_id": "ISIC_0026531",
@@ -116,7 +118,7 @@
     {
       "image_id": "ISIC_0030623",
       "true": "Melanoma",
-      "predicted": "Melanocytic Nevus"
+      "predicted": "Melanoma"
     },
     {
       "image_id": "ISIC_0024698",
@@ -141,7 +143,7 @@
     {
       "image_id": "ISIC_0029828",
       "true": "Melanocytic Nevus",
-      "predicted": "Melanoma"
+      "predicted": "Melanocytic Nevus"
     },
     {
       "image_id": "ISIC_0031588",
@@ -161,12 +163,12 @@
     {
       "image_id": "ISIC_0031325",
       "true": "Melanocytic Nevus",
-      "predicted": "Melanoma"
+      "predicted": "Melanocytic Nevus"
     },
     {
       "image_id": "ISIC_0025251",
       "true": "Melanocytic Nevus",
-      "predicted": "Melanoma"
+      "predicted": "Melanocytic Nevus"
     },
     {
       "image_id": "ISIC_0025843",
@@ -188,22 +190,22 @@
     {
       "image_id": "ISIC_0024333",
       "true": "Melanoma",
-      "predicted": "Melanocytic Nevus"
+      "predicted": "Melanoma"
     },
     {
       "image_id": "ISIC_0024400",
       "true": "Melanoma",
-      "predicted": "Melanocytic Nevus"
+      "predicted": "Melanoma"
     },
     {
       "image_id": "ISIC_0025964",
       "true": "Melanoma",
-      "predicted": "Melanoma"
+      "predicted": "Melanocytic Nevus"
     },
     {
       "image_id": "ISIC_0027190",
       "true": "Melanoma",
-      "predicted": "Melanoma"
+      "predicted": "Melanocytic Nevus"
     },
     {
       "image_id": "ISIC_0028086",
@@ -233,17 +235,17 @@
     {
       "image_id": "ISIC_0025450",
       "true": "Melanoma",
-      "predicted": "Melanoma"
+      "predicted": "Melanocytic Nevus"
     },
     {
       "image_id": "ISIC_0030623",
       "true": "Melanoma",
-      "predicted": "Melanocytic Nevus"
+      "predicted": "Melanoma"
     },
     {
       "image_id": "ISIC_0024698",
       "true": "Melanocytic Nevus",
-      "predicted": "Melanoma"
+      "predicted": "Melanocytic Nevus"
     },
     {
       "image_id": "ISIC_0024693",
@@ -283,12 +285,12 @@
     {
       "image_id": "ISIC_0031325",
       "true": "Melanocytic Nevus",
-      "predicted": "Melanoma"
+      "predicted": "Melanocytic Nevus"
     },
     {
       "image_id": "ISIC_0025251",
       "true": "Melanocytic Nevus",
-      "predicted": "Melanocytic Nevus"
+      "predicted": "Melanoma"
     },
     {
       "image_id": "ISIC_0025843",
@@ -298,7 +300,7 @@
     {
       "image_id": "ISIC_0025384",
       "true": "Melanocytic Nevus",
-      "predicted": "Melanoma"
+      "predicted": "Melanocytic Nevus"
     }
   ],
   "notes": ""

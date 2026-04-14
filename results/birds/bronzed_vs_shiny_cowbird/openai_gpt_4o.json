@@ -2,35 +2,35 @@
   "benchmark_id": "birds_bronzed_vs_shiny_cowbird_probe_v1",
   "benchmark_version": "1.0.0",
   "schema_version": "1.0",
-  "submitted": "2026-04-14T08:37:26",
+  "submitted": "2026-04-14T09:49:25",
   "pupil_model": "openai/gpt-4o",
   "tutor_model": "claude-opus-4-6",
   "validator_model": "claude-sonnet-4-6",
   "verdict": "partial",
-  "perception_score": 0.6333,
-  "vocabulary_overlap": 0.3083,
-  "zero_shot_accuracy": 0.75,
-  "rule_aided_accuracy": 0.6667,
-  "rule_comprehension_delta": -0.0833,
-  "consistency_score": 0.8,
+  "perception_score": 0.6083,
+  "vocabulary_overlap": 0.2792,
+  "zero_shot_accuracy": 0.7917,
+  "rule_aided_accuracy": 0.9167,
+  "rule_comprehension_delta": 0.125,
+  "consistency_score": 1.0,
   "feature_detection_by_difficulty": {
     "easy": 0.7,
-    "medium": 0.725,
-    "hard": 0.475
+    "medium": 0.625,
+    "hard": 0.5
   },
   "feature_profile": {
-    "red_eye_color_easy": 1.0,
-    "overall_bluish_purple_sheen_easy": 0.6,
-    "thick_neck_ruff_easy": 0.7,
-    "sleek_body_profile_easy": 0.5,
-    "bronze_toned_body_medium": 0.8,
-    "conical_finch_like_bill_medium": 0.7,
-    "slender_pointed_bill_medium": 0.4,
-    "dark_eye_color_medium": 1.0,
+    "red_eye_color_easy": 0.9,
+    "overall_blue_purple_sheen_easy": 0.7,
+    "bulky_neck_ruff_easy": 0.6,
+    "sleek_slender_body_easy": 0.6,
+    "bronze_body_tone_medium": 0.7,
+    "conical_pointed_bill_medium": 0.2,
+    "thick_decurved_bill_medium": 0.6,
+    "dark_eye_no_contrast_medium": 1.0,
     "hackled_nape_feathers_hard": 0.5,
-    "uniform_wing_iridescence_hard": 0.3,
-    "arched_culmen_profile_hard": 0.4,
-    "contrasting_wing_darkness_hard": 0.7
+    "wing_coverts_contrasting_gloss_hard": 0.6,
+    "uniform_violet_wing_gloss_hard": 0.4,
+    "flat_frontal_profile_hard": 0.5
   },
   "weak_points": [],
   "recommendations": [
@@ -38,25 +38,25 @@
   ],
   "costs": {
     "TUTOR": {
-      "input_tokens": 8097,
-      "output_tokens": 6719,
-      "api_calls": 26,
-      "cost_usd": 0.6253800000000002
+      "input_tokens": 11989,
+      "output_tokens": 7066,
+      "api_calls": 28,
+      "cost_usd": 0.7097850000000001
     },
     "VALIDATOR": {
-      "input_tokens": 43798,
-      "output_tokens": 11781,
+      "input_tokens": 43779,
+      "output_tokens": 11573,
       "api_calls": 144,
-      "cost_usd": 0.3081090000000001
+      "cost_usd": 0.3049319999999999
     },
     "PUPIL": {
-      "input_tokens": 63286,
-      "output_tokens": 8562,
+      "input_tokens": 63780,
+      "output_tokens": 8823,
       "api_calls": 207,
       "cost_usd": 0.0
     }
   },
-  "total_cost_usd": 0.933489,
+  "total_cost_usd": 1.014717,
   "per_image_zero_shot": [
     {
       "image_id": "Bronzed_Cowbird_0001_796219",
@@ -111,7 +111,7 @@
     {
       "image_id": "Bronzed_Cowbird_0061_796232",
       "true": "Bronzed Cowbird",
-      "predicted": "Shiny Cowbird"
+      "predicted": "Bronzed Cowbird"
     },
     {
       "image_id": "Bronzed_Cowbird_0081_24198",
@@ -243,7 +243,7 @@
     {
       "image_id": "Shiny_Cowbird_0001_796860",
       "true": "Shiny Cowbird",
-      "predicted": "Bronzed Cowbird"
+      "predicted": "Shiny Cowbird"
     },
     {
       "image_id": "Shiny_Cowbird_0002_24380",
@@ -253,7 +253,7 @@
     {
       "image_id": "Shiny_Cowbird_0004_796841",
       "true": "Shiny Cowbird",
-      "predicted": "Bronzed Cowbird"
+      "predicted": "Shiny Cowbird"
     },
     {
       "image_id": "Shiny_Cowbird_0006_796864",
@@ -263,7 +263,7 @@
     {
       "image_id": "Shiny_Cowbird_0007_24434",
       "true": "Shiny Cowbird",
-      "predicted": "Bronzed Cowbird"
+      "predicted": "Shiny Cowbird"
     },
     {
       "image_id": "Shiny_Cowbird_0009_796835",
@@ -273,12 +273,12 @@
     {
       "image_id": "Shiny_Cowbird_0010_24439",
       "true": "Shiny Cowbird",
-      "predicted": "Bronzed Cowbird"
+      "predicted": "Shiny Cowbird"
     },
     {
       "image_id": "Shiny_Cowbird_0012_24249",
       "true": "Shiny Cowbird",
-      "predicted": "Bronzed Cowbird"
+      "predicted": "Shiny Cowbird"
     },
     {
       "image_id": "Shiny_Cowbird_0014_24214",
@@ -293,7 +293,7 @@
     {
       "image_id": "Shiny_Cowbird_0030_24206",
       "true": "Shiny Cowbird",
-      "predicted": "Bronzed Cowbird"
+      "predicted": "Shiny Cowbird"
     },
     {
       "image_id": "Shiny_Cowbird_0080_796875",

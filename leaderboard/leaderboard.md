@@ -6,12 +6,12 @@ Sorted by perception score descending. See [CONTRIBUTING.md](../CONTRIBUTING.md)
 
 | Verdict | Model | Domain | Confusable pair | Percep. | VocabΔ | ZeroShot | RuleDelta | Consist. |
 |---|---|---|---|---|---|---|---|---|
-| 🟡 partial | `qwen/qwen3-vl-8b-instruct` | [road_surface](https://github.com/ztsrxh/RSCD-Road_Surface_Classification_Dataset) | [dry vs wet](https://github.com/khub-ai/patchbench/tree/main/benchmarks/road_surface/dry_vs_wet) | 0.86 | 0.33 | 0.62 | -0.12 | 1.00 |
-| 🟡 partial | `openai/gpt-4o` | [dermatology](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) | [melanoma vs nevus](https://github.com/khub-ai/patchbench/tree/main/benchmarks/dermatology/melanoma_vs_nevus) | 0.85 | 0.21 | 0.58 | +0.17 | 0.60 |
-| 🔴 no-go | `openai/gpt-4o` | [road_surface](https://github.com/ztsrxh/RSCD-Road_Surface_Classification_Dataset) | [dry vs wet](https://github.com/khub-ai/patchbench/tree/main/benchmarks/road_surface/dry_vs_wet) | 0.82 | 0.25 | 0.62 | +0.00 | 0.40 |
-| 🟡 partial | `qwen/qwen3-vl-8b-instruct` | [dermatology](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) | [melanoma vs nevus](https://github.com/khub-ai/patchbench/tree/main/benchmarks/dermatology/melanoma_vs_nevus) | 0.79 | 0.39 | 0.71 | -0.08 | 1.00 |
-| 🟡 partial | `openai/gpt-4o` | [birds](https://www.vision.caltech.edu/datasets/cub_200_2011/) | [bronzed vs shiny cowbird](https://github.com/khub-ai/patchbench/tree/main/benchmarks/birds/bronzed_vs_shiny_cowbird) | 0.63 | 0.31 | 0.75 | -0.08 | 0.80 |
-| 🟡 partial | `qwen/qwen3-vl-8b-instruct` | [birds](https://www.vision.caltech.edu/datasets/cub_200_2011/) | [bronzed vs shiny cowbird](https://github.com/khub-ai/patchbench/tree/main/benchmarks/birds/bronzed_vs_shiny_cowbird) | 0.60 | 0.28 | 0.42 | +0.08 | 1.00 |
+| 🔴 no-go | `openai/gpt-4o` | [dermatology](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) | [melanoma vs nevus](https://github.com/khub-ai/patchbench/tree/main/benchmarks/dermatology/melanoma_vs_nevus) | 0.81 | 0.22 | 0.79 | +0.04 | 0.40 |
+| 🟢 go | `qwen/qwen3-vl-8b-instruct` | [road_surface](https://github.com/ztsrxh/RSCD-Road_Surface_Classification_Dataset) | [dry vs wet](https://github.com/khub-ai/patchbench/tree/main/benchmarks/road_surface/dry_vs_wet) | 0.78 | 0.32 | 0.62 | +0.33 | 1.00 |
+| 🟡 partial | `qwen/qwen3-vl-8b-instruct` | [dermatology](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) | [melanoma vs nevus](https://github.com/khub-ai/patchbench/tree/main/benchmarks/dermatology/melanoma_vs_nevus) | 0.75 | 0.44 | 0.67 | -0.12 | 1.00 |
+| 🟡 partial | `openai/gpt-4o` | [road_surface](https://github.com/ztsrxh/RSCD-Road_Surface_Classification_Dataset) | [dry vs wet](https://github.com/khub-ai/patchbench/tree/main/benchmarks/road_surface/dry_vs_wet) | 0.72 | 0.26 | 0.54 | +0.08 | 0.60 |
+| 🟡 partial | `openai/gpt-4o` | [birds](https://www.vision.caltech.edu/datasets/cub_200_2011/) | [bronzed vs shiny cowbird](https://github.com/khub-ai/patchbench/tree/main/benchmarks/birds/bronzed_vs_shiny_cowbird) | 0.61 | 0.28 | 0.79 | +0.12 | 1.00 |
+| 🟢 go | `qwen/qwen3-vl-8b-instruct` | [birds](https://www.vision.caltech.edu/datasets/cub_200_2011/) | [bronzed vs shiny cowbird](https://github.com/khub-ai/patchbench/tree/main/benchmarks/birds/bronzed_vs_shiny_cowbird) | 0.60 | 0.29 | 0.42 | +0.33 | 1.00 |
 
 ## Column definitions
 
