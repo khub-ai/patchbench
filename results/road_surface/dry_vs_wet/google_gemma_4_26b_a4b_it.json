@@ -1,0 +1,303 @@
+{
+  "benchmark_id": "road_surface_dry_vs_wet_probe_v1",
+  "benchmark_version": "1.0.0",
+  "schema_version": "1.0",
+  "submitted": "2026-04-14T10:31:00",
+  "pupil_model": "google/gemma-4-26b-a4b-it",
+  "tutor_model": "claude-opus-4-6",
+  "validator_model": "claude-sonnet-4-6",
+  "verdict": "go",
+  "perception_score": 0.8667,
+  "vocabulary_overlap": 0.2646,
+  "zero_shot_accuracy": 0.5833,
+  "rule_aided_accuracy": 0.8333,
+  "rule_comprehension_delta": 0.25,
+  "consistency_score": 0.8,
+  "feature_detection_by_difficulty": {
+    "easy": 0.875,
+    "medium": 0.875,
+    "hard": 0.85
+  },
+  "feature_profile": {
+    "visible_water_puddles_easy": 0.9,
+    "shiny_reflective_surface_easy": 0.8,
+    "matte_asphalt_appearance_easy": 1.0,
+    "light_gray_pavement_color_easy": 0.8,
+    "tire_spray_rooster_tail_medium": 1.0,
+    "darkened_asphalt_tone_medium": 0.8,
+    "dry_tire_tracks_in_wet_medium": 0.8,
+    "visible_dust_kick_up_medium": 0.9,
+    "specular_headlight_reflection_hard": 1.0,
+    "aggregate_texture_visibility_hard": 0.6,
+    "hydroplaning_surface_film_hard": 0.9,
+    "thermal_drying_gradient_hard": 0.9
+  },
+  "weak_points": [],
+  "recommendations": [],
+  "costs": {
+    "PUPIL": {
+      "input_tokens": 70900,
+      "output_tokens": 10024,
+      "api_calls": 207,
+      "cost_usd": 0.0090948
+    },
+    "VALIDATOR": {
+      "input_tokens": 9258,
+      "output_tokens": 2192,
+      "api_calls": 24,
+      "cost_usd": 0.06065400000000001
+    },
+    "TUTOR": {
+      "input_tokens": 1013,
+      "output_tokens": 328,
+      "api_calls": 2,
+      "cost_usd": 0.039795
+    }
+  },
+  "total_cost_usd": 0.109544,
+  "per_image_zero_shot": [
+    {
+      "image_id": "20220321182055148",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "2022021018461116",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "202204251326231",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "202207022314431641",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "2022021011335410",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "202202101357457",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "20220715003039285",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "20220604230403836",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "202202101525334",
+      "true": "Dry Road",
+      "predicted": "Wet Road"
+    },
+    {
+      "image_id": "202204212245281",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "202206212203471557",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "2022021013150912",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "20220622155519502",
+      "true": "Wet Road",
+      "predicted": "Wet Road"
+    },
+    {
+      "image_id": "20220330144623829",
+      "true": "Wet Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "202206221601391914",
+      "true": "Wet Road",
+      "predicted": "Wet Road"
+    },
+    {
+      "image_id": "2022071500272212",
+      "true": "Wet Road",
+      "predicted": "Wet Road"
+    },
+    {
+      "image_id": "202203202202157",
+      "true": "Wet Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "202203241622461",
+      "true": "Wet Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "20220714234429504",
+      "true": "Wet Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "20220329200741781",
+      "true": "Wet Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "20220622155859141",
+      "true": "Wet Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "20220715002053108",
+      "true": "Wet Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "20220321222926387",
+      "true": "Wet Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "20220714234237684",
+      "true": "Wet Road",
+      "predicted": "Dry Road"
+    }
+  ],
+  "per_image_rule_aided": [
+    {
+      "image_id": "20220321182055148",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "2022021018461116",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "202204251326231",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "202207022314431641",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "2022021011335410",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "202202101357457",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "20220715003039285",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "20220604230403836",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "202202101525334",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "202204212245281",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "202206212203471557",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "2022021013150912",
+      "true": "Dry Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "20220622155519502",
+      "true": "Wet Road",
+      "predicted": "Wet Road"
+    },
+    {
+      "image_id": "20220330144623829",
+      "true": "Wet Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "202206221601391914",
+      "true": "Wet Road",
+      "predicted": "Wet Road"
+    },
+    {
+      "image_id": "2022071500272212",
+      "true": "Wet Road",
+      "predicted": "Wet Road"
+    },
+    {
+      "image_id": "202203202202157",
+      "true": "Wet Road",
+      "predicted": "Wet Road"
+    },
+    {
+      "image_id": "202203241622461",
+      "true": "Wet Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "20220714234429504",
+      "true": "Wet Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "20220329200741781",
+      "true": "Wet Road",
+      "predicted": "Wet Road"
+    },
+    {
+      "image_id": "20220622155859141",
+      "true": "Wet Road",
+      "predicted": "Wet Road"
+    },
+    {
+      "image_id": "20220715002053108",
+      "true": "Wet Road",
+      "predicted": "Dry Road"
+    },
+    {
+      "image_id": "20220321222926387",
+      "true": "Wet Road",
+      "predicted": "Wet Road"
+    },
+    {
+      "image_id": "20220714234237684",
+      "true": "Wet Road",
+      "predicted": "Wet Road"
+    }
+  ],
+  "notes": ""
+}
