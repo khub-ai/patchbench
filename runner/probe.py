@@ -272,10 +272,14 @@ async def _get_tutor_descriptions(
         pc = manifest.precomputed
         _print(f"  [dim]Using pre-committed TUTOR/VALIDATOR outputs "
                f"({pc.tutor_model}, {pc.validator_model})[/dim]")
-        seed_rules = {}
-        if pc.seed_rule:
+        # Prefer seed_rules (per-class dict); fall back to legacy seed_rule (single).
+        if pc.seed_rules:
+            seed_rules = pc.seed_rules
+        elif pc.seed_rule:
             favored = pc.seed_rule.get("favors", manifest.class_a)
-            seed_rules[favored] = pc.seed_rule
+            seed_rules = {favored: pc.seed_rule}
+        else:
+            seed_rules = {}
         return (
             pc.tutor_descriptions,
             pc.feature_queries,
@@ -499,6 +503,46 @@ async def _classify(
 
 
 # ---------------------------------------------------------------------------
+# Write precomputed outputs back to manifest
+# ---------------------------------------------------------------------------
+
+def _write_precomputed_to_manifest(
+    manifest_path:   Path,
+    tutor_model:     str,
+    validator_model: str,
+    tutor_descs:     Dict[str, str],
+    feature_queries: list,
+    validator_answers: Dict[str, Dict[str, bool]],
+    seed_rules:      Dict[str, dict],
+) -> None:
+    """Persist TUTOR/VALIDATOR outputs into the manifest's precomputed section.
+
+    Safe to call multiple times — merges into existing precomputed data so that
+    a partial run (e.g. interrupted after Step 1) can be resumed.
+    """
+    data = json.loads(manifest_path.read_text(encoding="utf-8"))
+    pc = data.setdefault("precomputed", {})
+    pc["tutor_model"]        = tutor_model
+    pc["validator_model"]    = validator_model
+    pc["generated"]          = time.strftime("%Y-%m-%d")
+    pc["tutor_descriptions"] = tutor_descs
+    pc["feature_queries"]    = [
+        {
+            "feature_id":     q.feature_id,
+            "question":       q.question,
+            "diagnostic_for": q.diagnostic_for,
+            "difficulty":     q.difficulty,
+        }
+        for q in feature_queries
+    ]
+    pc["validator_answers"]  = validator_answers
+    pc["seed_rules"]         = seed_rules
+    manifest_path.write_text(
+        json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+
+
+# ---------------------------------------------------------------------------
 # Rule quality gate
 # ---------------------------------------------------------------------------
 
@@ -552,15 +596,16 @@ async def _validate_rules_gate(
 # ---------------------------------------------------------------------------
 
 async def run_probe(
-    manifest_path:   str | Path,
-    pupil_model:     str,
-    tutor_model:     str  = "claude-opus-4-6",
-    validator_model: str  = "claude-sonnet-4-6",
-    recompute_tutor: bool = False,
-    anthropic_key:   str  = "",
-    openrouter_key:  str  = "",
-    cache_dir:       Optional[Path] = None,
-    console         = None,
+    manifest_path:    str | Path,
+    pupil_model:      str,
+    tutor_model:      str  = "claude-opus-4-6",
+    validator_model:  str  = "claude-sonnet-4-6",
+    recompute_tutor:  bool = False,
+    save_precomputed: bool = False,
+    anthropic_key:    str  = "",
+    openrouter_key:   str  = "",
+    cache_dir:        Optional[Path] = None,
+    console          = None,
 ) -> ProbeResult:
     """Run the full PatchBench probe. Returns a ProbeResult."""
 
@@ -583,10 +628,17 @@ async def run_probe(
     tutor_descs, feature_queries, validator_answers, seed_rules = (
         await _get_tutor_descriptions(
             manifest, manifest_path, caller, tutor_model,
-            recompute_tutor, cache_dir, costs, _print,
+            recompute_tutor or save_precomputed, cache_dir, costs, _print,
         )
     )
     _print(f"    {len(tutor_descs)} descriptions, {len(feature_queries)} feature queries")
+
+    if save_precomputed:
+        _write_precomputed_to_manifest(
+            manifest_path, tutor_model, validator_model,
+            tutor_descs, feature_queries, validator_answers, seed_rules,
+        )
+        _print(f"  [green]Precomputed outputs saved to manifest.[/green]")
 
     # ------------------------------------------------------------------
     # Step 2 — PUPIL vocabulary

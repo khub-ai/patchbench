@@ -101,6 +101,9 @@ Examples:
                    help=f"VALIDATOR model  [default: {DEFAULT_VALIDATOR}]")
     p.add_argument("--recompute-tutor", action="store_true",
                    help="Regenerate TUTOR/VALIDATOR outputs instead of using pre-committed values")
+    p.add_argument("--save-precomputed", action="store_true",
+                   help="Regenerate TUTOR/VALIDATOR outputs and write them back into the manifest "
+                        "(populates the precomputed section so future contributors need only PUPIL credentials)")
     p.add_argument("--output",         default="",
                    help="Output path for result JSON (default: auto under results/)")
     p.add_argument("--list-benchmarks", action="store_true")
@@ -146,15 +149,16 @@ async def main():
         sys.exit(1)
 
     result = await run_probe(
-        manifest_path   = benchmark_path,
-        pupil_model     = args.pupil_model,
-        tutor_model     = args.tutor_model,
-        validator_model = args.validator_model,
-        recompute_tutor = args.recompute_tutor,
-        anthropic_key   = anthropic_key,
-        openrouter_key  = openrouter_key,
-        cache_dir       = CACHE_DIR,
-        console         = console,
+        manifest_path    = benchmark_path,
+        pupil_model      = args.pupil_model,
+        tutor_model      = args.tutor_model,
+        validator_model  = args.validator_model,
+        recompute_tutor  = args.recompute_tutor,
+        save_precomputed = args.save_precomputed,
+        anthropic_key    = anthropic_key,
+        openrouter_key   = openrouter_key,
+        cache_dir        = CACHE_DIR,
+        console          = console,
     )
 
     # Save result

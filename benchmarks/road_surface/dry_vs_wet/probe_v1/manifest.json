@@ -308,11 +308,268 @@
   "precomputed": {
     "tutor_model": "claude-opus-4-6",
     "validator_model": "claude-sonnet-4-6",
-    "generated": "",
-    "tutor_descriptions": {},
-    "feature_queries": [],
-    "validator_answers": {},
+    "generated": "2026-04-14",
+    "tutor_descriptions": {
+      "20220321182055148": "This image shows a **dry asphalt road surface** characterized by its uniformly matte, non-reflective appearance. The aggregate texture is clearly visible, with individual stone chips and bitumen binder distinguishable in a granular, speckled pattern of gray, tan, and dark brown tones. There is no specular reflection or gloss on the surface, which is a key differentiator from wet pavement that would exhibit a sheen or mirror-like reflectivity from ambient light sources. The surface appears consistently light-absorbing across the entire frame, with no pooling, darkened saturation zones, or film of water that would reduce the contrast between aggregate particles. The high-frequency textural detail remains sharp and well-defined, whereas a wet surface would appear smoother and darker due to water filling the micro-voids between aggregate particles.",
+      "2022021018461116": "This image shows a **dry asphalt road surface** characterized by its **matte, non-reflective finish** with uniform light absorption across the frame. The aggregate texture is clearly visible, with individual stone chips and bituminous binder distinguishable, creating a **granular, coarse micro-texture** typical of aged hot-mix asphalt. There is an **absence of specular highlights or glare**, which would indicate moisture film — the surface appears consistently opaque and dull gray throughout. The color tone is a **uniform medium-to-light gray**, lacking the characteristic darkening that water saturation produces when it fills the pore spaces between aggregate particles. No puddles, rivulets, or surface sheen are present, confirming the pavement is in a fully dry state.",
+      "202204251326231": "This image shows a **dry road surface** characterized by its **uniform, matte finish** with minimal specular reflectivity. The asphalt exhibits a **consistent light gray tonality** with visible aggregate texture — the individual stone chips and bituminous binder are discernible as a fine, granular mosaic pattern without any pooling, sheen, or mirror-like reflections that would indicate moisture. The surface appears **diffuse in its light scattering**, with no darkening of the pavement color that typically accompanies water saturation. The texture is **evenly illuminated** without the characteristic glare spots or elongated reflections of light sources that wet surfaces produce. The overall appearance is chalky and muted, consistent with a dry macrotexture where interstitial voids between aggregate particles are filled with air rather than water.",
+      "202207022314431641": "This image depicts a **dry road surface** characterized by its **uniformly matte, non-reflective appearance** with consistent diffuse light scattering across the entire frame. The asphalt aggregate is clearly visible as a **granular, speckled texture** with distinguishable individual stone chips and bituminous binder, presenting a heterogeneous mosaic of light gray, white, and subtle greenish-blue mineral tones. There is **no specular reflection, glare pooling, or mirror-like sheen** that would indicate the presence of a water film on the surface. The texture exhibits **high micro-contrast** between aggregate particles, as dry surfaces allow each granule to scatter light independently rather than being smoothed by a refractive water layer. The overall **albedo is relatively high and even**, consistent with dry pavement where surface pores and voids remain air-filled rather than water-saturated, which would typically darken the surface significantly.",
+      "2022021011335410": "This image shows a **dry road surface** characterized by its **matte, non-reflective finish** with a uniformly light gray tonality. The surface texture exhibits a granular, slightly rough appearance typical of compacted gravel or unpaved roadway material, with **no specular highlights or gloss** that would indicate moisture. Small loose aggregate particles and minor debris are visible on the surface, maintaining their distinct, sharp edges without any water-induced darkening or cohesion. There is a slightly discolored band near the top that appears to be a variation in surface material or compaction rather than residual moisture, as it lacks the characteristic **tonal darkening and reflective sheen** associated with wet pavement. The overall **high albedo and diffuse light scattering** across the surface confirm dry conditions.",
+      "202202101357457": "This image depicts a **dry asphalt road surface** characterized by its **matte, non-reflective finish** with uniform light absorption across the frame. The aggregate composition is clearly visible, showing the typical **granular texture** of bituminous pavement with fine chips and mineral particles embedded in the binder, appearing as subtle speckled variations in gray tones. There is **no specular reflection or gloss**, which is the key distinguishing feature from wet pavement, where water would create a mirror-like sheen and darken the overall surface tone. The surface appears in a **consistent medium-gray coloration** without the darkened, saturated appearance that moisture imparts to asphalt. The micro-texture of the pavement is distinctly legible, with individual aggregate particles discernible rather than being obscured by a water film.",
+      "20220715003039285": "This image depicts a **dry road surface** characterized by its **matte, non-reflective finish** with uniform light scattering across the pavement. The asphalt exhibits a **granular, coarse texture** where individual aggregate particles are clearly discernible, giving the surface a speckled gray appearance with subtle tonal variations between lighter and darker mineral components. There is **no specular reflection or gloss**, which is the hallmark distinction from wet pavement, where water fills surface voids and creates a mirror-like sheen. The surface shows typical **open-textured macrotexture** with small dark voids and irregularities that would otherwise be masked or filled by a water film on a wet road. The overall **albedo is relatively high and consistent**, without the characteristic darkening or contrast enhancement that moisture absorption produces in asphalt binder.",
+      "20220604230403836": "This image shows a **dry road surface** characterized by its **matte, non-reflective finish** with a uniformly granular asphalt texture visible throughout. The aggregate particles in the pavement are clearly distinguishable, exhibiting their natural varied coloration (grays, tans, and subtle greens) without the darkening or color saturation that moisture would produce. The **road marking stripe** running diagonally across the frame appears with a chalky, faded appearance and well-defined edges, lacking any specular highlights or glossy sheen that would indicate surface water. There is a complete **absence of puddles, water films, or mirror-like reflectivity**, which are hallmark indicators of wet pavement conditions. The overall surface appears light-toned and evenly textured, consistent with dry aggregate that scatters light diffusely rather than producing the directional reflections characteristic of a wet surface.",
+      "202202101525334": "This image shows a **dry road surface** characterized by its **matte, non-reflective finish** with a uniformly dull gray tonality. The aggregate texture of the asphalt or concrete is clearly visible, with individual surface granules and micro-texture discernible without being obscured by a water film. There is an absence of **specular reflection or glare**, which would typically appear as bright highlights or mirror-like sheen on a wet surface. Some slight tonal variation and discoloration patterns are present, likely from previous moisture exposure or oil staining, but the surface itself exhibits the **high-friction, light-scattering properties** consistent with dry pavement. The overall color appears lighter and more washed-out compared to the characteristically darkened, saturated appearance that water absorption produces on wet roadways.",
+      "202204212245281": "This image depicts a **dry asphalt road surface** characterized by its **matte, non-reflective finish** with a uniform dark gray tonality. The surface texture exhibits the typical **granular aggregate pattern** of aged pavement, where individual stone chips and bituminous binder are faintly discernible without any glossy sheen or specular highlights. A visible **longitudinal crack or joint seam** runs horizontally across the lower portion, showing typical dry pavement deterioration with clean, well-defined edges rather than water-filled depressions. Notably absent are any telltale signs of moisture such as **surface film reflections, mirror-like light pooling, or darkened wet patches** that would increase apparent surface contrast. The overall **diffuse light scattering** across the surface is consistent with dry aggregate, where micro-texture remains fully exposed rather than being masked by a water layer.",
+      "202206212203471557": "This image shows a **dry asphalt road surface** characterized by its uniformly matte, non-reflective appearance. The texture displays a consistent granular aggregate pattern typical of bituminous pavement, with individual stone chips and mineral particles clearly visible without any obscuring moisture film. The surface exhibits a **flat, diffuse light scattering** profile — there are no specular highlights, glare spots, or mirror-like reflections that would indicate the presence of a water layer. The color is a consistent medium gray throughout, lacking the darkened, saturated tone that wet pavement typically displays due to water filling surface micropores and reducing light scattering. The overall surface reads as **high-friction and absorptive**, with the macro-texture of the aggregate fully exposed and uncoated by any liquid film.",
+      "2022021013150912": "This image depicts a **dry asphalt road surface** characterized by its **matte, non-reflective finish** with a uniformly dull gray tone throughout. The surface texture reveals the typical **granular aggregate structure** of asphalt, with small individual stone chips and fine particulate visible, indicating no moisture film obscuring the micro-texture. There is an **absence of specular highlights or glare**, which would be present on a wet surface where water fills the surface voids and creates a mirror-like reflective layer. The overall **tonal consistency** across the frame—without darker saturated patches or pooling—confirms the pavement is free of surface moisture. Minor surface debris and small imperfections are clearly discernible, a detail that would be softened or obscured by a water film on a wet road.",
+      "20220622155519502": "This image depicts a **wet road** surface, identifiable by several key visual indicators. The asphalt exhibits a **darkened, saturated appearance** compared to the lighter gray tone characteristic of dry pavement, as moisture fills the micro-pores of the aggregate. There is a subtle **specular sheen** across the surface, particularly noticeable in the upper portions where slight **reflective highlights** suggest a thin film of water. The surface texture appears **smoothed out** perceptually — the typical granular roughness of dry asphalt is visually muted because water fills the interstitial voids between aggregate particles, reducing surface scattering. Along the upper edge, faint traces of **greenish reflected color** from nearby vegetation further confirm the presence of a moisture layer acting as a partial reflective medium.",
+      "20220330144623829": "This image depicts a **wet road** surface, identifiable by several key visual indicators. The asphalt exhibits a slightly **darkened, saturated tone** compared to what dry pavement would present, with the aggregate particles showing enhanced contrast against the binder matrix due to moisture filling the surface microtexture. There is a subtle **diffuse sheen** across the surface, characteristic of a thin water film that reduces the matte appearance typical of dry asphalt. The surface texture appears somewhat **muted and homogenized**, as water fills the interstitial voids between aggregate particles, smoothing out the visual granularity. Notably, while the road is wet, it lacks standing water or specular pooling, suggesting it is in a **damp-to-wet transitional state** rather than actively flooded, with moisture uniformly distributed across the pavement surface.",
+      "202206221601391914": "# Wet Road Analysis\n\nThis image depicts a **wet road surface** characterized by its notably **dark, saturated appearance** — the asphalt has absorbed moisture, significantly lowering its overall albedo compared to a dry state. The surface exhibits a **uniform darkening** across the frame, consistent with water saturation of the pavement's porous texture. Visible **streaking patterns of rainfall** or water flow can be observed as diagonal linear artifacts across the surface, indicating active precipitation or recent heavy moisture. The texture appears **smoothed out** — the typical granular micro-texture of dry aggregate is visually suppressed by the thin water film, reducing surface contrast. A small **brownish object** (possibly a drain cover or debris) in the lower right corner shows slight tonal differentiation, further confirming the wet surface's tendency to mute color variation across the roadway.",
+      "2022071500272212": "This image depicts a **wet road surface** characterized by several distinguishing features. The asphalt exhibits a **heightened specular reflectivity**, with visible **sheen and glossy patches** across the surface where a thin film of water sits atop the aggregate. Notably, there are **irregular pooling patterns and rivulets** visible in the upper portion of the image, where water has collected in low spots and surface depressions of the pavement texture. The overall surface appears **darker in tonality** compared to dry asphalt, as water saturation reduces the diffuse scattering of light from the aggregate particles. The fine macro-texture of the pavement — individual aggregate chips and bituminous binder — is partially obscured by the water film, giving the surface a **smoother, more homogeneous visual appearance** than the characteristically matte, granular look of dry asphalt.",
+      "202203202202157": "Despite appearing relatively dark and uniform at first glance, this road surface exhibits subtle characteristics consistent with a **wet road**. The aggregate texture of the asphalt shows a slight sheen across the surface, with individual stone chips displaying faint specular highlights that would not be present on a fully dry surface. The inter-granular spaces between the exposed aggregate appear filled or darkened, suggesting moisture has saturated the porous texture, reducing the overall contrast between aggregate particles and the binder matrix. The surface coloration is notably darker than typical dry asphalt of this aggregate type, indicating water absorption has shifted the albedo downward. The edges visible in the upper corners show lighter-toned adjacent surfaces (possibly concrete or pavement markings), and the contrast differential between these lighter areas and the darkened asphalt further supports the presence of a thin moisture film.",
+      "202203241622461": "This image shows a **wet road** surface, identifiable by several key visual indicators. The asphalt exhibits a **slightly glossy, reflective sheen** rather than the matte, granular texture characteristic of dry pavement — notice how the surface appears to have a uniform darkening with a subtle luminous quality. The manhole cover, while textured with its raised diamond/crosshatch anti-slip pattern, shows **moisture accumulation in the recessed areas** and along the rim where water collects at the junction with the surrounding pavement. The overall **tonal contrast is compressed**, with the road surface appearing darker and more uniformly saturated than dry asphalt, which would typically show more visible aggregate texture and lighter, variegated coloring. Small debris and particulate matter on the surface appear **slightly embedded or adhered** to the wet film rather than sitting loosely, as they would on a dry road.",
+      "20220714234429504": "Despite the ground truth label of **Wet Road**, this surface presents subtly distinguishing characteristics upon close inspection. The asphalt exhibits a slightly **darkened tone** compared to typical dry pavement, with the aggregate particles showing a mild **uniform dampness** that reduces the contrast between the bituminous binder and embedded stones. The surface lacks the **bright specular reflections or glare spots** typically associated with heavily wet roads, suggesting this is likely a **lightly moist or recently dampened** surface where a thin film of water has been absorbed into the pavement texture rather than pooling. The overall **matte-to-slightly-satin sheen** is characteristic of a road in the early stages of wetting or late stages of drying, where micro-texture remains visible but the macro-texture appears slightly subdued. The aggregate particles appear marginally more defined in color variation than on a fully dry surface, as moisture tends to **enhance chromatic contrast** between individual stone chips embedded in the asphalt matrix.",
+      "20220329200741781": "This image depicts a **wet road** surface, identifiable through several key visual indicators. The asphalt exhibits a **subtle specular sheen** across its surface, with small points of light reflection scattered throughout, particularly noticeable in the lower portion of the frame — consistent with a thin film of moisture coating the aggregate particles. The surface appears **darker and more uniformly toned** than typical dry asphalt, which would present a lighter, more matte gray appearance with clearly visible individual aggregate texture. The micro-reflections from individual stone chips in the pavement create a **faint glittering or sparkling pattern**, characteristic of water filling the interstitial voids between aggregate particles. Unlike a dry road, where surface texture appears granular and absorptive, this surface shows the **reduced contrast between aggregate and binder** that occurs when water saturates the pavement's microtexture.",
+      "20220622155859141": "This image depicts a **wet road** surface, identifiable by several key visual characteristics. The asphalt exhibits a **uniform, darkened tone** compared to what dry pavement would show, indicating moisture saturation of the aggregate and binder. While there is no overt specular reflection or visible pooling, the surface has a **muted, low-contrast appearance** where the individual aggregate particles are slightly obscured by a thin water film, reducing the textural granularity typically visible on dry pavement. The **color saturation is shifted toward a darker gray-blue**, consistent with water filling the micro-texture voids of the asphalt surface. Small bright specks scattered across the surface likely represent **micro-reflections from embedded aggregate particles** catching ambient light through the moisture layer, a feature far less pronounced on dry surfaces.",
+      "20220715002053108": "Despite the ground truth label of **Wet Road**, this image presents subtly distinguishing features consistent with a moisture-laden asphalt surface. The aggregate within the hot-mix asphalt (HMA) appears slightly more visible than on a fully dry surface, as a thin film of water enhances the contrast between the bituminous binder and the embedded mineral aggregate. The overall surface exhibits a slightly lower albedo than typical dry pavement, with a faint darkening of the asphalt matrix suggesting moisture saturation in the surface pores. Notably absent are specular reflections or glare spots that would indicate standing water or a heavily saturated condition, suggesting this is likely a **damp or lightly wet** surface in the early stages of wetting or drying. The micro-texture remains relatively visible, indicating the water film is thin enough to not fully obscure the pavement's macro-texture profile.",
+      "20220321222926387": "This image shows a **wet road** surface, identifiable by several key visual indicators. The asphalt exhibits a **darkened, saturated appearance** with a slightly elevated reflectivity compared to dry conditions, giving the surface a subtle sheen rather than the matte, lighter gray tone characteristic of dry pavement. The **cast iron manhole cover** in the upper portion displays a dampened surface where its embossed lettering appears muted and less contrasting than it would when dry. The **aggregate and patched areas** on the right side show enhanced color saturation—the lighter mineral surfaces appear more vivid with greenish-white tones that would typically appear duller and more washed out when dry. Additionally, the **joint seams** around the manhole cover appear more pronounced due to moisture pooling in the recessed edges, creating darker linear shadows that are less distinct on dry surfaces.",
+      "20220714234237684": "This image shows a **wet road surface** characterized by a uniformly darkened asphalt tone, which is a hallmark of moisture absorption reducing the pavement's natural albedo. The surface exhibits a **muted, low-contrast texture** where the aggregate particles are visible but lack the sharp, high-contrast granularity typical of dry asphalt — instead, the water film fills micro-voids between aggregate, creating a more **homogeneous, smoothed-out appearance**. There is a subtle **diffuse sheen** across the surface, though no specular highlights or puddle reflections are present, suggesting a thin moisture layer rather than standing water. The overall color skews toward a **dark charcoal-blue gray**, distinctly darker than the lighter, warmer gray tones characteristic of dry pavement. The lack of visible dust or light-scattering surface particulates further confirms moisture presence, as water binds fine surface debris and suppresses the chalky lightness seen on dry roads."
+    },
+    "feature_queries": [
+      {
+        "feature_id": "visible_water_puddles",
+        "question": "Are there visible puddles of standing water on the road surface?",
+        "diagnostic_for": "Wet Road",
+        "difficulty": "easy"
+      },
+      {
+        "feature_id": "shiny_reflective_surface",
+        "question": "Does the road surface appear shiny or glossy with reflections?",
+        "diagnostic_for": "Wet Road",
+        "difficulty": "easy"
+      },
+      {
+        "feature_id": "matte_asphalt_appearance",
+        "question": "Does the road surface appear uniformly matte and dull with no reflective sheen?",
+        "diagnostic_for": "Dry Road",
+        "difficulty": "easy"
+      },
+      {
+        "feature_id": "light_gray_pavement_color",
+        "question": "Is the road surface a light gray color consistent with dry pavement?",
+        "diagnostic_for": "Dry Road",
+        "difficulty": "easy"
+      },
+      {
+        "feature_id": "tire_spray_rooster_tail",
+        "question": "Is there visible spray or mist being kicked up behind moving vehicles?",
+        "diagnostic_for": "Wet Road",
+        "difficulty": "medium"
+      },
+      {
+        "feature_id": "darkened_asphalt_tone",
+        "question": "Does the asphalt appear significantly darker than its typical dry color tone?",
+        "diagnostic_for": "Wet Road",
+        "difficulty": "medium"
+      },
+      {
+        "feature_id": "dry_tire_tracks_in_wet",
+        "question": "Are there lighter-colored tire track patterns visible against a darker road surface, suggesting partial drying?",
+        "diagnostic_for": "Wet Road",
+        "difficulty": "medium"
+      },
+      {
+        "feature_id": "visible_dust_kick_up",
+        "question": "Is there visible dust being disturbed by vehicles or wind on the road surface?",
+        "diagnostic_for": "Dry Road",
+        "difficulty": "medium"
+      },
+      {
+        "feature_id": "specular_headlight_reflection",
+        "question": "Are there elongated specular reflections of headlights or streetlights mirrored on the road surface?",
+        "diagnostic_for": "Wet Road",
+        "difficulty": "hard"
+      },
+      {
+        "feature_id": "aggregate_texture_visibility",
+        "question": "Is the micro-texture of individual aggregate stones in the asphalt clearly visible without any surface film obscuring them?",
+        "diagnostic_for": "Dry Road",
+        "difficulty": "hard"
+      },
+      {
+        "feature_id": "hydroplaning_surface_film",
+        "question": "Is there a thin continuous water film visible on the road surface that reduces contrast of lane markings?",
+        "diagnostic_for": "Wet Road",
+        "difficulty": "hard"
+      },
+      {
+        "feature_id": "thermal_drying_gradient",
+        "question": "Are there irregular drying patterns with sharp boundaries between darker wet zones and lighter dry zones across the road surface?",
+        "diagnostic_for": "Wet Road",
+        "difficulty": "hard"
+      }
+    ],
+    "validator_answers": {
+      "20220321182055148": {
+        "visible_water_puddles": false,
+        "shiny_reflective_surface": false,
+        "matte_asphalt_appearance": true,
+        "light_gray_pavement_color": false,
+        "tire_spray_rooster_tail": false,
+        "darkened_asphalt_tone": true,
+        "dry_tire_tracks_in_wet": false,
+        "visible_dust_kick_up": false,
+        "specular_headlight_reflection": false,
+        "aggregate_texture_visibility": false,
+        "hydroplaning_surface_film": false,
+        "thermal_drying_gradient": false
+      },
+      "2022021018461116": {
+        "visible_water_puddles": false,
+        "shiny_reflective_surface": false,
+        "matte_asphalt_appearance": true,
+        "light_gray_pavement_color": true,
+        "tire_spray_rooster_tail": false,
+        "darkened_asphalt_tone": false,
+        "dry_tire_tracks_in_wet": false,
+        "visible_dust_kick_up": false,
+        "specular_headlight_reflection": false,
+        "aggregate_texture_visibility": true,
+        "hydroplaning_surface_film": false,
+        "thermal_drying_gradient": false
+      },
+      "202204251326231": {
+        "visible_water_puddles": false,
+        "shiny_reflective_surface": true,
+        "matte_asphalt_appearance": false,
+        "light_gray_pavement_color": true,
+        "tire_spray_rooster_tail": false,
+        "darkened_asphalt_tone": false,
+        "dry_tire_tracks_in_wet": false,
+        "visible_dust_kick_up": false,
+        "specular_headlight_reflection": false,
+        "aggregate_texture_visibility": false,
+        "hydroplaning_surface_film": false,
+        "thermal_drying_gradient": false
+      },
+      "202207022314431641": {
+        "visible_water_puddles": false,
+        "shiny_reflective_surface": true,
+        "matte_asphalt_appearance": false,
+        "light_gray_pavement_color": true,
+        "tire_spray_rooster_tail": false,
+        "darkened_asphalt_tone": false,
+        "dry_tire_tracks_in_wet": false,
+        "visible_dust_kick_up": false,
+        "specular_headlight_reflection": false,
+        "aggregate_texture_visibility": true,
+        "hydroplaning_surface_film": false,
+        "thermal_drying_gradient": false
+      },
+      "2022021011335410": {
+        "visible_water_puddles": false,
+        "shiny_reflective_surface": false,
+        "matte_asphalt_appearance": true,
+        "light_gray_pavement_color": true,
+        "tire_spray_rooster_tail": false,
+        "darkened_asphalt_tone": false,
+        "dry_tire_tracks_in_wet": false,
+        "visible_dust_kick_up": true,
+        "specular_headlight_reflection": false,
+        "aggregate_texture_visibility": true,
+        "hydroplaning_surface_film": false,
+        "thermal_drying_gradient": false
+      },
+      "202202101357457": {
+        "visible_water_puddles": false,
+        "shiny_reflective_surface": false,
+        "matte_asphalt_appearance": true,
+        "light_gray_pavement_color": true,
+        "tire_spray_rooster_tail": false,
+        "darkened_asphalt_tone": false,
+        "dry_tire_tracks_in_wet": false,
+        "visible_dust_kick_up": false,
+        "specular_headlight_reflection": false,
+        "aggregate_texture_visibility": true,
+        "hydroplaning_surface_film": false,
+        "thermal_drying_gradient": false
+      },
+      "20220715003039285": {
+        "visible_water_puddles": false,
+        "shiny_reflective_surface": false,
+        "matte_asphalt_appearance": true,
+        "light_gray_pavement_color": true,
+        "tire_spray_rooster_tail": false,
+        "darkened_asphalt_tone": false,
+        "dry_tire_tracks_in_wet": false,
+        "visible_dust_kick_up": false,
+        "specular_headlight_reflection": false,
+        "aggregate_texture_visibility": false,
+        "hydroplaning_surface_film": false,
+        "thermal_drying_gradient": false
+      },
+      "20220604230403836": {
+        "visible_water_puddles": false,
+        "shiny_reflective_surface": false,
+        "matte_asphalt_appearance": true,
+        "light_gray_pavement_color": true,
+        "tire_spray_rooster_tail": false,
+        "darkened_asphalt_tone": false,
+        "dry_tire_tracks_in_wet": true,
+        "visible_dust_kick_up": false,
+        "specular_headlight_reflection": false,
+        "aggregate_texture_visibility": false,
+        "hydroplaning_surface_film": false,
+        "thermal_drying_gradient": true
+      },
+      "202202101525334": {
+        "visible_water_puddles": true,
+        "shiny_reflective_surface": true,
+        "matte_asphalt_appearance": false,
+        "light_gray_pavement_color": true,
+        "tire_spray_rooster_tail": false,
+        "darkened_asphalt_tone": false,
+        "dry_tire_tracks_in_wet": true,
+        "visible_dust_kick_up": false,
+        "specular_headlight_reflection": false,
+        "aggregate_texture_visibility": false,
+        "hydroplaning_surface_film": true,
+        "thermal_drying_gradient": false
+      },
+      "202204212245281": {
+        "visible_water_puddles": false,
+        "shiny_reflective_surface": false,
+        "matte_asphalt_appearance": true,
+        "light_gray_pavement_color": false,
+        "tire_spray_rooster_tail": false,
+        "darkened_asphalt_tone": true,
+        "dry_tire_tracks_in_wet": false,
+        "visible_dust_kick_up": false,
+        "specular_headlight_reflection": false,
+        "aggregate_texture_visibility": false,
+        "hydroplaning_surface_film": false,
+        "thermal_drying_gradient": false
+      }
+    },
     "seed_rule": null,
-    "_note": "Run: python run_probe.py --recompute-tutor to populate this section"
+    "_note": "Run: python run_probe.py --recompute-tutor to populate this section",
+    "seed_rules": {
+      "Dry Road": {
+        "rule": "The road surface exhibits a uniform matte, non-reflective finish with a light-to-medium gray tonality, where individual aggregate particles and bituminous binder are clearly distinguishable as a sharp, high-contrast granular texture, and there is a complete absence of specular sheen, darkened saturation, surface streaking, or reflective highlights.",
+        "preconditions": [
+          "An asphalt road surface is visible in the image",
+          "Sufficient illumination exists to assess surface reflectivity and texture detail"
+        ],
+        "favors": "Dry Road"
+      },
+      "Wet Road": {
+        "rule": "The road surface appears darkened and saturated with a visible specular sheen or diffuse gloss, where the typical granular aggregate texture is visually muted or smoothed out by a water film filling interstitial voids, and the overall albedo is noticeably lower than the light-gray, matte appearance of dry asphalt.",
+        "preconditions": [
+          "An asphalt road surface is visible in the image",
+          "Sufficient lighting exists to assess surface reflectivity and texture"
+        ],
+        "favors": "Wet Road"
+      }
+    }
   }
 }

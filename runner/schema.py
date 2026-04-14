@@ -56,6 +56,7 @@ class Precomputed:
     API credentials for their own PUPIL model.
 
     Set recompute=True in the runner to regenerate these from scratch.
+    Use --save-precomputed to populate this section and commit the result.
     """
     tutor_model:       str
     validator_model:   str
@@ -65,7 +66,10 @@ class Precomputed:
     feature_queries:   List[FeatureQuery]         = field(default_factory=list)
     validator_answers: Dict[str, Dict[str, bool]] = field(default_factory=dict)
     # image_id -> {feature_id -> bool}
+    seed_rules:        Optional[Dict[str, dict]]  = None
+    # class_name -> rule dict, one per class (preferred)
     seed_rule:         Optional[dict]             = None
+    # legacy single-rule field — superseded by seed_rules
 
 
 @dataclass
@@ -153,6 +157,7 @@ class BenchmarkManifest:
                 tutor_descriptions = pc.get("tutor_descriptions", {}),
                 feature_queries    = queries,
                 validator_answers  = pc.get("validator_answers", {}),
+                seed_rules         = pc.get("seed_rules"),
                 seed_rule          = pc.get("seed_rule"),
             )
 

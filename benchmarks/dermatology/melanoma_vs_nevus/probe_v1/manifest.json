@@ -18,7 +18,10 @@
       "true_class": "Melanoma",
       "difficulty": "medium",
       "notes": "",
-      "metadata": {"dx": "mel", "source": "HAM10000"}
+      "metadata": {
+        "dx": "mel",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0024333",
@@ -26,7 +29,10 @@
       "true_class": "Melanoma",
       "difficulty": "medium",
       "notes": "",
-      "metadata": {"dx": "mel", "source": "HAM10000"}
+      "metadata": {
+        "dx": "mel",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0024400",
@@ -34,7 +40,10 @@
       "true_class": "Melanoma",
       "difficulty": "medium",
       "notes": "",
-      "metadata": {"dx": "mel", "source": "HAM10000"}
+      "metadata": {
+        "dx": "mel",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0025964",
@@ -42,7 +51,10 @@
       "true_class": "Melanoma",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "mel", "source": "HAM10000"}
+      "metadata": {
+        "dx": "mel",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0027190",
@@ -50,7 +62,10 @@
       "true_class": "Melanoma",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "mel", "source": "HAM10000"}
+      "metadata": {
+        "dx": "mel",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0028086",
@@ -58,7 +73,10 @@
       "true_class": "Melanoma",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "mel", "source": "HAM10000"}
+      "metadata": {
+        "dx": "mel",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0026993",
@@ -66,7 +84,10 @@
       "true_class": "Melanoma",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "mel", "source": "HAM10000"}
+      "metadata": {
+        "dx": "mel",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0026120",
@@ -74,7 +95,10 @@
       "true_class": "Melanoma",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "mel", "source": "HAM10000"}
+      "metadata": {
+        "dx": "mel",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0028412",
@@ -82,7 +106,10 @@
       "true_class": "Melanoma",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "mel", "source": "HAM10000"}
+      "metadata": {
+        "dx": "mel",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0026531",
@@ -90,7 +117,10 @@
       "true_class": "Melanoma",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "mel", "source": "HAM10000"}
+      "metadata": {
+        "dx": "mel",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0025450",
@@ -98,7 +128,10 @@
       "true_class": "Melanoma",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "mel", "source": "HAM10000"}
+      "metadata": {
+        "dx": "mel",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0030623",
@@ -106,7 +139,10 @@
       "true_class": "Melanoma",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "mel", "source": "HAM10000"}
+      "metadata": {
+        "dx": "mel",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0024698",
@@ -114,7 +150,10 @@
       "true_class": "Melanocytic Nevus",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "nv", "source": "HAM10000"}
+      "metadata": {
+        "dx": "nv",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0024693",
@@ -122,7 +161,10 @@
       "true_class": "Melanocytic Nevus",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "nv", "source": "HAM10000"}
+      "metadata": {
+        "dx": "nv",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0032212",
@@ -130,7 +172,10 @@
       "true_class": "Melanocytic Nevus",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "nv", "source": "HAM10000"}
+      "metadata": {
+        "dx": "nv",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0025775",
@@ -138,7 +183,10 @@
       "true_class": "Melanocytic Nevus",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "nv", "source": "HAM10000"}
+      "metadata": {
+        "dx": "nv",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0029828",
@@ -146,7 +194,10 @@
       "true_class": "Melanocytic Nevus",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "nv", "source": "HAM10000"}
+      "metadata": {
+        "dx": "nv",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0031588",
@@ -154,7 +205,10 @@
       "true_class": "Melanocytic Nevus",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "nv", "source": "HAM10000"}
+      "metadata": {
+        "dx": "nv",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0028502",
@@ -162,7 +216,10 @@
       "true_class": "Melanocytic Nevus",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "nv", "source": "HAM10000"}
+      "metadata": {
+        "dx": "nv",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0028239",
@@ -170,7 +227,10 @@
       "true_class": "Melanocytic Nevus",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "nv", "source": "HAM10000"}
+      "metadata": {
+        "dx": "nv",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0031325",
@@ -178,7 +238,10 @@
       "true_class": "Melanocytic Nevus",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "nv", "source": "HAM10000"}
+      "metadata": {
+        "dx": "nv",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0025251",
@@ -186,7 +249,10 @@
       "true_class": "Melanocytic Nevus",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "nv", "source": "HAM10000"}
+      "metadata": {
+        "dx": "nv",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0025843",
@@ -194,7 +260,10 @@
       "true_class": "Melanocytic Nevus",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "nv", "source": "HAM10000"}
+      "metadata": {
+        "dx": "nv",
+        "source": "HAM10000"
+      }
     },
     {
       "image_id": "ISIC_0025384",
@@ -202,7 +271,10 @@
       "true_class": "Melanocytic Nevus",
       "difficulty": "easy",
       "notes": "",
-      "metadata": {"dx": "nv", "source": "HAM10000"}
+      "metadata": {
+        "dx": "nv",
+        "source": "HAM10000"
+      }
     }
   ],
   "schema_version": "1.0",
@@ -210,11 +282,267 @@
   "precomputed": {
     "tutor_model": "claude-opus-4-6",
     "validator_model": "claude-sonnet-4-6",
-    "generated": "",
-    "tutor_descriptions": {},
-    "feature_queries": [],
-    "validator_answers": {},
+    "generated": "2026-04-14",
+    "tutor_descriptions": {
+      "ISIC_0024315": "## Dermoscopic Analysis: Melanoma\n\nThis lesion demonstrates several hallmark features of melanoma. The **asymmetry** is striking—both in overall architecture and color distribution—with an irregular, jagged border exhibiting pseudopods and radial streaming, particularly along the superior and lateral margins. The lesion displays marked **polychromy** with multiple colors including dark brown, blue-gray, black, and a concerning area of **pink-white regression** (milky-red/pinkish structureless zone) in the central-to-lower right portion, indicative of regression with fibrosis and possible dermal involvement.\n\nThe **blue-white veil** overlying portions of the lesion suggests the presence of melanin in the deeper dermis combined with orthokeratosis, a feature strongly associated with invasive melanoma rather than benign nevi. The surface texture is heterogeneous, with areas of granular dark pigmentation intermixed with structureless zones, lacking the organized reticular or globular pattern typically seen in melanocytic nevi. The **irregular pigment network** at the periphery, combined with abrupt cutoff of pigmentation and atypical dots/globules, contrasts sharply with the uniform, symmetric, and well-demarcated appearance expected of a benign nevus—note the two adjacent smaller lesions which demonstrate the homogeneous brown pigmentation and regular borders characteristic of common melanocytic nevi, providing a useful comparison.",
+      "ISIC_0024333": "This dermoscopic image displays multiple features characteristic of **melanoma**. The lesion exhibits marked **asymmetry** in both structure and color distribution, with an irregular, poorly defined border showing peripheral **pseudopods or radial streaming** at several points along the margin. There is striking **polychromy** with heterogeneous shades ranging from light brown to dark brown and notably a **blue-white regression structure** (milky-white area) centrally, indicative of dermal fibrosis and melanosis from tumor regression. The pigment network is **atypical and disorganized**, with areas of abrupt termination, thickened irregular lines, and loss of the regular honeycomb pattern typically seen in benign nevi. Multiple **irregular dots and globules** of varying sizes are scattered asymmetrically, and the overall architecture lacks the organized, symmetric globular or reticular pattern expected in a melanocytic nevus, strongly favoring a malignant melanocytic proliferation.",
+      "ISIC_0024400": "This dermoscopic image displays several hallmark features consistent with **melanoma**. The lesion exhibits marked **color heterogeneity**, with an irregular admixture of light brown, dark brown, blue-gray, and reddish-pink hues — a polychromatic pattern rarely seen in benign melanocytic nevi, which typically show uniform tan-to-brown coloration. **Blue-white structures** (regression areas) are prominently visible in the left and central portions, indicating dermal fibrosis and melanophages characteristic of tumoral regression. The **pigment network is disrupted and irregular**, with areas of broadened, angulated network lines interspersed with structureless zones, contrasting with the regular, thin, honeycomb-like network of a typical nevus. The lesion demonstrates marked **asymmetry** in both structure and color distribution, with ill-defined borders and an **atypical globular pattern** with irregularly distributed brown granules and dots, fulfilling multiple dermoscopic criteria for melanoma under the ABCD rule and pattern analysis.",
+      "ISIC_0025964": "## Dermoscopic Analysis\n\nThis lesion exhibits several features consistent with **melanoma**. The pigmentation demonstrates marked **color heterogeneity**, with dark brown-to-black hues centrally and lighter brown tones at the periphery, suggesting irregular melanin distribution at varying depths within the epidermis and dermis. The **border is irregular and poorly defined**, with asymmetric pigment distribution — notably, the inferior-left margin shows an abrupt cutoff while the superior portion has a more diffuse, fading edge, indicative of asymmetric radial growth. An **atypical vascular structure** (pink-red papule/regression area) is visible adjacent to the lesion's inferior-left aspect, suggesting possible regression with associated neovascularization or a satellite component. The overall **architecture lacks the organized, symmetric globular or reticular pattern** typically seen in benign melanocytic nevi, instead showing a structureless dark central zone with irregular peripheral pigment granularity consistent with an atypical melanocytic proliferation.",
+      "ISIC_0027190": "## Dermoscopic Analysis: Melanoma\n\nThis lesion exhibits a **multicomponent pattern** with striking asymmetry in both structure and color distribution, hallmarks of melanoma. The pigment network is **atypical and irregular**, showing heterogeneous brown-to-dark brown hues with areas of **blue-white regression** (structureless depigmented zone centrally), indicating dermal fibrosis or regression phenomena characteristic of malignant transformation. The borders are **ill-defined and feathered**, with pigment fading irregularly into the surrounding skin rather than showing the sharp, symmetric demarcation typical of benign nevi. Multiple **granular structures** and amorphous dark-brown to reddish-brown blotches are scattered asymmetrically, particularly concentrated in the right half, suggesting irregular melanin deposition at varying dermal depths. The overall architecture demonstrates **polychromy** (light brown, dark brown, reddish-brown, and white) with loss of any organized reticular pattern, consistent with the dermoscopic chaos pattern strongly associated with invasive melanoma.",
+      "ISIC_0028086": "## Dermoscopic Analysis: Melanoma\n\nThis lesion exhibits striking **asymmetry** in both structure and color, with a polychromatic palette spanning light brown, dark brown, blue-gray, and blue-white hues—a hallmark of melanoma's multicomponent pattern. The **blue-white veil** (structureless blue-white area) is prominently visible in the central-to-upper region, overlying darker pigmented structures, indicating melanin in the deeper dermis combined with orthokeratosis. The borders demonstrate **irregular pseudopods and radial streaming**, particularly along the periphery at the lower-left and upper-right margins, where dark brown-to-black pigment extends asymmetrically—a feature strongly distinguishing melanoma from benign nevi. Multiple **regression structures** are evident as gray-white scarring-like zones interspersed with blue-gray peppering (granularity), suggesting partial tumoral regression with melanophage accumulation. The surface shows **irregular globules** of varying sizes and heterogeneous pigment distribution, lacking the organized, symmetric globular or reticular pattern characteristic of melanocytic nevi, with areas of shiny white structures visible under polarized light reflecting dermal fibrosis.",
+      "ISIC_0026993": "## Dermoscopic Analysis: Melanoma\n\nThis lesion exhibits striking **asymmetry** in both structure and color distribution, a hallmark of melanoma. The color palette is notably **polychromatic**, featuring dark brown, black, blue-gray, and tan hues—the blue-white veil (regression structures) visible centrally suggests dermal melanin or fibrosis, which is highly characteristic of invasive melanoma rather than a benign nevus. The **borders are irregular and jagged**, with pseudopods and radial streaming apparent at the periphery (particularly the right and lower margins), indicating asymmetric radial growth. The surface texture is heterogeneous, with areas of **granularity and structureless zones** intermixed with a glossy, slightly raised blue-gray component suggesting nodular regression or vertical growth phase. The left peripheral zone shows a **light brown diffuse pigment spread** with loss of normal skin markings, consistent with a superficial spreading melanoma pattern extending beyond the more densely pigmented central mass.",
+      "ISIC_0026120": "## Dermoscopic Analysis: Melanoma\n\nThis lesion exhibits marked **asymmetry** in both structure and color distribution, a hallmark feature distinguishing melanoma from benign melanocytic nevi. There is striking **polychromy** with at least five colors present — dark brown, black, blue-gray, reddish-brown, and a prominent **milky-white/pinkish-white area** centrally, the latter suggesting regression with fibrosis (white scar-like depigmentation). The **irregular, ill-defined borders** show peripheral extension with heterogeneous brown pigment spreading unevenly, contrasting with the well-circumscribed, symmetric borders typical of benign nevi. A **blue-white veil** is visible overlying the central region, representing melanin-laden cells within the dermis combined with orthokeratosis — a dermoscopic structure highly specific for invasive melanoma. The **atypical pigment network** at the periphery is irregularly thickened with abrupt cutoff, and the overall architecture lacks any organized globular or reticular pattern, demonstrating the structural chaos characteristic of malignant melanocytic proliferation.",
+      "ISIC_0028412": "## Dermoscopic Analysis: Melanoma\n\nThis lesion exhibits striking **polychromia** with at least 4-5 distinct colors—dark brown/black, reddish-brown, blue-white, and pink—which is a hallmark dermoscopic feature strongly favoring melanoma over a benign melanocytic nevus. A prominent **blue-white veil** (regression structure) is visible centrally, indicating dermal fibrosis and melanophages beneath an acanthotic epidermis, a feature rarely seen in benign nevi. The lesion demonstrates marked **asymmetry** in both structure and color distribution, with an **irregular, notched border** and peripheral pseudopods/radial streaming at several points, indicating asymmetric radial growth. The **atypical pigment network** is disrupted and heterogeneous, with broadened and irregularly spaced network lines, contrasting sharply with the regular, uniform reticular pattern expected in a benign nevus. Areas of **milky-red/pink coloration** suggest neovascularization and regression, while the overall architecture lacks the organized, symmetric globular or reticular pattern that characterizes melanocytic nevi.",
+      "ISIC_0026531": "## Dermoscopic Analysis: Melanoma\n\nThis lesion demonstrates several hallmark dermoscopic features consistent with melanoma. There is striking **asymmetry** in both structure and color distribution, with a multicomponent pattern showing **polychromia** including dark brown-black, reddish-brown, and blue-white areas — the latter suggesting regression structures (peppering/blue-white veil). The borders are **irregular and ill-defined**, with pigment fading heterogeneously into the surrounding skin, particularly notable on the right side where a **violaceous/pinkish hue** suggests dermal inflammation or regression. Unlike a benign melanocytic nevus, which would typically exhibit a **symmetric, organized globular or reticular pattern**, this lesion shows **atypical pigment network disruption** with structureless zones and abrupt pigment cutoff at the periphery. A **white scar-like depigmented area** centrally is consistent with regression, and the overall architecture lacks the orderly, centripetally symmetric pattern expected in a nevus.",
+      "ISIC_0025450": "## Dermoscopic Analysis: Melanoma\n\nThis lesion demonstrates several features consistent with melanoma. There is notable **asymmetry in both structure and color distribution**, with the pigmentation showing an irregular, multicomponent pattern rather than the homogeneous or symmetric globular pattern typical of benign nevi. The lesion exhibits **polychromia** with multiple shades including light brown, dark brown, and reddish-pink areas, along with focal **regression structures** (white-pink scarring/peppering) centrally, which represent areas of immune-mediated tumor regression. Scattered **irregular brown-black dots and globules** are visible predominantly in the upper-left quadrant, distributed asymmetrically rather than in the organized peripheral pattern seen in growing nevi. The **border is irregular and poorly defined** with an uneven fading pattern into the surrounding skin, and there is an eccentric hypopigmented zone at approximately the 4–5 o'clock position suggesting structural regression—contrasting with the well-circumscribed, symmetric borders characteristic of melanocytic nevi.",
+      "ISIC_0030623": "## Dermoscopic Analysis: Melanoma\n\nThis lesion demonstrates several features consistent with melanoma. The **asymmetry** is notable both in overall shape and in the distribution of colors, with a dark brown-to-black central zone that is eccentrically placed, surrounded by an irregular light brown peripheral halo — suggesting an **atypical pigment network** with loss of regular meshwork pattern. The **color variegation** is striking, spanning from light tan at the periphery through dark brown to near-black centrally, with possible blue-white structures suggesting **regression areas** — a heterogeneity not typically seen in benign melanocytic nevi which tend toward uniform pigmentation. The borders are **irregular and poorly defined**, with asymmetric fading into the surrounding skin rather than the sharp, well-demarcated edge characteristic of a benign nevus. Additionally, the surface texture appears **granular and rough** within the darkly pigmented center, with loss of normal skin furrow patterns (indicating epidermal effacement), and the adjacent **cherry angioma** (red papule) provides a useful size reference highlighting the lesion's concerning diameter.",
+      "ISIC_0024698": "## Dermoscopic Analysis: Melanocytic Nevus\n\nThis lesion presents as a relatively small, flat-to-slightly-elevated pigmented macule on fair skin, displaying a **brown-to-dark brown color palette** with modest chromatic variation. The overall architecture demonstrates a **relatively symmetric morphology** with mildly irregular but not dramatically distorted borders, consistent with a benign melanocytic proliferation rather than the striking asymmetry and highly irregular, notched margins characteristic of melanoma. The surface texture appears **homogeneous with a granular quality**, and there is subtle light reflection suggesting a smooth, intact epidermal surface without ulceration, regression zones, or the blue-white veil often seen in invasive melanoma.\n\nThe pigment distribution shows a **globular-to-structureless pattern** with centrally concentrated darker pigmentation that fades peripherally — a pattern consistent with a compound or junctional nevus rather than the atypical pigment network, radial streaming, or pseudopods associated with melanoma. A small area of lighter tan pigment at the lesion periphery appears as fading pigmentation rather than true regression with peppering or scar-like depigmentation. The surrounding skin shows fine rhomboid furrows of normal skin texture, and the lesion lacks the **multicomponent dermoscopic pattern** (≥3 distinct structural patterns) that serves as a strong discriminator for melanoma.",
+      "ISIC_0024693": "## Dermoscopic Analysis: Melanocytic Nevus\n\nThis image demonstrates a **symmetric, homogeneous pinkish-tan lesion** with a relatively uniform globular pattern, characteristic of a benign melanocytic nevus. The dermoscopic structures show **regular, evenly spaced brown globules and dots** distributed in a relatively organized pattern across the central portion of the lesion, consistent with nests of melanocytes at the dermoepidermal junction. The background coloration exhibits a **diffuse, even pink-to-salmon hue** without the irregular blue-white structures, atypical pigment network, or regression features that would raise concern for melanoma. Fine vellus hairs are visible traversing the lesion surface, indicating preserved follicular architecture and absence of destructive growth — a reassuring sign against malignancy. The lesion lacks **asymmetric streaks, irregular blotches, or polymorphous vascular patterns**, and the overall structural monotony and chromatic homogeneity strongly favor a benign diagnosis.",
+      "ISIC_0032212": "## Dermoscopic Analysis: Melanocytic Nevus\n\nThis lesion displays features consistent with a benign melanocytic nevus. The pigmented area exhibits a **relatively symmetric, vertically elongated elliptical shape** with smooth, well-defined borders that fade gradually into the surrounding skin, demonstrating the characteristic \"soft edge\" transition seen in benign nevi rather than the abrupt, irregular cutoff typical of melanoma. The color distribution shows a **homogeneous brown pigmentation** with a single dominant hue, lacking the polychromatic pattern (blue-white veil, regression structures, or red-black variegation) that would raise concern for melanoma. The surface texture appears **smooth and slightly elevated** with a uniform, matte reflectivity and no evidence of ulceration, erosion, or shiny white structures. The overall dermoscopic pattern suggests a **structureless/globular pattern** without atypical network, irregular dots/globules, or streaks/pseudopods at the periphery, supporting the classification as a benign melanocytic proliferation.",
+      "ISIC_0025775": "## Dermatoscopic Analysis: Melanocytic Nevus\n\nThis lesion presents as a relatively **symmetric, ovoid macule** with a predominantly homogeneous brown-to-dark brown pigment pattern, which is characteristic of a benign melanocytic nevus rather than melanoma. The pigment distribution, while somewhat variegated in intensity, shows a **diffuse, centrally concentrated pattern** without the irregular streaks, pseudopods, or blue-white veil structures typically associated with melanoma. The borders demonstrate a **gradual, blended transition** from the pigmented center to the surrounding erythematous skin, lacking the sharp, irregular, or notched border contour seen in malignant lesions. The surface texture appears **flat and smooth** without ulceration, regression structures, or atypical vascular patterns (such as dotted or polymorphous vessels), and the surrounding erythema likely reflects normal skin vascularity or mild irritation rather than an inflammatory melanoma response. The overall architecture suggests a **globular or structureless benign pattern** with relatively uniform color distribution, consistent with a compound or junctional melanocytic nevus.",
+      "ISIC_0029828": "## Dermoscopic Analysis: Melanocytic Nevus\n\nThis lesion demonstrates a relatively **symmetric globular pattern** with a central darker brown-to-violaceous zone that gradually transitions into a lighter peripheral halo, consistent with a **benign structureless pattern** often seen in dermal nevi or combined nevi. The pigment distribution, while heterogeneous, follows a **centrifugal gradient** with darker pigmentation centrally fading to lighter brown at the periphery — a pattern more typical of benign melanocytic proliferations than the eccentric, irregular pigment distribution seen in melanoma.\n\nThe borders show a **diffuse, fading edge** without sharp demarcation, pseudopods, or radial streaming, which would be concerning dermoscopic features for melanoma. The surface texture appears relatively **homogeneous and smooth** without ulceration, regression structures (blue-white veil, peppering/granularity), or atypical vascular patterns such as irregular dots or linear-irregular vessels. Fine vellus hairs are visible traversing the lesion surface, suggesting the epidermis is intact and the lesion has not disrupted normal adnexal structures — a reassuring finding that supports a benign melanocytic nevus diagnosis rather than an invasive melanocytic neoplasm.",
+      "ISIC_0031588": "## Dermoscopic Analysis: Melanocytic Nevus\n\nThis lesion presents as a relatively **homogeneous brown pigmented macule** with a predominantly uniform, diffuse pigment network pattern. The color palette is restricted to varying shades of light-to-medium brown, lacking the ominous blue-white structures, regression areas, or polychromatic variation (blue-gray, jet black, red, white) typically associated with melanoma.\n\nThe borders, while somewhat **irregular in overall shape**, demonstrate a gradual fading at the periphery rather than the abrupt cutoff or pseudopod/radial streaming patterns characteristic of malignant lesions. The surface texture appears **smooth and flat** with no evidence of ulceration, shiny white lines (chrysalis structures), or atypical vascular patterns. Fine vellus hairs traverse the lesion undisturbed, indicating preserved skin architecture — a reassuring sign against invasive pathology.\n\nThe pigment distribution shows a **structureless brown pattern** with slight central hyperpigmentation that fades toward the edges, consistent with a **homogeneous global pattern** seen in benign melanocytic nevi, rather than the asymmetric, multi-component architecture expected in melanoma.",
+      "ISIC_0028502": "## Clinical Description\n\nThis image depicts a **melanocytic nevus** rather than melanoma, though several features warrant careful analysis. The lesion presents as a relatively large, ovoid macule/patch with a predominantly **homogeneous reddish-purple to violaceous hue**, consistent with a dermal or compound nevus with prominent vascular component or possibly a traumatized (contused) benign lesion. The color distribution, while showing some variation, lacks the **irregular, asymmetric polychromia** (simultaneous presence of brown, black, blue-gray, red, and white) characteristic of melanoma. The borders, though somewhat indistinct, demonstrate a **gradual, symmetrical fading** into surrounding skin rather than the irregular, notched, or pseudopod-bearing margins typical of melanoma. The surface texture appears **smooth and flat without ulceration, regression zones, or the shiny/atrophic white scarring** (regression structures) that often accompany invasive melanoma, and the surrounding skin shows normal follicular openings with fine vellus hairs traversing the lesion undisturbed—suggesting the architecture of normal skin appendages is preserved rather than obliterated by neoplastic proliferation.",
+      "ISIC_0028239": "## Clinical Dermoscopic Analysis\n\nThis image shows features consistent with **melanocytic nevus** rather than melanoma based on several distinguishing visual characteristics. The lesions demonstrate relatively **homogeneous brown pigmentation** with a diffuse, uniform pigment network, lacking the chaotic polychromasia (multiple shades of black, blue-gray, red, and white) typically seen in melanoma. The borders, while somewhat irregular, show **gradual fading** into the surrounding skin rather than the abrupt cutoff or pseudopod/radial streaming patterns characteristic of invasive melanoma. The surface texture appears **smooth and flat (macular)**, without ulceration, regression structures (blue-white veil), or atypical vascular patterns such as dotted or polymorphous vessels. Notably, the surrounding skin shows age-related changes with fine vellus hairs traversing the lesion undisturbed, and the overall pigment distribution maintains a relatively **symmetric, structureless-to-globular pattern** without the asymmetric structuring in multiple dermoscopic criteria that would raise concern for malignancy.",
+      "ISIC_0031325": "## Dermoscopic Analysis: Melanocytic Nevus\n\nThis lesion displays a relatively **symmetric globular pattern** with a central darker brown-to-reddish-brown zone that gradually fades into a lighter peripheral halo, consistent with a **benign pigment network** pattern. The color distribution, while showing some variation from light tan at the periphery to deeper brown centrally, follows a **regular concentric gradient** rather than the chaotic, multifocal color distribution typically seen in melanoma. The borders demonstrate a somewhat **diffuse, feathered edge** that blends smoothly into the surrounding skin without the sharp, irregular cutoffs or pseudopods characteristic of malignant lesions. The surface texture appears relatively **homogeneous and matte**, lacking the regression structures (blue-white veil, scar-like depigmentation) or atypical vascular patterns that would raise concern for melanoma. Although the lesion shows mild **asymmetry** in its overall silhouette with a slightly bilobed contour, the internal architectural pattern remains orderly and consistent with a compound or dermal melanocytic nevus.",
+      "ISIC_0025251": "## Dermatoscopic Analysis: Melanocytic Nevus\n\nThis lesion presents as a relatively large, irregularly bordered pigmented macule/patch with a predominantly **brown coloration** displaying a somewhat heterogeneous but non-chaotic pigment network. The pigment distribution shows a **reticular pattern** with fading, mesh-like brown lines that gradually attenuate toward the periphery, consistent with a benign dermal melanocytic proliferation rather than the dense, atypical globular or regression patterns seen in melanoma. The surrounding skin exhibits significant **erythema and purpuric discoloration** (pink-violaceous hue), which may represent trauma-related ecchymosis rather than intrinsic lesional vascularity or regression inflammation. Notably, the lesion lacks key melanoma-specific features such as **blue-white structures, irregular dots/globules at the periphery, atypical vascular patterns, or sharply demarcated pseudopods/radial streaming**. The surface texture appears uniformly flat and macular without ulceration, nodularity, or differential reflectivity zones, supporting a diagnosis of a benign melanocytic nevus—likely a congenital or acquired junctional/compound type with age-related structural fading.",
+      "ISIC_0025843": "## Clinical Dermatoscopic Analysis\n\nThis lesion presents as a **melanocytic nevus** based on several distinguishing features. The lesion exhibits a relatively **homogeneous brown-to-dark brown pigmentation pattern** centrally, without the chaotic architectural disorder or multiple disparate colors (blue-white veil, regression structures, or irregular black dots/globules) typically associated with melanoma. The pigment distribution shows a **symmetrical, diffuse pattern** with gradual fading toward the periphery, consistent with a benign centrifugal pigment gradient rather than the abrupt peripheral cutoff or pseudopods seen in melanoma.\n\nThe surrounding skin displays **diffuse erythema and telangiectatic vessels**, which appear reactive rather than representing the polymorphous vascular patterns (dotted, linear-irregular) characteristic of melanoma. The surface texture is **smooth and uniform** without ulceration, shiny white structures (chrysalis/shiny white lines), or the irregular surface topography that raises suspicion for malignancy. Fine vellus hairs are visible traversing the lesion, suggesting the epidermis is intact and the lesion lacks the destructive growth pattern that would obliterate follicular structures — a reassuring sign favoring a benign melanocytic proliferation.",
+      "ISIC_0025384": "## Clinical Description\n\nThis lesion presents as a **dome-shaped, exophytic papule** with a predominantly homogeneous dark reddish-brown to violaceous coloration, consistent with a **melanocytic nevus** (likely a **papillomatous or Unna-type dermal nevus**). The surface exhibits a **smooth, globular contour** with a somewhat lobulated morphology, lacking the irregular borders, asymmetry, or chaotic pigment distribution typically associated with melanoma. The surrounding skin shows a **pink-violaceous halo**, which likely represents vascular ectasia or mild irritation rather than the inflammatory regression pattern seen in melanoma. Notably, the pigment distribution appears **relatively uniform** without blue-white structures, atypical pigment network, or irregular streaks/pseudopods at the periphery — features that would raise concern for melanocytic malignancy. The **glossy, taut surface reflectivity** and soft-appearing texture suggest a well-circumscribed dermal proliferation of benign melanocytes rather than an invasive neoplasm with ulceration or surface irregularity."
+    },
+    "feature_queries": [
+      {
+        "feature_id": "asymmetric_shape",
+        "question": "Is the lesion asymmetric in shape, where one half does not mirror the other half?",
+        "diagnostic_for": "Melanoma",
+        "difficulty": "easy"
+      },
+      {
+        "feature_id": "multiple_colors",
+        "question": "Does the lesion contain three or more distinct colors (e.g., brown, black, red, white, or blue)?",
+        "diagnostic_for": "Melanoma",
+        "difficulty": "easy"
+      },
+      {
+        "feature_id": "uniform_color",
+        "question": "Is the lesion predominantly a single uniform shade of brown throughout?",
+        "diagnostic_for": "Melanocytic Nevus",
+        "difficulty": "easy"
+      },
+      {
+        "feature_id": "regular_border",
+        "question": "Does the lesion have a smooth, well-defined, and regular border?",
+        "diagnostic_for": "Melanocytic Nevus",
+        "difficulty": "easy"
+      },
+      {
+        "feature_id": "irregular_streaks",
+        "question": "Are there irregular streaks or pseudopods extending from the lesion periphery?",
+        "diagnostic_for": "Melanoma",
+        "difficulty": "medium"
+      },
+      {
+        "feature_id": "blue_white_veil",
+        "question": "Is there an area of blue-white veil (confluent blue-white haze) overlying the lesion?",
+        "diagnostic_for": "Melanoma",
+        "difficulty": "medium"
+      },
+      {
+        "feature_id": "symmetric_pigment_network",
+        "question": "Does the lesion display a symmetric and regular pigment network across its entire surface?",
+        "diagnostic_for": "Melanocytic Nevus",
+        "difficulty": "medium"
+      },
+      {
+        "feature_id": "diameter_over_6mm",
+        "question": "Does the lesion appear to have a diameter greater than 6 millimeters?",
+        "diagnostic_for": "Melanoma",
+        "difficulty": "medium"
+      },
+      {
+        "feature_id": "regression_structures",
+        "question": "Are there regression structures such as white scar-like areas or blue-gray peppering within the lesion?",
+        "diagnostic_for": "Melanoma",
+        "difficulty": "hard"
+      },
+      {
+        "feature_id": "atypical_pigment_network",
+        "question": "Is there an atypical pigment network characterized by irregular, thickened lines with heterogeneous spacing?",
+        "diagnostic_for": "Melanoma",
+        "difficulty": "hard"
+      },
+      {
+        "feature_id": "negative_pigment_network",
+        "question": "Is a negative pigment network (serpiginous lighter lines surrounding darker hyperpigmented structures) visible?",
+        "diagnostic_for": "Melanoma",
+        "difficulty": "hard"
+      },
+      {
+        "feature_id": "symmetric_globular_pattern",
+        "question": "Does the lesion exhibit a symmetric globular or cobblestone pattern with evenly distributed brown globules?",
+        "diagnostic_for": "Melanocytic Nevus",
+        "difficulty": "hard"
+      }
+    ],
+    "validator_answers": {
+      "ISIC_0024315": {
+        "asymmetric_shape": true,
+        "multiple_colors": true,
+        "uniform_color": false,
+        "regular_border": false,
+        "irregular_streaks": true,
+        "blue_white_veil": true,
+        "symmetric_pigment_network": false,
+        "diameter_over_6mm": true,
+        "regression_structures": true,
+        "atypical_pigment_network": true,
+        "negative_pigment_network": true,
+        "symmetric_globular_pattern": false
+      },
+      "ISIC_0024333": {
+        "asymmetric_shape": true,
+        "multiple_colors": true,
+        "uniform_color": false,
+        "regular_border": false,
+        "irregular_streaks": false,
+        "blue_white_veil": false,
+        "symmetric_pigment_network": false,
+        "diameter_over_6mm": true,
+        "regression_structures": true,
+        "atypical_pigment_network": true,
+        "negative_pigment_network": true,
+        "symmetric_globular_pattern": false
+      },
+      "ISIC_0024400": {
+        "asymmetric_shape": true,
+        "multiple_colors": true,
+        "uniform_color": false,
+        "regular_border": false,
+        "irregular_streaks": false,
+        "blue_white_veil": true,
+        "symmetric_pigment_network": false,
+        "diameter_over_6mm": true,
+        "regression_structures": true,
+        "atypical_pigment_network": true,
+        "negative_pigment_network": true,
+        "symmetric_globular_pattern": false
+      },
+      "ISIC_0025964": {
+        "asymmetric_shape": true,
+        "multiple_colors": true,
+        "uniform_color": false,
+        "regular_border": false,
+        "irregular_streaks": true,
+        "blue_white_veil": false,
+        "symmetric_pigment_network": false,
+        "diameter_over_6mm": true,
+        "regression_structures": true,
+        "atypical_pigment_network": true,
+        "negative_pigment_network": false,
+        "symmetric_globular_pattern": false
+      },
+      "ISIC_0027190": {
+        "asymmetric_shape": true,
+        "multiple_colors": true,
+        "uniform_color": false,
+        "regular_border": false,
+        "irregular_streaks": true,
+        "blue_white_veil": false,
+        "symmetric_pigment_network": false,
+        "diameter_over_6mm": true,
+        "regression_structures": true,
+        "atypical_pigment_network": false,
+        "negative_pigment_network": true,
+        "symmetric_globular_pattern": false
+      },
+      "ISIC_0028086": {
+        "asymmetric_shape": true,
+        "multiple_colors": true,
+        "uniform_color": false,
+        "regular_border": false,
+        "irregular_streaks": true,
+        "blue_white_veil": true,
+        "symmetric_pigment_network": false,
+        "diameter_over_6mm": false,
+        "regression_structures": true,
+        "atypical_pigment_network": false,
+        "negative_pigment_network": true,
+        "symmetric_globular_pattern": false
+      },
+      "ISIC_0026993": {
+        "asymmetric_shape": true,
+        "multiple_colors": true,
+        "uniform_color": false,
+        "regular_border": false,
+        "irregular_streaks": true,
+        "blue_white_veil": true,
+        "symmetric_pigment_network": false,
+        "diameter_over_6mm": true,
+        "regression_structures": false,
+        "atypical_pigment_network": true,
+        "negative_pigment_network": true,
+        "symmetric_globular_pattern": false
+      },
+      "ISIC_0026120": {
+        "asymmetric_shape": true,
+        "multiple_colors": true,
+        "uniform_color": false,
+        "regular_border": false,
+        "irregular_streaks": true,
+        "blue_white_veil": true,
+        "symmetric_pigment_network": false,
+        "diameter_over_6mm": true,
+        "regression_structures": true,
+        "atypical_pigment_network": false,
+        "negative_pigment_network": true,
+        "symmetric_globular_pattern": false
+      },
+      "ISIC_0028412": {
+        "asymmetric_shape": true,
+        "multiple_colors": true,
+        "uniform_color": false,
+        "regular_border": false,
+        "irregular_streaks": true,
+        "blue_white_veil": true,
+        "symmetric_pigment_network": false,
+        "diameter_over_6mm": true,
+        "regression_structures": true,
+        "atypical_pigment_network": false,
+        "negative_pigment_network": true,
+        "symmetric_globular_pattern": false
+      },
+      "ISIC_0026531": {
+        "asymmetric_shape": true,
+        "multiple_colors": true,
+        "uniform_color": false,
+        "regular_border": false,
+        "irregular_streaks": true,
+        "blue_white_veil": true,
+        "symmetric_pigment_network": false,
+        "diameter_over_6mm": true,
+        "regression_structures": false,
+        "atypical_pigment_network": false,
+        "negative_pigment_network": true,
+        "symmetric_globular_pattern": false
+      }
+    },
     "seed_rule": null,
-    "_note": "Run: python run_probe.py --recompute-tutor to populate this section"
+    "_note": "Run: python run_probe.py --recompute-tutor to populate this section",
+    "seed_rules": {
+      "Melanoma": {
+        "rule": "The lesion displays three or more colors (e.g., dark brown, blue-gray, black, pink-white, or reddish hues) distributed asymmetrically, with structural disorganization such as irregular or disrupted pigment network, blue-white regression structures, or peripheral pseudopods/radial streaming, in contrast to the one-to-two color homogeneity and symmetric architecture of benign nevi.",
+        "preconditions": [
+          "The image shows a pigmented skin lesion with sufficient resolution to assess color variation, border morphology, and internal structural patterns"
+        ],
+        "favors": "Melanoma"
+      },
+      "Melanocytic Nevus": {
+        "rule": "The lesion displays a symmetric shape with homogeneous coloration (one or two shades of brown or pink-tan), well-defined smooth borders that fade gradually into surrounding skin, and a uniform structureless or regular globular pattern lacking blue-white structures, irregular streaks/pseudopods, regression zones, or polychromy (three or more colors).",
+        "preconditions": [
+          "The image shows a pigmented skin lesion under dermoscopy or clinical photography",
+          "The lesion is sufficiently in focus to assess color distribution, border characteristics, and internal pattern architecture"
+        ],
+        "favors": "Melanocytic Nevus"
+      }
+    }
   }
 }
