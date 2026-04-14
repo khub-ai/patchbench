@@ -1,6 +1,6 @@
 # PatchBench Leaderboard
 
-> Generated 2026-04-14 · 9 result(s)
+> Generated 2026-04-14 · 12 result(s)
 
 Sorted by perception score descending. See [CONTRIBUTING.md](../CONTRIBUTING.md) to submit your model's results.
 
@@ -9,9 +9,12 @@ Sorted by perception score descending. See [CONTRIBUTING.md](../CONTRIBUTING.md)
 | 🟢 go | `google/gemma-4-26b-a4b-it` | [road_surface](https://github.com/ztsrxh/RSCD-Road_Surface_Classification_Dataset) | [dry vs wet](https://github.com/khub-ai/patchbench/tree/main/benchmarks/road_surface/dry_vs_wet) | 0.87 | 0.26 | 0.58 | +0.25 | 0.80 |
 | 🔴 no-go | `openai/gpt-4o` | [dermatology](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) | [melanoma vs nevus](https://github.com/khub-ai/patchbench/tree/main/benchmarks/dermatology/melanoma_vs_nevus) | 0.81 | 0.22 | 0.79 | +0.04 | 0.40 |
 | 🟢 go | `google/gemma-4-26b-a4b-it` | [dermatology](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) | [melanoma vs nevus](https://github.com/khub-ai/patchbench/tree/main/benchmarks/dermatology/melanoma_vs_nevus) | 0.79 | 0.38 | 0.62 | +0.38 | 1.00 |
+| 🟢 go | `claude-haiku-4-5-20251001` | [dermatology](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) | [melanoma vs nevus](https://github.com/khub-ai/patchbench/tree/main/benchmarks/dermatology/melanoma_vs_nevus) | 0.78 | 0.32 | 0.54 | +0.21 | 1.00 |
 | 🟢 go | `qwen/qwen3-vl-8b-instruct` | [road_surface](https://github.com/ztsrxh/RSCD-Road_Surface_Classification_Dataset) | [dry vs wet](https://github.com/khub-ai/patchbench/tree/main/benchmarks/road_surface/dry_vs_wet) | 0.78 | 0.32 | 0.62 | +0.33 | 1.00 |
+| 🟡 partial | `claude-haiku-4-5-20251001` | [road_surface](https://github.com/ztsrxh/RSCD-Road_Surface_Classification_Dataset) | [dry vs wet](https://github.com/khub-ai/patchbench/tree/main/benchmarks/road_surface/dry_vs_wet) | 0.76 | 0.38 | 0.62 | +0.04 | 1.00 |
 | 🟡 partial | `qwen/qwen3-vl-8b-instruct` | [dermatology](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) | [melanoma vs nevus](https://github.com/khub-ai/patchbench/tree/main/benchmarks/dermatology/melanoma_vs_nevus) | 0.75 | 0.44 | 0.67 | -0.12 | 1.00 |
 | 🟡 partial | `openai/gpt-4o` | [road_surface](https://github.com/ztsrxh/RSCD-Road_Surface_Classification_Dataset) | [dry vs wet](https://github.com/khub-ai/patchbench/tree/main/benchmarks/road_surface/dry_vs_wet) | 0.72 | 0.26 | 0.54 | +0.08 | 0.60 |
+| 🟡 partial | `claude-haiku-4-5-20251001` | [birds](https://www.vision.caltech.edu/datasets/cub_200_2011/) | [bronzed vs shiny cowbird](https://github.com/khub-ai/patchbench/tree/main/benchmarks/birds/bronzed_vs_shiny_cowbird) | 0.67 | 0.21 | 0.62 | +0.17 | 0.60 |
 | 🟢 go | `google/gemma-4-26b-a4b-it` | [birds](https://www.vision.caltech.edu/datasets/cub_200_2011/) | [bronzed vs shiny cowbird](https://github.com/khub-ai/patchbench/tree/main/benchmarks/birds/bronzed_vs_shiny_cowbird) | 0.66 | 0.29 | 0.50 | +0.42 | 1.00 |
 | 🟡 partial | `openai/gpt-4o` | [birds](https://www.vision.caltech.edu/datasets/cub_200_2011/) | [bronzed vs shiny cowbird](https://github.com/khub-ai/patchbench/tree/main/benchmarks/birds/bronzed_vs_shiny_cowbird) | 0.61 | 0.28 | 0.79 | +0.12 | 1.00 |
 | 🟢 go | `qwen/qwen3-vl-8b-instruct` | [birds](https://www.vision.caltech.edu/datasets/cub_200_2011/) | [bronzed vs shiny cowbird](https://github.com/khub-ai/patchbench/tree/main/benchmarks/birds/bronzed_vs_shiny_cowbird) | 0.60 | 0.29 | 0.42 | +0.33 | 1.00 |
