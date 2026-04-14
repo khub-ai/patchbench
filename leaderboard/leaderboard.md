@@ -1,12 +1,14 @@
 # PatchBench Leaderboard
 
-> Generated 2026-04-14 · 3 result(s)
+> Generated 2026-04-14 · 5 result(s)
 
 Sorted by perception score descending. See [CONTRIBUTING.md](../CONTRIBUTING.md) to submit your model's results.
 
 | Verdict | Model | Domain | Confusable pair | Percep. | VocabΔ | ZeroShot | RuleDelta | Consist. |
 |---|---|---|---|---|---|---|---|---|
+| 🟡 partial | `openai/gpt-4o` | [dermatology](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) | [melanoma vs nevus](https://github.com/khub-ai/patchbench/tree/main/benchmarks/dermatology/melanoma_vs_nevus) | 0.85 | 0.21 | 0.58 | +0.17 | 0.60 |
 | 🔴 no-go | `openai/gpt-4o` | [road_surface](https://github.com/ztsrxh/RSCD-Road_Surface_Classification_Dataset) | [dry vs wet](https://github.com/khub-ai/patchbench/tree/main/benchmarks/road_surface/dry_vs_wet) | 0.82 | 0.25 | 0.62 | +0.00 | 0.40 |
+| 🟡 partial | `openai/gpt-4o` | [birds](https://www.vision.caltech.edu/datasets/cub_200_2011/) | [bronzed vs shiny cowbird](https://github.com/khub-ai/patchbench/tree/main/benchmarks/birds/bronzed_vs_shiny_cowbird) | 0.63 | 0.31 | 0.75 | -0.08 | 0.80 |
 | 🟡 partial ⚠ | `qwen/qwen3-vl-8b-instruct` | [birds](https://www.vision.caltech.edu/datasets/cub_200_2011/) | [bronzed vs shiny cowbird](https://github.com/khub-ai/patchbench/tree/main/benchmarks/birds/bronzed_vs_shiny_cowbird) | N/A | N/A | 0.33 | +0.50 | N/A |
 | 🟡 partial ⚠ | `qwen/qwen3-vl-8b-instruct` | [dermatology](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) | [melanoma vs nevus](https://github.com/khub-ai/patchbench/tree/main/benchmarks/dermatology/melanoma_vs_nevus) | N/A | N/A | 0.55 | +0.22 | N/A |
 
