@@ -61,8 +61,8 @@ outputs — you don't pay for those. Only your PUPIL model is called live.
 | Benchmark | Domain | Pair | Images | Status |
 |---|---|---|---|---|
 | `road_surface_dry_vs_wet_probe_v1` | Road surface | Dry vs Wet asphalt | 24 | ✅ Active |
-| `dermatology_melanoma_nevus_probe_v1` | Dermatology | Melanoma vs Nevus | — | 🔜 Planned |
-| `birds_bronzed_shiny_cowbird_probe_v1` | Birds | Bronzed vs Shiny Cowbird | — | 🔜 Planned |
+| `dermatology_melanoma_vs_nevus_probe_v1` | Dermatology | Melanoma vs Nevus | 24 | ✅ Active |
+| `birds_bronzed_vs_shiny_cowbird_probe_v1` | Birds | Bronzed vs Shiny Cowbird | 24 | ✅ Active |
 
 ---
 

@@ -173,8 +173,8 @@ async def main():
           f"'Add probe: {args.pupil_model} on {domain} {pair_id}'")
 
     # Final banner
-    colour = {"go": "✅", "partial": "⚠️", "no-go": "❌"}[result.verdict]
-    print(f"\n{colour}  Verdict: {result.verdict.upper()}")
+    icon = {"go": "[GO]", "partial": "[PARTIAL]", "no-go": "[NO-GO]"}[result.verdict]
+    print(f"\n{icon}  Verdict: {result.verdict.upper()}")
     print(f"   Perception:   {result.perception_score:.2f}")
     print(f"   Rule delta:   {result.rule_comprehension_delta:+.2f}")
     print(f"   Consistency:  {result.consistency_score:.2f}")

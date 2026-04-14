@@ -1,0 +1,220 @@
+{
+  "benchmark_id": "birds_bronzed_vs_shiny_cowbird_probe_v1",
+  "version": "1.0.0",
+  "benchmark_type": "probe",
+  "domain": "birds",
+  "created": "2026-04-13",
+  "pair_id": "bronzed_vs_shiny_cowbird",
+  "class_a": "Bronzed Cowbird",
+  "class_b": "Shiny Cowbird",
+  "dataset": "CUB-200-2011",
+  "pupil_model": null,
+  "n_per_class": 12,
+  "description": "Fixed probe image set for PUPIL Domain Readiness Probe. 12 Bronzed Cowbird + 12 Shiny Cowbird images from CUB-200-2011. Original 6-image DD experiment set included.",
+  "images": [
+    {
+      "image_id": "Bronzed_Cowbird_0001_796219",
+      "filename": "Bronzed_Cowbird_0001_796219.jpg",
+      "true_class": "Bronzed Cowbird",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"species": "Bronzed Cowbird"}
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0002_796244",
+      "filename": "Bronzed_Cowbird_0002_796244.jpg",
+      "true_class": "Bronzed Cowbird",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"species": "Bronzed Cowbird"}
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0003_796246",
+      "filename": "Bronzed_Cowbird_0003_796246.jpg",
+      "true_class": "Bronzed Cowbird",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"species": "Bronzed Cowbird"}
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0005_24173",
+      "filename": "Bronzed_Cowbird_0005_24173.jpg",
+      "true_class": "Bronzed Cowbird",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"species": "Bronzed Cowbird"}
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0008_796250",
+      "filename": "Bronzed_Cowbird_0008_796250.jpg",
+      "true_class": "Bronzed Cowbird",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"species": "Bronzed Cowbird"}
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0009_24033",
+      "filename": "Bronzed_Cowbird_0009_24033.jpg",
+      "true_class": "Bronzed Cowbird",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"species": "Bronzed Cowbird"}
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0010_24146",
+      "filename": "Bronzed_Cowbird_0010_24146.jpg",
+      "true_class": "Bronzed Cowbird",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"species": "Bronzed Cowbird"}
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0011_24138",
+      "filename": "Bronzed_Cowbird_0011_24138.jpg",
+      "true_class": "Bronzed Cowbird",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"species": "Bronzed Cowbird"}
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0012_796247",
+      "filename": "Bronzed_Cowbird_0012_796247.jpg",
+      "true_class": "Bronzed Cowbird",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"species": "Bronzed Cowbird"}
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0019_796242",
+      "filename": "Bronzed_Cowbird_0019_796242.jpg",
+      "true_class": "Bronzed Cowbird",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {"species": "Bronzed Cowbird"}
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0061_796232",
+      "filename": "Bronzed_Cowbird_0061_796232.jpg",
+      "true_class": "Bronzed Cowbird",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {"species": "Bronzed Cowbird"}
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0081_24198",
+      "filename": "Bronzed_Cowbird_0081_24198.jpg",
+      "true_class": "Bronzed Cowbird",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {"species": "Bronzed Cowbird"}
+    },
+    {
+      "image_id": "Shiny_Cowbird_0001_796860",
+      "filename": "Shiny_Cowbird_0001_796860.jpg",
+      "true_class": "Shiny Cowbird",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"species": "Shiny Cowbird"}
+    },
+    {
+      "image_id": "Shiny_Cowbird_0002_24380",
+      "filename": "Shiny_Cowbird_0002_24380.jpg",
+      "true_class": "Shiny Cowbird",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"species": "Shiny Cowbird"}
+    },
+    {
+      "image_id": "Shiny_Cowbird_0004_796841",
+      "filename": "Shiny_Cowbird_0004_796841.jpg",
+      "true_class": "Shiny Cowbird",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"species": "Shiny Cowbird"}
+    },
+    {
+      "image_id": "Shiny_Cowbird_0006_796864",
+      "filename": "Shiny_Cowbird_0006_796864.jpg",
+      "true_class": "Shiny Cowbird",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"species": "Shiny Cowbird"}
+    },
+    {
+      "image_id": "Shiny_Cowbird_0007_24434",
+      "filename": "Shiny_Cowbird_0007_24434.jpg",
+      "true_class": "Shiny Cowbird",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"species": "Shiny Cowbird"}
+    },
+    {
+      "image_id": "Shiny_Cowbird_0009_796835",
+      "filename": "Shiny_Cowbird_0009_796835.jpg",
+      "true_class": "Shiny Cowbird",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"species": "Shiny Cowbird"}
+    },
+    {
+      "image_id": "Shiny_Cowbird_0010_24439",
+      "filename": "Shiny_Cowbird_0010_24439.jpg",
+      "true_class": "Shiny Cowbird",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"species": "Shiny Cowbird"}
+    },
+    {
+      "image_id": "Shiny_Cowbird_0012_24249",
+      "filename": "Shiny_Cowbird_0012_24249.jpg",
+      "true_class": "Shiny Cowbird",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"species": "Shiny Cowbird"}
+    },
+    {
+      "image_id": "Shiny_Cowbird_0014_24214",
+      "filename": "Shiny_Cowbird_0014_24214.jpg",
+      "true_class": "Shiny Cowbird",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"species": "Shiny Cowbird"}
+    },
+    {
+      "image_id": "Shiny_Cowbird_0005_796873",
+      "filename": "Shiny_Cowbird_0005_796873.jpg",
+      "true_class": "Shiny Cowbird",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {"species": "Shiny Cowbird"}
+    },
+    {
+      "image_id": "Shiny_Cowbird_0030_24206",
+      "filename": "Shiny_Cowbird_0030_24206.jpg",
+      "true_class": "Shiny Cowbird",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {"species": "Shiny Cowbird"}
+    },
+    {
+      "image_id": "Shiny_Cowbird_0080_796875",
+      "filename": "Shiny_Cowbird_0080_796875.jpg",
+      "true_class": "Shiny Cowbird",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {"species": "Shiny Cowbird"}
+    }
+  ],
+  "schema_version": "1.0",
+  "images_dir": "images/",
+  "precomputed": {
+    "tutor_model": "claude-opus-4-6",
+    "validator_model": "claude-sonnet-4-6",
+    "generated": "",
+    "tutor_descriptions": {},
+    "feature_queries": [],
+    "validator_answers": {},
+    "seed_rule": null,
+    "_note": "Run: python run_probe.py --recompute-tutor to populate this section"
+  }
+}

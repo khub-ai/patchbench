@@ -1,0 +1,220 @@
+{
+  "benchmark_id": "dermatology_melanoma_vs_nevus_probe_v1",
+  "version": "1.0.0",
+  "benchmark_type": "probe",
+  "domain": "dermatology",
+  "created": "2026-04-13",
+  "pair_id": "melanoma_vs_nevus",
+  "class_a": "Melanoma",
+  "class_b": "Melanocytic Nevus",
+  "dataset": "HAM10000",
+  "pupil_model": null,
+  "n_per_class": 12,
+  "description": "Fixed probe image set for PUPIL Domain Readiness Probe. 12 Melanoma + 12 Melanocytic Nevus images from HAM10000 (ISIC Archive). KF-referenced ISIC images included.",
+  "images": [
+    {
+      "image_id": "ISIC_0024315",
+      "filename": "ISIC_0024315.jpg",
+      "true_class": "Melanoma",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {"dx": "mel", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0024333",
+      "filename": "ISIC_0024333.jpg",
+      "true_class": "Melanoma",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {"dx": "mel", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0024400",
+      "filename": "ISIC_0024400.jpg",
+      "true_class": "Melanoma",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {"dx": "mel", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0025964",
+      "filename": "ISIC_0025964.jpg",
+      "true_class": "Melanoma",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "mel", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0027190",
+      "filename": "ISIC_0027190.jpg",
+      "true_class": "Melanoma",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "mel", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0028086",
+      "filename": "ISIC_0028086.jpg",
+      "true_class": "Melanoma",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "mel", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0026993",
+      "filename": "ISIC_0026993.jpg",
+      "true_class": "Melanoma",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "mel", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0026120",
+      "filename": "ISIC_0026120.jpg",
+      "true_class": "Melanoma",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "mel", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0028412",
+      "filename": "ISIC_0028412.jpg",
+      "true_class": "Melanoma",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "mel", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0026531",
+      "filename": "ISIC_0026531.jpg",
+      "true_class": "Melanoma",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "mel", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0025450",
+      "filename": "ISIC_0025450.jpg",
+      "true_class": "Melanoma",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "mel", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0030623",
+      "filename": "ISIC_0030623.jpg",
+      "true_class": "Melanoma",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "mel", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0024698",
+      "filename": "ISIC_0024698.jpg",
+      "true_class": "Melanocytic Nevus",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "nv", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0024693",
+      "filename": "ISIC_0024693.jpg",
+      "true_class": "Melanocytic Nevus",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "nv", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0032212",
+      "filename": "ISIC_0032212.jpg",
+      "true_class": "Melanocytic Nevus",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "nv", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0025775",
+      "filename": "ISIC_0025775.jpg",
+      "true_class": "Melanocytic Nevus",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "nv", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0029828",
+      "filename": "ISIC_0029828.jpg",
+      "true_class": "Melanocytic Nevus",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "nv", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0031588",
+      "filename": "ISIC_0031588.jpg",
+      "true_class": "Melanocytic Nevus",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "nv", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0028502",
+      "filename": "ISIC_0028502.jpg",
+      "true_class": "Melanocytic Nevus",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "nv", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0028239",
+      "filename": "ISIC_0028239.jpg",
+      "true_class": "Melanocytic Nevus",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "nv", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0031325",
+      "filename": "ISIC_0031325.jpg",
+      "true_class": "Melanocytic Nevus",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "nv", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0025251",
+      "filename": "ISIC_0025251.jpg",
+      "true_class": "Melanocytic Nevus",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "nv", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0025843",
+      "filename": "ISIC_0025843.jpg",
+      "true_class": "Melanocytic Nevus",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "nv", "source": "HAM10000"}
+    },
+    {
+      "image_id": "ISIC_0025384",
+      "filename": "ISIC_0025384.jpg",
+      "true_class": "Melanocytic Nevus",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {"dx": "nv", "source": "HAM10000"}
+    }
+  ],
+  "schema_version": "1.0",
+  "images_dir": "images/",
+  "precomputed": {
+    "tutor_model": "claude-opus-4-6",
+    "validator_model": "claude-sonnet-4-6",
+    "generated": "",
+    "tutor_descriptions": {},
+    "feature_queries": [],
+    "validator_answers": {},
+    "seed_rule": null,
+    "_note": "Run: python run_probe.py --recompute-tutor to populate this section"
+  }
+}

@@ -108,8 +108,6 @@ class ModelCaller:
         self, model: str, system: str, content: list, max_tokens: int
     ) -> tuple[str, dict]:
         """Convert Anthropic-style content blocks to OpenAI format."""
-        client = self._get_openai()
-
         oa_content = []
         for block in content:
             if block.get("type") == "text":
@@ -129,14 +127,27 @@ class ModelCaller:
             {"role": "system", "content": system},
             {"role": "user",   "content": oa_content},
         ]
-        resp = await client.chat.completions.create(
-            model=model,
-            max_tokens=max_tokens,
-            messages=messages,
-        )
-        text  = resp.choices[0].message.content or ""
-        usage = {
-            "input_tokens":  getattr(resp.usage, "prompt_tokens", 0),
-            "output_tokens": getattr(resp.usage, "completion_tokens", 0),
-        }
-        return text, usage
+
+        last_exc = None
+        for attempt in range(3):
+            # Fresh client on retry — clears any stale keep-alive connection.
+            if attempt > 0:
+                self._openai_client = None
+            client = self._get_openai()
+            try:
+                resp = await client.chat.completions.create(
+                    model=model,
+                    max_tokens=max_tokens,
+                    messages=messages,
+                )
+                text  = resp.choices[0].message.content or ""
+                usage = {
+                    "input_tokens":  getattr(resp.usage, "prompt_tokens", 0),
+                    "output_tokens": getattr(resp.usage, "completion_tokens", 0),
+                }
+                return text, usage
+            except Exception as exc:
+                last_exc = exc
+                if attempt == 2:
+                    raise
+        raise last_exc  # unreachable but satisfies type checkers
