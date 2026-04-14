@@ -254,18 +254,27 @@ async def _get_tutor_descriptions(
     cache_dir:   Optional[Path],
     costs:       dict,
     _print,
-) -> Tuple[Dict[str, str], List[FeatureQuery], Dict[str, Dict[str, bool]], Optional[dict]]:
-    """Returns (tutor_descs, feature_queries, validator_answers, seed_rule)."""
+) -> Tuple[Dict[str, str], List[FeatureQuery], Dict[str, Dict[str, bool]], Dict[str, dict]]:
+    """Returns (tutor_descs, feature_queries, validator_answers, seed_rules).
+
+    seed_rules maps class name -> rule dict, one entry per class.
+    Rules are grounded in sampled TUTOR descriptions rather than generated
+    from class names alone.
+    """
 
     if not recompute and manifest.has_precomputed:
         pc = manifest.precomputed
         _print(f"  [dim]Using pre-committed TUTOR/VALIDATOR outputs "
                f"({pc.tutor_model}, {pc.validator_model})[/dim]")
+        seed_rules = {}
+        if pc.seed_rule:
+            favored = pc.seed_rule.get("favors", manifest.class_a)
+            seed_rules[favored] = pc.seed_rule
         return (
             pc.tutor_descriptions,
             pc.feature_queries,
             pc.validator_answers,
-            pc.seed_rule,
+            seed_rules,
         )
 
     _print("  Regenerating TUTOR descriptions and feature queries...")
@@ -352,18 +361,32 @@ async def _get_tutor_descriptions(
                 result.get("answer", "").lower().startswith("y")
             )
 
-    # Seed rule
-    seed_content = [{"type": "text", "text": (
-        f"Write one concise classification rule for distinguishing "
-        f"'{class_a}' from '{class_b}' based on visual features only.\n"
-        f'JSON: {{"rule": "...", "preconditions": ["..."], "favors": "{class_a}"}}'
-    )}]
-    raw_rule = await _call(caller, "TUTOR", tutor_model, system,
-                           seed_content, 512, True,
-                           anchor_hash + "_seed_rule", cache_dir, costs)
-    seed_rule = _parse_json_object(raw_rule)
+    # Seed rules — one per class, grounded in TUTOR descriptions.
+    # Sample up to 3 descriptions per class to keep the prompt concise.
+    imgs_a = [img for img in manifest.images if img.true_class == class_a][:3]
+    imgs_b = [img for img in manifest.images if img.true_class == class_b][:3]
+    sample_descs = "\n\n".join(
+        [f"[{class_a}] {tutor_descs[img.image_id]}" for img in imgs_a if img.image_id in tutor_descs] +
+        [f"[{class_b}] {tutor_descs[img.image_id]}" for img in imgs_b if img.image_id in tutor_descs]
+    )
+    seed_rules = {}
+    for favored, other in [(class_a, class_b), (class_b, class_a)]:
+        seed_content = [{"type": "text", "text": (
+            f"Here are expert descriptions of images from this dataset:\n\n"
+            f"{sample_descs}\n\n"
+            f"Write one concise classification rule for identifying '{favored}' "
+            f"(as opposed to '{other}') based only on visual features observable "
+            f"in images like those above.\n"
+            f'JSON: {{"rule": "...", "preconditions": ["..."], "favors": "{favored}"}}'
+        )}]
+        raw_rule = await _call(caller, "TUTOR", tutor_model, system,
+                               seed_content, 512, True,
+                               anchor_hash + f"_seed_rule_{favored}", cache_dir, costs)
+        parsed = _parse_json_object(raw_rule)
+        if parsed:
+            seed_rules[favored] = parsed
 
-    return tutor_descs, feature_queries, validator_answers, seed_rule
+    return tutor_descs, feature_queries, validator_answers, seed_rules
 
 
 # ---------------------------------------------------------------------------
@@ -501,7 +524,7 @@ async def run_probe(
     # TUTOR/VALIDATOR outputs
     # ------------------------------------------------------------------
     _print("\n  [bold]Step 1/4[/bold] Expert descriptions + feature queries...")
-    tutor_descs, feature_queries, validator_answers, seed_rule = (
+    tutor_descs, feature_queries, validator_answers, seed_rules = (
         await _get_tutor_descriptions(
             manifest, manifest_path, caller, tutor_model,
             recompute_tutor, cache_dir, costs, _print,
@@ -565,21 +588,62 @@ async def run_probe(
     class_a = manifest.class_a
     class_b = manifest.class_b
 
+    # 4a: Zero-shot sweep first.
     zs_results = await _bounded_gather([
         _classify(img, manifest.image_path(img, manifest_path),
                   class_a, class_b, caller, pupil_model, costs)
         for img in manifest.images
     ])
+    zs_correct = sum(p == img.true_class for img, p in zip(manifest.images, zs_results))
+    n = len(manifest.images)
+    zero_shot_acc = zs_correct / n if n else 0.0
+
+    # 4b: Generate failure-driven rules from zero-shot errors, then run rule-aided.
+    # For each misclassified image, ask TUTOR to refine the seed rule for that class
+    # using the TUTOR description as grounding. Collect one rule per class.
+    failures = [
+        (img, pred) for img, pred in zip(manifest.images, zs_results)
+        if pred != img.true_class
+    ]
+    failure_rules = dict(seed_rules)  # start from seed rules as fallback
+    if failures:
+        for true_class in (class_a, class_b):
+            class_failures = [(img, pred) for img, pred in failures
+                              if img.true_class == true_class][:3]
+            if not class_failures:
+                continue
+            other_class = class_b if true_class == class_a else class_a
+            failure_descs = "\n\n".join(
+                f"[Misclassified as {pred}; correct: {true_class}]\n"
+                f"{tutor_descs.get(img.image_id, '')}"
+                for img, pred in class_failures
+            )
+            refine_content = [{"type": "text", "text": (
+                f"A vision model misclassified the following '{true_class}' images "
+                f"as '{other_class}':\n\n{failure_descs}\n\n"
+                f"Write one concise classification rule that would help correctly "
+                f"identify '{true_class}' (vs '{other_class}') based on the visual "
+                f"features described above.\n"
+                f'JSON: {{"rule": "...", "preconditions": ["..."], "favors": "{true_class}"}}'
+            )}]
+            fail_hash = hashlib.md5(failure_descs.encode()).hexdigest()
+            raw = await _call(caller, "TUTOR", tutor_model,
+                              "You are a domain expert designing visual classification rules.",
+                              refine_content, 512, True,
+                              fail_hash + f"_failure_rule_{true_class}", cache_dir, costs)
+            parsed = _parse_json_object(raw)
+            if parsed:
+                failure_rules[true_class] = parsed
+
+    # Apply per-image rule: use the rule that favors the correct class.
     ra_results = await _bounded_gather([
         _classify(img, manifest.image_path(img, manifest_path),
-                  class_a, class_b, caller, pupil_model, costs, seed_rule)
+                  class_a, class_b, caller, pupil_model, costs,
+                  failure_rules.get(img.true_class))
         for img in manifest.images
-    ]) if seed_rule else zs_results
+    ]) if failure_rules else zs_results
 
-    zs_correct = sum(p == img.true_class for img, p in zip(manifest.images, zs_results))
     ra_correct = sum(p == img.true_class for img, p in zip(manifest.images, ra_results))
-    n = len(manifest.images)
-    zero_shot_acc  = zs_correct / n if n else 0.0
     rule_aided_acc = ra_correct / n if n else 0.0
     delta          = rule_aided_acc - zero_shot_acc
 
