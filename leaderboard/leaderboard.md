@@ -42,6 +42,36 @@ Sorted by perception score descending. See [CONTRIBUTING.md](../CONTRIBUTING.md)
 
 ---
 
+## How to use this leaderboard
+
+This leaderboard helps you decide whether Dialogic Distillation (DD) is worth attempting for your domain and PUPIL model, before committing to the full process.
+
+### Quick path — use an existing benchmark as a proxy
+
+1. **Find the closest domain.** Browse the table for a confusable pair that resembles your visual classification task — same image modality, similar level of visual subtlety, or the same application area (e.g. another dermatology pair as a proxy for your skin-lesion task).
+2. **Find your model (or the nearest equivalent).** If your PUPIL model appears in the table, read its row directly. If not, look for a model of similar size and architecture family.
+3. **Read the verdict.**
+   - 🟢 **go** — DD is likely to work. The model perceives domain features, follows injected rules, and gives stable answers. Proceed with building a rule library.
+   - 🟡 **partial** — DD may work but will need care. Check which score fell short: low RuleDelta suggests simpler, shorter rule phrasing; low Consistency suggests using temperature=0 or majority-vote inference.
+   - 🔴 **no-go** — the model lacks the visual grounding needed for this domain. Consider a larger model, a domain-adapted backbone, or a different PUPIL candidate.
+4. **Check RuleDelta specifically.** A high Percep but low RuleDelta means the model sees the features but does not act on rules — prompt engineering alone is unlikely to fix this. A low Percep means the model is blind to the discriminating features; rules cannot compensate.
+
+### Thorough path — run the probe on your own image set
+
+Use this when no existing benchmark is close enough to your domain, or when you need a defensible result for your specific model and data.
+
+1. **Prepare 24 images** — 12 per class, covering the confusable pair you care about. Include diversity in lighting, angle, and difficulty. See [CONTRIBUTING.md](../CONTRIBUTING.md) for the manifest format.
+2. **Run the probe** against your PUPIL model:
+   ```
+   python run_probe.py --pupil-model your-org/your-model \
+       --benchmark benchmarks/your_domain/your_pair/probe_v1/manifest.json
+   ```
+3. **Interpret the result** using the same verdict logic above. Additionally inspect the per-image breakdowns: consistent misclassifications on one class point to vocabulary gaps (low VocabΔ); inconsistent predictions on the same image point to stability problems (low Consist.).
+4. **If verdict is go or partial**, proceed to build your rule library using the DD workflow in [khub-ai/khub-knowledge-fabric](https://github.com/khub-ai/khub-knowledge-fabric). Start with the failure cases the probe identified — those are the highest-value targets for expert rule authoring.
+5. **Submit your result** via pull request so others with the same model can benefit.
+
+---
+
 ## Image data sources
 
 Benchmark images are curated subsets from publicly available datasets.
