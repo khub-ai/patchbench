@@ -1,0 +1,305 @@
+{
+  "benchmark_id": "birds_bronzed_vs_shiny_cowbird_probe_v1",
+  "benchmark_version": "1.0.0",
+  "schema_version": "1.0",
+  "submitted": "2026-04-14T08:37:26",
+  "pupil_model": "openai/gpt-4o",
+  "tutor_model": "claude-opus-4-6",
+  "validator_model": "claude-sonnet-4-6",
+  "verdict": "partial",
+  "perception_score": 0.6333,
+  "vocabulary_overlap": 0.3083,
+  "zero_shot_accuracy": 0.75,
+  "rule_aided_accuracy": 0.6667,
+  "rule_comprehension_delta": -0.0833,
+  "consistency_score": 0.8,
+  "feature_detection_by_difficulty": {
+    "easy": 0.7,
+    "medium": 0.725,
+    "hard": 0.475
+  },
+  "feature_profile": {
+    "red_eye_color_easy": 1.0,
+    "overall_bluish_purple_sheen_easy": 0.6,
+    "thick_neck_ruff_easy": 0.7,
+    "sleek_body_profile_easy": 0.5,
+    "bronze_toned_body_medium": 0.8,
+    "conical_finch_like_bill_medium": 0.7,
+    "slender_pointed_bill_medium": 0.4,
+    "dark_eye_color_medium": 1.0,
+    "hackled_nape_feathers_hard": 0.5,
+    "uniform_wing_iridescence_hard": 0.3,
+    "arched_culmen_profile_hard": 0.4,
+    "contrasting_wing_darkness_hard": 0.7
+  },
+  "weak_points": [],
+  "recommendations": [
+    "Rule injection not improving accuracy — try shorter, more directive rule phrasing."
+  ],
+  "costs": {
+    "TUTOR": {
+      "input_tokens": 8097,
+      "output_tokens": 6719,
+      "api_calls": 26,
+      "cost_usd": 0.6253800000000002
+    },
+    "VALIDATOR": {
+      "input_tokens": 43798,
+      "output_tokens": 11781,
+      "api_calls": 144,
+      "cost_usd": 0.3081090000000001
+    },
+    "PUPIL": {
+      "input_tokens": 63286,
+      "output_tokens": 8562,
+      "api_calls": 207,
+      "cost_usd": 0.0
+    }
+  },
+  "total_cost_usd": 0.933489,
+  "per_image_zero_shot": [
+    {
+      "image_id": "Bronzed_Cowbird_0001_796219",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0002_796244",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0003_796246",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0005_24173",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0008_796250",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0009_24033",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0010_24146",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0011_24138",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0012_796247",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0019_796242",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0061_796232",
+      "true": "Bronzed Cowbird",
+      "predicted": "Shiny Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0081_24198",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0001_796860",
+      "true": "Shiny Cowbird",
+      "predicted": "Shiny Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0002_24380",
+      "true": "Shiny Cowbird",
+      "predicted": "Shiny Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0004_796841",
+      "true": "Shiny Cowbird",
+      "predicted": "Shiny Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0006_796864",
+      "true": "Shiny Cowbird",
+      "predicted": "Shiny Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0007_24434",
+      "true": "Shiny Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0009_796835",
+      "true": "Shiny Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0010_24439",
+      "true": "Shiny Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0012_24249",
+      "true": "Shiny Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0014_24214",
+      "true": "Shiny Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0005_796873",
+      "true": "Shiny Cowbird",
+      "predicted": "Shiny Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0030_24206",
+      "true": "Shiny Cowbird",
+      "predicted": "Shiny Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0080_796875",
+      "true": "Shiny Cowbird",
+      "predicted": "Shiny Cowbird"
+    }
+  ],
+  "per_image_rule_aided": [
+    {
+      "image_id": "Bronzed_Cowbird_0001_796219",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0002_796244",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0003_796246",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0005_24173",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0008_796250",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0009_24033",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0010_24146",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0011_24138",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0012_796247",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0019_796242",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0061_796232",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Bronzed_Cowbird_0081_24198",
+      "true": "Bronzed Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0001_796860",
+      "true": "Shiny Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0002_24380",
+      "true": "Shiny Cowbird",
+      "predicted": "Shiny Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0004_796841",
+      "true": "Shiny Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0006_796864",
+      "true": "Shiny Cowbird",
+      "predicted": "Shiny Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0007_24434",
+      "true": "Shiny Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0009_796835",
+      "true": "Shiny Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0010_24439",
+      "true": "Shiny Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0012_24249",
+      "true": "Shiny Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0014_24214",
+      "true": "Shiny Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0005_796873",
+      "true": "Shiny Cowbird",
+      "predicted": "Shiny Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0030_24206",
+      "true": "Shiny Cowbird",
+      "predicted": "Bronzed Cowbird"
+    },
+    {
+      "image_id": "Shiny_Cowbird_0080_796875",
+      "true": "Shiny Cowbird",
+      "predicted": "Shiny Cowbird"
+    }
+  ],
+  "notes": ""
+}
