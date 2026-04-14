@@ -12,6 +12,57 @@ it can perceive domain-relevant features, follow expert rule instructions, and
 give stable answers. A model that scores poorly has a perception barrier that
 rules alone cannot fix.
 
+> **Status**: The runner is complete and all three benchmark probes are active.
+> Coverage is currently limited — a handful of models tested across three domains.
+> Broader conclusions will require results from more models, more domains, and
+> larger image sets. **Contributions are welcome**: see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+---
+
+## How it works — a concrete example
+
+Consider this image of a **Bronzed Cowbird** from CUB-200-2011:
+
+![Bronzed_Cowbird_0019_796242](benchmarks/birds/bronzed_vs_shiny_cowbird/probe_v1/images/Bronzed_Cowbird_0019_796242.jpg)
+
+Asked to classify it (Bronzed Cowbird vs. Shiny Cowbird), `qwen/qwen3-vl-8b-instruct`
+predicts: **Shiny Cowbird**. Wrong. The model fixed on the all-black plumage — shared
+by both species — and defaulted to the wrong class.
+
+Now the same question is asked with a rule injected into the prompt:
+
+```
+Classify this image as:
+  A) Bronzed Cowbird
+  B) Shiny Cowbird
+
+CLASSIFICATION RULE: When a small, all-black cowbird shows a conspicuous bright
+red or orange-red iris that is clearly visible as a bold colored eye, combined
+with a distinctly thick-based, slightly decurved bill that appears heavier and
+more robust than a typical icterid bill, identify as Bronzed Cowbird.
+
+PRECONDITIONS (must all be met):
+  - Bird is entirely or nearly entirely black-plumaged (male)
+  - Iris is visibly bright red or orange-red — not dark brown or black
+  - Bill appears notably thick-based and slightly decurved (gonys curved
+    downward), giving a heavier, almost grosbeak-like profile compared to
+    Shiny Cowbird's slimmer, straighter bill
+
+Apply the rule if preconditions are met; otherwise use your best judgment.
+
+JSON: {"classification": "Bronzed Cowbird" or "Shiny Cowbird", "reasoning": "brief"}
+```
+
+The model now predicts: **Bronzed Cowbird**. Correct. The rule told it *what to look
+for* — the perceptual capability was there all along.
+
+This rule was generated automatically by the DD process: a TUTOR model analysed the
+failure, identified the discriminating features an expert ornithologist would use, and
+authored the rule. PatchBench measures how reliably this pattern holds across models
+and domains.
+
+*Source: [khub-ai/khub-knowledge-fabric — usecases/image-classification/birds](https://github.com/khub-ai/khub-knowledge-fabric/tree/main/usecases/image-classification/birds)*
+
 ---
 
 ## Quick start
