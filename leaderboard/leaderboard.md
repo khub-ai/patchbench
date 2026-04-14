@@ -1,13 +1,14 @@
 # PatchBench Leaderboard
 
-> Generated 2026-04-13 · 2 result(s)
+> Generated 2026-04-14 · 3 result(s)
 
 Sorted by perception score descending. See [CONTRIBUTING.md](../CONTRIBUTING.md) to submit your model's results.
 
 | Verdict | Model | Domain | Confusable pair | Percep. | VocabΔ | ZeroShot | RuleDelta | Consist. |
 |---|---|---|---|---|---|---|---|---|
-| 🟡 partial ⚠ | `qwen/qwen3-vl-8b-instruct` | [birds](https://www.vision.caltech.edu/datasets/cub_200_2011/) | [bronzed vs shiny cowbird](https://github.com/khub-ai/khub-knowledge-fabric/tree/main/usecases/image-classification/birds) | N/A | N/A | 0.33 | +0.50 | N/A |
-| 🟡 partial ⚠ | `qwen/qwen3-vl-8b-instruct` | [dermatology](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) | [melanoma vs nevus](https://github.com/khub-ai/khub-knowledge-fabric/tree/main/usecases/image-classification/dermatology) | N/A | N/A | 0.55 | +0.22 | N/A |
+| 🔴 no-go | `openai/gpt-4o` | [road_surface](https://github.com/ztsrxh/RSCD-Road_Surface_Classification_Dataset) | [dry vs wet](https://github.com/khub-ai/patchbench/tree/main/benchmarks/road_surface/dry_vs_wet) | 0.82 | 0.25 | 0.62 | +0.00 | 0.40 |
+| 🟡 partial ⚠ | `qwen/qwen3-vl-8b-instruct` | [birds](https://www.vision.caltech.edu/datasets/cub_200_2011/) | [bronzed vs shiny cowbird](https://github.com/khub-ai/patchbench/tree/main/benchmarks/birds/bronzed_vs_shiny_cowbird) | N/A | N/A | 0.33 | +0.50 | N/A |
+| 🟡 partial ⚠ | `qwen/qwen3-vl-8b-instruct` | [dermatology](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) | [melanoma vs nevus](https://github.com/khub-ai/patchbench/tree/main/benchmarks/dermatology/melanoma_vs_nevus) | N/A | N/A | 0.55 | +0.22 | N/A |
 
 ## Column definitions
 
@@ -39,8 +40,8 @@ See [DATA_LICENSE.md](../DATA_LICENSE.md) for full attribution and license text.
 | Domain | Dataset | Credit | License |
 |---|---|---|---|
 | road_surface | [RSCD](https://github.com/ztsrxh/RSCD-Road_Surface_Classification_Dataset) | Tsinghua University | CC BY-NC-SA 4.0 |
-| birds *(images pending)* | [CUB-200-2011](https://www.vision.caltech.edu/datasets/cub_200_2011/) | Caltech | Research use |
-| dermatology *(images pending)* | [HAM10000](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) | ViDIR Group, Medical University of Vienna | CC BY-NC-SA 4.0 |
+| birds | [CUB-200-2011](https://www.vision.caltech.edu/datasets/cub_200_2011/) | Caltech | Research use |
+| dermatology | [HAM10000](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) | ViDIR Group, Medical University of Vienna | CC BY-NC-SA 4.0 |
 
 ---
 
