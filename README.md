@@ -65,6 +65,21 @@ and domains.
 
 ---
 
+## Model selection
+
+PatchBench is most useful for **small-to-mid-size VLMs** — models where capability gaps are real and DD-style patching has practical value. Very large models tend to have high baselines that leave little room for rules to show improvement.
+
+When choosing models to test, we prioritise:
+
+- **Vision capability** — the model must accept image input
+- **Accessible via API** — OpenRouter or Anthropic-compatible endpoints, so results are reproducible without local GPU infrastructure
+- **Range of sizes** — to map where the patchability sweet spot lies
+- **Open weights preferred** — results are more useful to the community when others can run, fine-tune, or deploy the same model
+
+Proprietary models are included where they provide a useful reference point. Contributions testing additional models are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+---
+
 ## Quick start
 
 ```bash
