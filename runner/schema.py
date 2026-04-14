@@ -212,6 +212,10 @@ class ProbeResult:
     recommendations:         List[str]
     costs:                   Dict[str, dict]
     total_cost_usd:          float
+    # Rule quality gate — VALIDATOR-based check that generated rules are discriminative
+    # before attributing a low PUPIL delta to poor rule-following.
+    rule_gate_accuracy:      Optional[float] = None   # VALIDATOR accuracy on held-out subset with rule
+    rule_gate_passed:        Optional[bool]  = None   # True if gate_accuracy >= threshold
     # Optional detailed data
     per_image_zero_shot:     List[dict] = field(default_factory=list)
     per_image_rule_aided:    List[dict] = field(default_factory=list)

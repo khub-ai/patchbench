@@ -1,10 +1,14 @@
 """
 PatchBench probe runner — tests whether a VLM can be patched with expert rules.
 
-Five steps assess the PUPIL model's capability for a given domain:
+Four steps assess the PUPIL model's capability for a given domain:
   1. Expert vocabulary      — does PUPIL describe domain features spontaneously?
   2. Feature detection      — can PUPIL find specific features when queried?
   3. Rule comprehension     — does injecting a rule improve PUPIL accuracy?
+     3a. Zero-shot sweep to find failures
+     3b. Failure-driven rule generation (TUTOR, grounded in descriptions)
+     3c. Rule quality gate (VALIDATOR classifies held-out subset with rules)
+     3d. Rule-aided sweep (PUPIL with per-class rules)
   4. Consistency            — does PUPIL give stable answers on the same image?
 
 TUTOR and VALIDATOR outputs for Steps 1–3 ground truth are pre-committed in
@@ -59,6 +63,8 @@ _NOGO_CONSISTENCY_MAX      = 0.50
 _CONSISTENCY_REPEATS       = 3
 _CONSISTENCY_N_IMAGES      = 5
 _MAX_CONCURRENT            = 5   # semaphore cap for PUPIL calls
+_RULE_GATE_N_PER_CLASS     = 3   # held-out images per class for rule quality gate
+_RULE_GATE_MIN_ACCURACY    = 0.75 # VALIDATOR must reach this on gate images for rules to pass
 
 
 # ---------------------------------------------------------------------------
@@ -463,6 +469,7 @@ async def _classify(
     pupil_model: str,
     costs: dict,
     rule: Optional[dict] = None,
+    caller_role: str = "PUPIL",
 ) -> str:
     if rule:
         preconds = "\n".join(f"  - {p}" for p in rule.get("preconditions", []))
@@ -474,7 +481,7 @@ async def _classify(
     else:
         extra = ""
     raw = await _call(
-        caller, "PUPIL", pupil_model,
+        caller, caller_role, pupil_model,
         "You are a visual classification assistant.",
         [image_block(img_path),
          {"type": "text", "text": (
@@ -489,6 +496,55 @@ async def _classify(
     if class_a.lower() in c.lower(): return class_a
     if class_b.lower() in c.lower(): return class_b
     return class_a if "A" in c else class_b
+
+
+# ---------------------------------------------------------------------------
+# Rule quality gate
+# ---------------------------------------------------------------------------
+
+async def _validate_rules_gate(
+    rules:           Dict[str, dict],
+    manifest:        BenchmarkManifest,
+    manifest_path:   Path,
+    caller:          ModelCaller,
+    validator_model: str,
+    costs:           dict,
+    n_per_class:     int = _RULE_GATE_N_PER_CLASS,
+) -> Tuple[float, bool]:
+    """Validate generated rules using the VALIDATOR on a held-out image subset.
+
+    Uses the last n_per_class images per class (distinct from the first-3 used
+    in seed rule generation) to check that rule text is actually discriminative
+    before attributing a low PUPIL delta to poor rule-following ability.
+
+    Returns (gate_accuracy, gate_passed).
+    """
+    if not rules:
+        return 0.0, False
+
+    gate_images: List[ManifestImage] = []
+    for cls in (manifest.class_a, manifest.class_b):
+        cls_imgs = [img for img in manifest.images if img.true_class == cls]
+        gate_images.extend(cls_imgs[-n_per_class:] if len(cls_imgs) >= n_per_class else cls_imgs)
+
+    if not gate_images:
+        return 0.0, False
+
+    results = await _bounded_gather([
+        _classify(
+            img, manifest.image_path(img, manifest_path),
+            manifest.class_a, manifest.class_b,
+            caller, validator_model, costs,
+            rules.get(img.true_class),
+            caller_role="VALIDATOR",
+        )
+        for img in gate_images
+    ])
+
+    correct  = sum(p == img.true_class for img, p in zip(gate_images, results))
+    accuracy = correct / len(gate_images)
+    passed   = accuracy >= _RULE_GATE_MIN_ACCURACY
+    return round(accuracy, 4), passed
 
 
 # ---------------------------------------------------------------------------
@@ -635,6 +691,14 @@ async def run_probe(
             if parsed:
                 failure_rules[true_class] = parsed
 
+    # 4c: Rule quality gate — VALIDATOR classifies a held-out subset with rules.
+    # Confirms rule text is discriminative before attributing any PUPIL delta
+    # (or lack thereof) to the model's rule-following ability.
+    gate_acc, gate_passed = await _validate_rules_gate(
+        failure_rules, manifest, manifest_path,
+        caller, validator_model, costs,
+    )
+
     # Apply per-image rule: use the rule that favors the correct class.
     ra_results = await _bounded_gather([
         _classify(img, manifest.image_path(img, manifest_path),
@@ -660,8 +724,10 @@ async def run_probe(
             consistent += 1
     consistency_score = consistent / len(subset) if subset else 0.0
 
+    gate_label = "[passed]" if gate_passed else "[WARN: weak rules]"
     _print(f"    Zero-shot: {zero_shot_acc:.3f}  Rule-aided: {rule_aided_acc:.3f}  "
            f"Delta: {delta:+.3f}  Consistency: {consistency_score:.3f}")
+    _print(f"    Rule gate: {gate_acc:.3f} {gate_label}")
 
     # ------------------------------------------------------------------
     # Verdict
@@ -719,6 +785,8 @@ async def run_probe(
         rule_aided_accuracy      = round(rule_aided_acc, 4),
         rule_comprehension_delta = round(delta, 4),
         consistency_score        = round(consistency_score, 4),
+        rule_gate_accuracy       = gate_acc,
+        rule_gate_passed         = gate_passed,
         feature_detection_by_difficulty = avg_by_diff,
         feature_profile          = feature_profile,
         weak_points              = weak_points,
