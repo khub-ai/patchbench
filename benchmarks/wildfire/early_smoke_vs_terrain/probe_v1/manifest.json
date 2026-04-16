@@ -357,5 +357,271 @@
         "offset_label": "1min_pre_ignition"
       }
     }
-  ]
+  ],
+  "precomputed": {
+    "tutor_model": "claude-opus-4-6",
+    "validator_model": "claude-sonnet-4-6",
+    "generated": "2026-04-16",
+    "tutor_descriptions": {
+      "rm-n-mobo-c_20160604_+0000": "This HPWREN camera image from Red Mountain North shows a panoramic view of semi-arid Southern California terrain with chaparral and coastal sage scrub vegetation under clear skies. The critical distinguishing feature for an **early smoke signature** is the subtle atmospheric haze visible along the horizon line, particularly in the center-right portion of the frame, where there is a diffuse, slightly milky opacity that reduces contrast against the distant ridgelines — distinct from the typical blue-sky atmospheric scattering. Unlike **near_ignition_terrain**, which would present localized surface-level indicators such as concentrated thermal distortion, visible flame reflection, or a defined plume base anchored to a specific point, this image shows a more dispersed, low-opacity aerosol layer that softens the terrain texture at distance. The foreground terrain exhibits typical dry-season coloration with brown, desiccated grasses and scattered dark-green shrub canopy, but no localized scorching, ash deposition, or ember-cast shadows are evident. The winding dirt access road and small infrastructure pad in the lower-left show no surface disturbance consistent with active fire proximity, reinforcing that the smoke signal is distant and diffuse rather than proximal.",
+      "rm-n-mobo-c_20160604_+0180": "This image, captured from the HPWREN Red Mountain North camera on June 4, 2016, displays a clear **early smoke signature** visible in the upper-right quadrant of the frame—a discrete, grayish-white plume rising vertically against the otherwise uniformly clear blue sky. The smoke column exhibits a diffuse, semi-transparent texture characteristic of incipient combustion, where the plume has not yet developed the dense, turbulent convective structure seen in established fires. The surrounding terrain consists of arid, chaparral-covered hillsides with typical Southern California semi-arid vegetation patterns—sparse scrub brush interspersed with exposed sandy-brown soil and winding dirt access roads.\n\nWhat distinguishes this as an **early smoke signature** rather than near-ignition terrain is the presence of the anomalous atmospheric feature itself: the smoke plume is detectable at distance, rising above the ridgeline horizon, while the foreground terrain shows no visible scorching, active flame glow, or localized heat distortion. The terrain's spectral reflectance remains uniform with no differential albedo changes indicative of fresh burn scarring, confirming this is a remote detection of smoke onset rather than observation of immediate ignition-point ground conditions.",
+      "rm-n-mobo-c_20160604_+0360": "This image, captured by the HPWREN camera at Red Mountain North on June 4, 2016, displays a classic **early smoke signature** visible in the upper-right quadrant of the frame — a discrete, vertically developing smoke column with a grayish-white coloration that contrasts sharply against the clear blue sky. The plume exhibits a coherent convective structure with defined edges and moderate opacity, indicating active combustion at a distance rather than diffuse haze or pre-ignition conditions. Unlike **near-ignition terrain**, which would show localized surface-level indicators such as desiccated fuel beds, exposed mineral soil, or heat shimmer distortion in the immediate foreground, the smoke source here is clearly remote from the camera's position, situated well beyond the intervening ridgelines. The surrounding terrain displays typical Southern California chaparral and coastal sage scrub in a cured, drought-stressed state with tan-to-brown surface reflectivity, but no proximate thermal disturbance or surface discoloration suggestive of imminent ignition is evident near the camera. The spatial separation between the observer and the plume, combined with the plume's organized vertical lofting behavior, firmly categorizes this as an early detection event rather than a terrain-level ignition assessment.",
+      "rm-n-mobo-c_20160604_-0360": "## Near Ignition Terrain Analysis\n\nThis HPWREN camera image from Red Mountain North shows classic **near ignition terrain** characteristics without any visible smoke signatures. The landscape displays extensive **dry, senescent chaparral and coastal sage scrub** with a distinctive tawny-brown coloration indicating critically low live fuel moisture content, particularly evident on the south-facing slopes where exposed bare mineral soil patches create a mottled texture pattern. The terrain exhibits significant topographic complexity with steep-sided ravines and ridgelines that would channel fire-driven winds, and the **unpaved access roads** winding through the lower right foreground highlight the wildland-urban interface infrastructure typical of fire-prone areas.\n\nThe atmosphere is notably clear with excellent visibility to distant mountain ranges, showing **no haze columns, diffuse plume structures, or localized opacity changes** along the horizon or ridgelines that would indicate an early smoke signature. The vegetation density varies markedly between north-facing slopes (darker green, denser canopy) and south-facing exposures (sparse, highly reflective dry biomass), creating a fuel mosaic that defines ignition vulnerability rather than active combustion evidence.",
+      "rm-n-mobo-c_20160604_-0180": "This image, captured from the HPWREN Red Mountain North camera, depicts **near_ignition_terrain** characterized by its highly susceptible fire-fuel landscape. The terrain displays extensive dry, desiccated chaparral and coastal sage scrub vegetation with a tan-to-brown color palette indicating cured, low-moisture-content biomass typical of Southern California's early summer fire season. The exposed bare soil patches, visible as reddish-orange clearings in the lower left, create discontinuous fuel beds adjacent to dense brush, while the winding unpaved access road on the right provides both potential ignition corridors and firebreak features. Critically, there is **no visible smoke plume, haze column, or localized atmospheric opacity anomaly** anywhere in the scene—the sky exhibits a clean blue gradient with only mild horizon-level atmospheric haze consistent with normal boundary-layer aerosols, not combustion particulates. The terrain's steep topographic relief with south-facing slopes and narrow canyons represents classic fire-prone geomorphology where slope-driven convective heating accelerates fire spread.",
+      "rm-n-mobo-c_20160604_-0060": "This image, captured from the HPWREN Red Mountain North camera on June 4, 2016, displays classic **near_ignition_terrain** characteristics rather than early smoke signatures. The landscape exhibits extensive **dry, desiccated chaparral and coastal sage scrub** with a pronounced tawny-brown color palette indicating cured fine fuels and low live fuel moisture content — hallmarks of fire-prone Southern California terrain during early summer. The exposed **bare mineral soil** patches, particularly the reddish-brown cleared area in the lower left near the small structure, show high solar reflectivity consistent with decomposed granite substrates that typify fire-vulnerable ridgeline environments.\n\nThe winding **unpaved access road** with its light-colored compacted surface snaking through the lower right provides critical context as a firebreak or fuel break corridor, a terrain management feature associated with ignition-risk zones. Critically, there is **no visible atmospheric opacity gradient, no diffuse scattering, and no particulate haze plumes** disrupting the clear blue sky — the horizon line remains sharp with excellent visibility across the mountain ridges, confirming the absence of any early smoke signature. The vegetation mosaic shows a **discontinuous fuel bed** of scattered shrubs interspersed with bare ground, characteristic of semi-arid terrain where ignition events can rapidly transition to running fire given the dry fuel conditions visible here.",
+      "bl-n-mobo-c_20161113_+0000": "## Early Smoke Signature Analysis\n\nThis HPWREN camera image from Black Mountain North (2016-11-13, 11:12:49) shows subtle atmospheric characteristics consistent with an **early smoke signature** rather than simple near-ignition terrain. The horizon line exhibits a distinctive **haze band** with reduced visibility and a brownish-gray turbidity gradient that differentiates it from the typical clear atmospheric boundary seen in baseline terrain imagery. The mid-ground atmosphere displays a slight **opacity differential** — the distant mountain ridgelines appear softened and desaturated compared to what clear-day visibility at this elevation (~1,500 ft) would normally permit, suggesting particulate matter dispersal in the atmospheric column. The chaparral-covered foreground terrain shows no active flame or localized thermal convection distortion, but the diffuse light scattering pattern across the suburban developments in the middle distance is consistent with early-stage smoke entrainment rather than typical marine layer or urban aerosol haze. The telecommunications tower microwave dishes on the right edge provide scale reference, confirming this is a summit-mounted monitoring camera designed precisely for detecting such incipient smoke plume signatures before they become visually obvious.",
+      "bl-n-mobo-c_20161113_+0180": "## Early Smoke Signature Analysis\n\nThis HPWREN camera image from Black Mountain North (2016-11-13, 11:15:49) shows subtle atmospheric characteristics consistent with an **early smoke signature** rather than mere near-ignition terrain. The horizon line exhibits a pronounced **haze band** with reduced contrast and a milky, desaturated quality in the mid-distance atmospheric layer, distinguishing it from the typically sharp horizon delineation seen in clean-air terrain views. The **atmospheric transmissivity** is noticeably degraded across the middle distance, where the rolling hills and suburban development in the Rancho Peñasquitos/Rancho Bernardo area appear with muted color saturation and softened edge definition—a telltale sign of particulate scattering from early combustion products. The chaparral-covered foreground slopes show normal reflectivity and texture, but the **differential visibility gradient** between the sharp near-field vegetation and the increasingly obscured background terrain suggests an aerosol plume dispersing at low concentration. The sky transitions from clear blue at zenith to a warm, yellowish-white tone near the horizon, consistent with fine smoke particulate producing Mie scattering effects rather than the clean Rayleigh gradient expected on an unaffected day.",
+      "bl-n-mobo-c_20161113_+0360": "## Early Smoke Signature Analysis\n\nThis HPWREN camera image from Black Mountain North (2016-11-13, 11:18:49) shows characteristics consistent with an **early smoke signature** rather than merely depicting near-ignition terrain. While the atmosphere appears largely clear, there is a subtle haziness along the horizon line and mid-ground that slightly reduces contrast and visibility of the distant mountain ranges — a telltale indicator of particulate dispersion in the atmosphere that distinguishes early smoke from clean-air conditions. The terrain exhibits typical Southern California chaparral and coastal sage scrub with dry, brown coloration consistent with autumn fire-prone conditions, but the key differentiator is the **atmospheric opacity gradient**: the mid-distance developments and ridgelines show a diffused, slightly washed-out quality that departs from the crisp definition one would expect on a clear November day. The foreground vegetation and dirt trails remain sharply defined with visible textural detail in the scrub canopy, while the progressive degradation of contrast with distance suggests an aerosol layer — likely thin smoke — rather than simple marine layer or humidity. The telecommunications tower's microwave dish antennas on the right edge provide a sharp near-field reference that accentuates the contrast loss at distance, confirming atmospheric scattering consistent with early-stage smoke particulates.",
+      "bl-n-mobo-c_20161113_-0360": "## Near Ignition Terrain Analysis\n\nThis HPWREN camera image from Black Mountain North (2016-11-13) displays characteristic **near ignition terrain** features rather than an early smoke signature. The landscape exhibits **dry, senescent chaparral and coastal sage scrub** with a distinctive brown-to-olive mosaic pattern, indicating cured fine fuels intermixed with drought-stressed vegetation — classic pre-fire fuel conditions in San Diego County's wildland-urban interface. The exposed **dirt trail system** on the left slope shows reddish-tan decomposed granite soils with high reflectivity, contrasting against the darker shrub canopy, and there is **no visible atmospheric opacity anomaly, diffuse plume, or localized haze column** that would indicate combustion byproducts. The telecommunication tower infrastructure on the right edge confirms this as a monitored high-fire-risk ridgeline position. The clear sky with excellent visibility to the distant mountain ranges (likely Palomar and the inland ranges) further confirms the absence of any smoke particulate in the atmospheric column.",
+      "bl-n-mobo-c_20161113_-0180": "This image depicts **near_ignition_terrain** as captured by the HPWREN camera on Black Mountain North. The landscape exhibits the characteristic dry, semi-arid chaparral and coastal sage scrub vegetation typical of San Diego County's fire-prone wildland-urban interface, with desiccated brown hillsides interspersed among darker green scrub patches indicating differential moisture content and fuel loading. The exposed dirt trail winding through the foreground hillside shows bare mineral soil with high reflectivity consistent with compacted, dry earth — classic fine fuel conditions adjacent to cured vegetation. Notably, there is **no visible smoke plume, haze column, or localized atmospheric opacity anomaly** that would indicate combustion; the atmosphere presents clear, uniform blue sky with only mild horizon haze attributable to typical boundary-layer aerosol loading. The terrain's mosaic of green brush, cured grasslands, and residential development in the mid-ground represents a high fire-risk landscape where ignition potential is elevated due to fuel continuity and dryness, distinguishing this as documentation of pre-fire terrain conditions rather than an active early smoke signature.",
+      "bl-n-mobo-c_20161113_-0060": "## Near Ignition Terrain Analysis\n\nThis HPWREN camera image from Black Mountain North shows characteristic **near_ignition_terrain** features rather than early smoke signatures. The foreground hillside displays extensive **drought-stressed chaparral and coastal sage scrub** with a brown-to-dark-green mosaic pattern, indicating critically dry fuel loads typical of Southern California's fire-prone landscape in mid-November. Notably, there is **no visible smoke plume, haze column, or anomalous atmospheric opacity** that would indicate combustion—the sky exhibits uniform clear-blue gradient with excellent visibility to distant mountain ranges.\n\nThe terrain surface shows **exposed bare-earth fire trails and dirt paths** winding through dense, desiccated brush, with the reddish-tan soil reflectivity contrasting sharply against the dark scrub canopy—a classic wildland-urban interface (WUI) setting. The right edge reveals a **telecommunications tower with microwave dish antennas**, confirming this as a monitored summit installation, while the mid-ground shows suburban development abutting undeveloped wildland fuels, representing the high-risk ignition zone interface where human activity meets cured vegetation.",
+      "lp-s-iqeye_20170520_+0000": "This image from the HPWREN Lyons Peak South camera (May 20, 2017, 11:19:14) shows an **early smoke signature** distinguished by a subtle atmospheric opacity along the distant ridgeline and horizon, particularly visible in the right-center portion of the frame where a thin, diffuse haze softens the contrast between terrain and sky. Unlike clear-day conditions typical of near-ignition terrain documentation, there is a noticeable reduction in **atmospheric transmittance** at distance, with the far mountain ranges appearing washed out and lacking the crisp definition expected under the otherwise clear blue sky conditions. The haze exhibits a grayish-blue tonal shift rather than the warm brown or white columnar structure of developed smoke, consistent with early-stage particulate dispersion from a nascent fire. The foreground granitic boulder outcrops and chaparral-covered slopes of Lyons Peak remain sharply defined with high textural detail, confirming that the atmospheric degradation is distant and directional—a hallmark of **early smoke plume detection** rather than localized ignition-point terrain features. The contrast gradient between the well-lit foreground surfaces and the progressively obscured background ridges serves as the primary visual discriminator for this classification.",
+      "lp-s-iqeye_20170520_+0180": "This HPWREN webcam image from Lyons Peak South captures an **early smoke signature** visible in the mid-right portion of the frame, where a distinct whitish-gray plume rises from a canyon drainage, contrasting against the darker chaparral-covered terrain. The smoke column appears diffuse and semi-transparent, characteristic of an incipient fire in its early growth phase, with enough thermal buoyancy to loft vertically but insufficient intensity to produce a dense, opaque plume. The surrounding terrain displays typical Southern California inland topography with granitic boulder outcrops in the foreground showing high-albedo, sun-exposed surfaces, while the hillsides are covered in mixed coastal sage scrub and chaparral exhibiting dry-season browning patterns. Unlike near-ignition terrain which would show localized heat distortion, flame signatures, or immediate ground-level discoloration, this image shows the smoke source at distance with atmospheric scattering already softening the plume edges. The clear blue sky with slight haze along the horizon provides good contrast for smoke detection, making the anomalous white plume readily distinguishable from ambient atmospheric conditions.",
+      "lp-s-iqeye_20170520_+0360": "This image captured from the HPWREN Lyons Peak South camera shows a clear **early smoke signature** in the right-center portion of the frame, where a diffuse, grayish-white plume rises from a distant ridgeline and disperses laterally with the ambient wind. The smoke column is thin, semi-transparent, and lacks the dense opacity characteristic of an established fire, indicating a nascent combustion event likely in its initial growth phase. The plume's coloration—pale gray transitioning to translucent white at its edges—suggests smoldering vegetation with incomplete combustion, consistent with chaparral or dry grass ignition in this semi-arid Southern California terrain.\n\nWhat distinguishes this as **early_smoke_signature** rather than **near_ignition_terrain** is the presence of the visible atmospheric aerosol plume itself: near_ignition_terrain would show only the vulnerable landscape features (dry fuel loads, rocky exposures, sparse vegetation) without an active smoke column. The surrounding terrain displays characteristic granitic boulder outcrops with high albedo surfaces, interspersed with dark-toned drought-stressed chaparral scrub, and the haze-attenuated mountain ridges in the background confirm typical late-spring atmospheric conditions conducive to fire starts. The smoke's spatial separation from the camera and its low vertical development indicate detection at an early stage, precisely the scenario HPWREN cameras are designed to capture for rapid fire alert purposes.",
+      "lp-s-iqeye_20170520_-0360": "This image, captured from the HPWREN camera at Lyons Peak South, displays **near_ignition_terrain** characteristics rather than an early smoke signature. The landscape is dominated by **exposed granitic boulder outcroppings** in the foreground with pale tan, highly reflective surfaces under direct midday sun, interspersed with dark **chaparral and coastal sage scrub** vegetation—classic Southern California fire-prone fuel beds. The terrain exhibits a mosaic of **cured, dry grasslands** (light brown patches in valleys) and sparse oak woodland, with visible fuel discontinuities across the rugged topography of ridgelines and drainages. Critically, there is **no visible atmospheric opacity anomaly, diffuse plume, or localized haze gradient** that would indicate an early smoke signature; the sky is uniformly clear blue with only distant atmospheric haze along the horizon consistent with normal boundary layer conditions. The surface texture contrast between sun-lit rock and shadowed vegetation is sharp and unobstructed, confirming the absence of particulate scattering characteristic of smoke.",
+      "lp-s-iqeye_20170520_-0180": "This image, captured from the HPWREN Lyons Peak South camera, shows **near_ignition_terrain** characterized by its distinctive surface properties. The foreground displays extensive **granitic boulder outcrops** with smooth, rounded weathering surfaces exhibiting high solar reflectivity and pale tan coloration typical of exposed tonalite/granodiorite in San Diego County's backcountry. The surrounding terrain features a mosaic of **sparse chaparral and coastal sage scrub** interspersed with dry, cured annual grasses creating a patchy brown-green texture pattern indicative of high fire susceptibility during late spring. The absence of any visible plume, haze column, or localized atmospheric opacity anomaly distinguishes this from an early smoke signature—the sky presents a clean, uniform blue gradient with only minor atmospheric haze along the distant ridgeline consistent with typical boundary-layer aerosol loading rather than combustion byproducts. The terrain's desiccated vegetation matrix, exposed mineral soils along drainage channels, and fuel continuity patterns represent classic pre-ignition landscape conditions in Southern California's fire-prone wildland-urban interface.",
+      "lp-s-iqeye_20170520_-0060": "## Near Ignition Terrain Analysis\n\nThis HPWREN camera image from Lyons Peak South captures **near_ignition_terrain** characterized by several distinguishing features. The foreground reveals extensive **granitic boulder outcrops** with high solar reflectivity and weathered exfoliation surfaces, interspersed with dry, sparse **chaparral and coastal sage scrub** vegetation exhibiting a desiccated brown-to-olive palette indicative of cured fine fuels. The terrain displays a **rugged, dissected topography** with exposed mineral soils and rocky ridgelines that create natural fire breaks and channeling corridors for wind-driven fire spread. Critically, the atmosphere is **clear with no visible smoke plume, haze column, or particulate scattering**—the sky gradient transitions cleanly from deep blue at zenith to a slight atmospheric haze at the horizon, consistent with normal boundary layer conditions rather than combustion byproducts. The surface properties—high fuel-to-rock ratio, sun-exposed south-facing aspects, and dry vegetation texture—define this as terrain with significant ignition vulnerability rather than an active or incipient smoke event.",
+      "hp-n-mobo-c_20170613_+0000": "This image from the HPWREN camera network at High Point North shows a panoramic view of semi-arid mountainous terrain in Southern California with a subtle atmospheric anomaly consistent with an **early smoke signature**. The key distinguishing feature is the diffuse, hazy reduction in visibility along the horizon, particularly noticeable in the middle distance where distant mountain ranges appear unusually obscured with a milky, desaturated quality that exceeds typical atmospheric scattering for a clear June day. Unlike near-ignition terrain—which would exhibit localized thermal distortion, visible flame, or concentrated dark/white plume columns rising from a discrete point source—this scene shows a broadly distributed, low-opacity aerosol layer that uniformly degrades contrast across the landscape. The surface terrain in the foreground displays dry, xeric chaparral and sparse conifer coverage with exposed decomposed granite soils, all exhibiting normal reflectivity without the darkened char signatures or heat shimmer characteristic of active ignition. The smoke dispersion pattern suggests transport from a distant or early-stage fire, creating a thin particulate veil that subtly washes out the blue atmospheric gradient near the horizon line.",
+      "hp-n-mobo-c_20170613_+0180": "## Early Smoke Signature Analysis\n\nThis HPWREN camera image from High Point North (2017-06-13, 12:00:25) exhibits subtle atmospheric characteristics consistent with an **early smoke signature** rather than merely displaying near-ignition terrain. The horizon line shows a distinct **haze gradient** with reduced visibility and a milky, bluish-white turbidity layer concentrated along the left-center background, differing from the typical atmospheric scattering pattern seen on clear days—this low-opacity plume diffusion is characteristic of distant or nascent combustion. The **contrast attenuation** across the mid-ground terrain is uneven, with the left flank showing noticeably more atmospheric obscuration than the right, suggesting a localized aerosol source rather than uniform regional haze. The terrain itself displays the dry, semi-arid chaparral and conifer landscape typical of Southern California fire-prone environments, with desiccated soil surfaces showing high reflectivity on exposed dirt roads, but the critical differentiator is the **asymmetric visibility degradation** in the valley below. The surface vegetation textures remain sharp in the foreground while progressively losing definition in a pattern inconsistent with simple distance-based atmospheric perspective, pointing to particulate loading from an early-stage smoke event.",
+      "hp-n-mobo-c_20170613_+0360": "This HPWREN camera image from High Point North shows a panoramic mountainous landscape under clear skies with notable atmospheric haze layering along the distant horizon, which is a key distinguishing feature of **early_smoke_signature**. The haze band visible along the mid-to-far horizon exhibits a diffuse, grayish-blue opacity that reduces visibility of distant mountain ranges — this graduated atmospheric turbidity differs from the clear atmospheric conditions typically seen in baseline near_ignition_terrain imagery. The terrain itself displays typical semi-arid chaparral and conifer vegetation with dry, exposed granitic soil on the summit clearing, but critically, there is no localized thermal distortion, darkened ground scarring, or concentrated plume column that would indicate active near-ignition conditions. The subtle, horizontally stratified smoke dispersion pattern suggests transported particulate matter from a distant fire source, creating the characteristic early smoke signature where smoke has diffused into a thin, broad atmospheric layer rather than presenting as a defined vertical column. The slight reduction in contrast and warm-toning of the distant terrain further supports early-stage smoke infiltration into the viewshed.",
+      "hp-n-mobo-c_20170613_-0360": "## Near Ignition Terrain Analysis\n\nThis HPWREN camera image from High Point North captures a classic **near_ignition_terrain** scene characterized by its highly fire-susceptible landscape features. The terrain exhibits extensive **xeric chaparral and sparse coniferous vegetation** interspersed with large patches of exposed, desiccated mineral soil and decomposed granite, presenting a mosaic of cured fine fuels and bare ground with high solar reflectivity. The **surface texture is coarse and granular**, with dirt access roads showing compacted, light-toned sediment contrasting against darker vegetated patches — a hallmark of semi-arid montane terrain in southern California's backcountry. Critically, the atmosphere is **uniformly clear with high visibility** across the distant mountain ranges, showing no diffuse light scattering, columnar opacity, or grayish-blue haze gradients that would indicate smoke particulates — distinguishing this definitively from an early_smoke_signature. The vegetation canopy displays a **dry, olive-to-brown spectral tone** consistent with pre-fire season fuel loading conditions, with no localized discoloration or thermal shimmer anomalies suggesting active combustion.",
+      "hp-n-mobo-c_20170613_-0180": "## Near Ignition Terrain Analysis\n\nThis HPWREN camera image from High Point North shows characteristic **near_ignition_terrain** features rather than early smoke signatures. The landscape exhibits **dry, xeric chaparral and mixed conifer vegetation** on steep, south-facing slopes with highly desiccated soil surfaces displaying a tan-to-ochre reflectivity typical of critically low fuel moisture conditions. The terrain texture is a mosaic of sparse **drought-stressed scrub**, exposed decomposed granite soils, and scattered conifers (likely Coulter or Jeffrey pine), creating a discontinuous fuel bed with significant fine fuel loading along the ridgeline. Notably, there is **no visible atmospheric opacity anomaly, diffuse plume structure, or localized haze gradient** that would indicate an early smoke signature — the horizon line remains crisp with only typical atmospheric scattering. The presence of a service vehicle on the unpaved access road and the orange equipment cache on the summit suggests active site maintenance at this remote mountaintop installation, with the surrounding terrain representing classic Southern California fire-prone wildland-urban interface conditions during early summer.",
+      "hp-n-mobo-c_20170613_-0060": "## Near Ignition Terrain Analysis\n\nThis HPWREN camera image from High Point North shows a classic **near_ignition_terrain** profile rather than an early smoke signature. The foreground reveals a **mountaintop clearing with exposed mineral soil and compacted dirt access roads**, exhibiting high reflectivity consistent with dry, desiccated ground surfaces typical of Southern California's semi-arid chaparral zones in mid-June. The surrounding vegetation consists of scattered **coniferous trees (likely Coulter or Jeffrey pine)** interspersed with dense, drought-stressed **chaparral and coastal sage scrub** displaying characteristic brown-tan coloration indicative of critically low live fuel moisture content. The terrain texture shows a mosaic of fine-grained decomposed granite soils and coarse woody vegetation with no visible atmospheric opacity anomalies, plume structures, or light-scattering haze columns that would characterize early smoke. The expansive viewshed across the arid valley floor to distant mountain ranges shows clear atmospheric transmission with only typical boundary-layer haze, confirming the absence of combustion byproducts while highlighting the fire-prone landscape conditions."
+    },
+    "feature_queries": [
+      {
+        "feature_id": "visible_smoke_plume",
+        "question": "Is there a visible plume of smoke rising from the landscape?",
+        "diagnostic_for": "early_smoke_signature",
+        "difficulty": "easy"
+      },
+      {
+        "feature_id": "hazy_discoloration_in_air",
+        "question": "Is there a hazy or translucent discoloration in the air above the terrain?",
+        "diagnostic_for": "early_smoke_signature",
+        "difficulty": "easy"
+      },
+      {
+        "feature_id": "dry_vegetation_present",
+        "question": "Is there visibly dry, brown, or desiccated vegetation covering a significant portion of the scene?",
+        "diagnostic_for": "near_ignition_terrain",
+        "difficulty": "easy"
+      },
+      {
+        "feature_id": "absence_of_active_combustion",
+        "question": "Is the scene free of any visible flames or glowing embers?",
+        "diagnostic_for": "near_ignition_terrain",
+        "difficulty": "easy"
+      },
+      {
+        "feature_id": "wispy_column_structure",
+        "question": "Is there a thin, wispy vertical column structure consistent with an incipient smoke source?",
+        "diagnostic_for": "early_smoke_signature",
+        "difficulty": "medium"
+      },
+      {
+        "feature_id": "fine_fuel_loading",
+        "question": "Is there evidence of high fine-fuel loading such as continuous grass, leaf litter, or dry brush on the ground surface?",
+        "diagnostic_for": "near_ignition_terrain",
+        "difficulty": "medium"
+      },
+      {
+        "feature_id": "localized_opacity_gradient",
+        "question": "Is there a localized gradient in atmospheric opacity suggesting a concentrated aerosol source?",
+        "diagnostic_for": "early_smoke_signature",
+        "difficulty": "medium"
+      },
+      {
+        "feature_id": "slope_aspect_favoring_ignition",
+        "question": "Does the terrain exhibit a south- or southwest-facing slope aspect with sparse canopy cover, favoring solar heating and ignition potential?",
+        "diagnostic_for": "near_ignition_terrain",
+        "difficulty": "medium"
+      },
+      {
+        "feature_id": "blue_gray_scattering_signature",
+        "question": "Is there a blue-gray light-scattering signature characteristic of sub-micron particulate matter from smoldering combustion?",
+        "diagnostic_for": "early_smoke_signature",
+        "difficulty": "hard"
+      },
+      {
+        "feature_id": "pyrolysis_discoloration",
+        "question": "Is there subtle brownish or yellowish discoloration at the base of the smoke consistent with thermal pyrolysis of organic material?",
+        "diagnostic_for": "early_smoke_signature",
+        "difficulty": "hard"
+      },
+      {
+        "feature_id": "fuel_moisture_deficit_indicators",
+        "question": "Are there visual indicators of critically low live-fuel moisture content, such as curled leaves or gray-green foliage pallor, in the vegetation canopy?",
+        "diagnostic_for": "near_ignition_terrain",
+        "difficulty": "hard"
+      },
+      {
+        "feature_id": "ladder_fuel_continuity",
+        "question": "Is there vertical fuel continuity (ladder fuels) connecting surface litter to elevated shrub and lower canopy layers, indicating high fire-spread potential?",
+        "diagnostic_for": "near_ignition_terrain",
+        "difficulty": "hard"
+      }
+    ],
+    "validator_answers": {
+      "rm-n-mobo-c_20160604_+0000": {
+        "visible_smoke_plume": false,
+        "hazy_discoloration_in_air": true,
+        "dry_vegetation_present": true,
+        "absence_of_active_combustion": true,
+        "wispy_column_structure": false,
+        "fine_fuel_loading": true,
+        "localized_opacity_gradient": false,
+        "slope_aspect_favoring_ignition": true,
+        "blue_gray_scattering_signature": true,
+        "pyrolysis_discoloration": false,
+        "fuel_moisture_deficit_indicators": true,
+        "ladder_fuel_continuity": false
+      },
+      "rm-n-mobo-c_20160604_+0180": {
+        "visible_smoke_plume": true,
+        "hazy_discoloration_in_air": true,
+        "dry_vegetation_present": true,
+        "absence_of_active_combustion": true,
+        "wispy_column_structure": true,
+        "fine_fuel_loading": true,
+        "localized_opacity_gradient": true,
+        "slope_aspect_favoring_ignition": true,
+        "blue_gray_scattering_signature": true,
+        "pyrolysis_discoloration": true,
+        "fuel_moisture_deficit_indicators": false,
+        "ladder_fuel_continuity": false
+      },
+      "rm-n-mobo-c_20160604_+0360": {
+        "visible_smoke_plume": true,
+        "hazy_discoloration_in_air": true,
+        "dry_vegetation_present": true,
+        "absence_of_active_combustion": true,
+        "wispy_column_structure": true,
+        "fine_fuel_loading": true,
+        "localized_opacity_gradient": true,
+        "slope_aspect_favoring_ignition": true,
+        "blue_gray_scattering_signature": true,
+        "pyrolysis_discoloration": true,
+        "fuel_moisture_deficit_indicators": false,
+        "ladder_fuel_continuity": false
+      },
+      "rm-n-mobo-c_20160604_-0360": {
+        "visible_smoke_plume": false,
+        "hazy_discoloration_in_air": true,
+        "dry_vegetation_present": true,
+        "absence_of_active_combustion": true,
+        "wispy_column_structure": false,
+        "fine_fuel_loading": true,
+        "localized_opacity_gradient": false,
+        "slope_aspect_favoring_ignition": false,
+        "blue_gray_scattering_signature": false,
+        "pyrolysis_discoloration": false,
+        "fuel_moisture_deficit_indicators": false,
+        "ladder_fuel_continuity": true
+      },
+      "rm-n-mobo-c_20160604_-0180": {
+        "visible_smoke_plume": false,
+        "hazy_discoloration_in_air": true,
+        "dry_vegetation_present": true,
+        "absence_of_active_combustion": true,
+        "wispy_column_structure": false,
+        "fine_fuel_loading": true,
+        "localized_opacity_gradient": false,
+        "slope_aspect_favoring_ignition": false,
+        "blue_gray_scattering_signature": false,
+        "pyrolysis_discoloration": false,
+        "fuel_moisture_deficit_indicators": false,
+        "ladder_fuel_continuity": false
+      },
+      "rm-n-mobo-c_20160604_-0060": {
+        "visible_smoke_plume": false,
+        "hazy_discoloration_in_air": true,
+        "dry_vegetation_present": true,
+        "absence_of_active_combustion": true,
+        "wispy_column_structure": false,
+        "fine_fuel_loading": true,
+        "localized_opacity_gradient": false,
+        "slope_aspect_favoring_ignition": false,
+        "blue_gray_scattering_signature": false,
+        "pyrolysis_discoloration": false,
+        "fuel_moisture_deficit_indicators": false,
+        "ladder_fuel_continuity": true
+      },
+      "bl-n-mobo-c_20161113_+0000": {
+        "visible_smoke_plume": false,
+        "hazy_discoloration_in_air": true,
+        "dry_vegetation_present": true,
+        "absence_of_active_combustion": true,
+        "wispy_column_structure": false,
+        "fine_fuel_loading": true,
+        "localized_opacity_gradient": false,
+        "slope_aspect_favoring_ignition": false,
+        "blue_gray_scattering_signature": false,
+        "pyrolysis_discoloration": false,
+        "fuel_moisture_deficit_indicators": false,
+        "ladder_fuel_continuity": false
+      },
+      "bl-n-mobo-c_20161113_+0180": {
+        "visible_smoke_plume": false,
+        "hazy_discoloration_in_air": true,
+        "dry_vegetation_present": true,
+        "absence_of_active_combustion": true,
+        "wispy_column_structure": false,
+        "fine_fuel_loading": true,
+        "localized_opacity_gradient": false,
+        "slope_aspect_favoring_ignition": false,
+        "blue_gray_scattering_signature": false,
+        "pyrolysis_discoloration": false,
+        "fuel_moisture_deficit_indicators": false,
+        "ladder_fuel_continuity": false
+      },
+      "bl-n-mobo-c_20161113_+0360": {
+        "visible_smoke_plume": false,
+        "hazy_discoloration_in_air": true,
+        "dry_vegetation_present": true,
+        "absence_of_active_combustion": true,
+        "wispy_column_structure": false,
+        "fine_fuel_loading": true,
+        "localized_opacity_gradient": false,
+        "slope_aspect_favoring_ignition": true,
+        "blue_gray_scattering_signature": false,
+        "pyrolysis_discoloration": false,
+        "fuel_moisture_deficit_indicators": false,
+        "ladder_fuel_continuity": false
+      },
+      "bl-n-mobo-c_20161113_-0360": {
+        "visible_smoke_plume": false,
+        "hazy_discoloration_in_air": true,
+        "dry_vegetation_present": true,
+        "absence_of_active_combustion": true,
+        "wispy_column_structure": false,
+        "fine_fuel_loading": true,
+        "localized_opacity_gradient": false,
+        "slope_aspect_favoring_ignition": false,
+        "blue_gray_scattering_signature": false,
+        "pyrolysis_discoloration": false,
+        "fuel_moisture_deficit_indicators": false,
+        "ladder_fuel_continuity": false
+      }
+    },
+    "seed_rules": {
+      "early_smoke_signature": {
+        "rule": "The image contains a visible anomalous atmospheric opacity feature — such as a discrete grayish-white plume, column, or diffuse haze band — that disrupts the otherwise uniform blue sky or reduces contrast against distant ridgelines, and this feature is distinguishable from normal boundary-layer aerosols by its localized concentration, vertical structure, or contrast against surrounding clear atmosphere.",
+        "preconditions": [
+          "The image is captured from a fixed HPWREN wildfire monitoring camera showing a panoramic view of semi-arid terrain",
+          "The sky and horizon are sufficiently visible to assess atmospheric clarity and detect opacity anomalies"
+        ],
+        "favors": "early_smoke_signature"
+      },
+      "near_ignition_terrain": {
+        "rule": "The sky and horizon exhibit uniformly clear visibility with no anomalous atmospheric opacity features — no discrete smoke plumes, diffuse haze columns, or localized milky/grayish scattering that reduces contrast against distant ridgelines — while the foreground terrain prominently displays dry, cured vegetation with tan-to-brown coloration, exposed bare mineral soil patches, and fire-management infrastructure such as unpaved access roads, indicating high ignition susceptibility without any evidence of active combustion.",
+        "preconditions": [
+          "Image is captured from an HPWREN or similar fixed wildfire surveillance camera overlooking semi-arid Southern California terrain",
+          "The scene includes visible sky, horizon ridgelines, and foreground chaparral or coastal sage scrub vegetation",
+          "Lighting conditions allow assessment of both atmospheric clarity and surface vegetation color/moisture state"
+        ],
+        "favors": "near_ignition_terrain"
+      }
+    }
+  }
 }
