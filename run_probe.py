@@ -177,7 +177,11 @@ async def main():
     )
     result.save(out_path)
     print(f"\nResult saved: {out_path}")
-    print(f"To submit: git add {out_path.relative_to(_HERE)} && git commit -m "
+    try:
+        rel = out_path.relative_to(_HERE)
+    except ValueError:
+        rel = out_path
+    print(f"To submit: git add {rel} && git commit -m "
           f"'Add probe: {args.pupil_model} on {domain} {pair_id}'")
 
     # Final banner

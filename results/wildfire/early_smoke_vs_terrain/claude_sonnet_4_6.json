@@ -1,0 +1,299 @@
+{
+  "benchmark_id": "wildfire_early_smoke_vs_terrain_probe_v1",
+  "benchmark_version": "1.0.0",
+  "schema_version": "1.0",
+  "submitted": "2026-04-16T14:47:05",
+  "pupil_model": "claude-sonnet-4-6",
+  "tutor_model": "claude-opus-4-6",
+  "validator_model": "claude-sonnet-4-6",
+  "verdict": "go",
+  "perception_score": 0.775,
+  "vocabulary_overlap": 0.5979,
+  "zero_shot_accuracy": 0.6667,
+  "rule_aided_accuracy": 0.9583,
+  "rule_comprehension_delta": 0.2917,
+  "consistency_score": 1.0,
+  "feature_detection_by_difficulty": {
+    "easy": 1.0,
+    "medium": 0.825,
+    "hard": 0.5
+  },
+  "feature_profile": {
+    "visible_smoke_plume_easy": 1.0,
+    "hazy_discoloration_in_air_easy": 1.0,
+    "dry_vegetation_present_easy": 1.0,
+    "absence_of_active_combustion_easy": 1.0,
+    "wispy_column_structure_medium": 1.0,
+    "fine_fuel_loading_medium": 1.0,
+    "localized_opacity_gradient_medium": 0.8,
+    "slope_aspect_favoring_ignition_medium": 0.5,
+    "blue_gray_scattering_signature_hard": 0.7,
+    "pyrolysis_discoloration_hard": 1.0,
+    "fuel_moisture_deficit_indicators_hard": 0.1,
+    "ladder_fuel_continuity_hard": 0.2
+  },
+  "weak_points": [],
+  "recommendations": [],
+  "costs": {
+    "PUPIL": {
+      "input_tokens": 342990,
+      "output_tokens": 21994,
+      "api_calls": 207,
+      "cost_usd": 1.3588799999999988
+    },
+    "VALIDATOR": {
+      "input_tokens": 27547,
+      "output_tokens": 3832,
+      "api_calls": 30,
+      "cost_usd": 0.14012100000000002
+    }
+  },
+  "total_cost_usd": 1.499001,
+  "rule_gate_accuracy": 1.0,
+  "rule_gate_passed": true,
+  "per_image_zero_shot": [
+    {
+      "image_id": "rm-n-mobo-c_20160604_+0000",
+      "true": "early_smoke_signature",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "rm-n-mobo-c_20160604_+0180",
+      "true": "early_smoke_signature",
+      "predicted": "early_smoke_signature"
+    },
+    {
+      "image_id": "rm-n-mobo-c_20160604_+0360",
+      "true": "early_smoke_signature",
+      "predicted": "early_smoke_signature"
+    },
+    {
+      "image_id": "rm-n-mobo-c_20160604_-0360",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "rm-n-mobo-c_20160604_-0180",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "rm-n-mobo-c_20160604_-0060",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "bl-n-mobo-c_20161113_+0000",
+      "true": "early_smoke_signature",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "bl-n-mobo-c_20161113_+0180",
+      "true": "early_smoke_signature",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "bl-n-mobo-c_20161113_+0360",
+      "true": "early_smoke_signature",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "bl-n-mobo-c_20161113_-0360",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "bl-n-mobo-c_20161113_-0180",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "bl-n-mobo-c_20161113_-0060",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "lp-s-iqeye_20170520_+0000",
+      "true": "early_smoke_signature",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "lp-s-iqeye_20170520_+0180",
+      "true": "early_smoke_signature",
+      "predicted": "early_smoke_signature"
+    },
+    {
+      "image_id": "lp-s-iqeye_20170520_+0360",
+      "true": "early_smoke_signature",
+      "predicted": "early_smoke_signature"
+    },
+    {
+      "image_id": "lp-s-iqeye_20170520_-0360",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "lp-s-iqeye_20170520_-0180",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "lp-s-iqeye_20170520_-0060",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "hp-n-mobo-c_20170613_+0000",
+      "true": "early_smoke_signature",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "hp-n-mobo-c_20170613_+0180",
+      "true": "early_smoke_signature",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "hp-n-mobo-c_20170613_+0360",
+      "true": "early_smoke_signature",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "hp-n-mobo-c_20170613_-0360",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "hp-n-mobo-c_20170613_-0180",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "hp-n-mobo-c_20170613_-0060",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    }
+  ],
+  "per_image_rule_aided": [
+    {
+      "image_id": "rm-n-mobo-c_20160604_+0000",
+      "true": "early_smoke_signature",
+      "predicted": "early_smoke_signature"
+    },
+    {
+      "image_id": "rm-n-mobo-c_20160604_+0180",
+      "true": "early_smoke_signature",
+      "predicted": "early_smoke_signature"
+    },
+    {
+      "image_id": "rm-n-mobo-c_20160604_+0360",
+      "true": "early_smoke_signature",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "rm-n-mobo-c_20160604_-0360",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "rm-n-mobo-c_20160604_-0180",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "rm-n-mobo-c_20160604_-0060",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "bl-n-mobo-c_20161113_+0000",
+      "true": "early_smoke_signature",
+      "predicted": "early_smoke_signature"
+    },
+    {
+      "image_id": "bl-n-mobo-c_20161113_+0180",
+      "true": "early_smoke_signature",
+      "predicted": "early_smoke_signature"
+    },
+    {
+      "image_id": "bl-n-mobo-c_20161113_+0360",
+      "true": "early_smoke_signature",
+      "predicted": "early_smoke_signature"
+    },
+    {
+      "image_id": "bl-n-mobo-c_20161113_-0360",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "bl-n-mobo-c_20161113_-0180",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "bl-n-mobo-c_20161113_-0060",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "lp-s-iqeye_20170520_+0000",
+      "true": "early_smoke_signature",
+      "predicted": "early_smoke_signature"
+    },
+    {
+      "image_id": "lp-s-iqeye_20170520_+0180",
+      "true": "early_smoke_signature",
+      "predicted": "early_smoke_signature"
+    },
+    {
+      "image_id": "lp-s-iqeye_20170520_+0360",
+      "true": "early_smoke_signature",
+      "predicted": "early_smoke_signature"
+    },
+    {
+      "image_id": "lp-s-iqeye_20170520_-0360",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "lp-s-iqeye_20170520_-0180",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "lp-s-iqeye_20170520_-0060",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "hp-n-mobo-c_20170613_+0000",
+      "true": "early_smoke_signature",
+      "predicted": "early_smoke_signature"
+    },
+    {
+      "image_id": "hp-n-mobo-c_20170613_+0180",
+      "true": "early_smoke_signature",
+      "predicted": "early_smoke_signature"
+    },
+    {
+      "image_id": "hp-n-mobo-c_20170613_+0360",
+      "true": "early_smoke_signature",
+      "predicted": "early_smoke_signature"
+    },
+    {
+      "image_id": "hp-n-mobo-c_20170613_-0360",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "hp-n-mobo-c_20170613_-0180",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    },
+    {
+      "image_id": "hp-n-mobo-c_20170613_-0060",
+      "true": "near_ignition_terrain",
+      "predicted": "near_ignition_terrain"
+    }
+  ],
+  "notes": ""
+}
