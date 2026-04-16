@@ -1,0 +1,361 @@
+{
+  "benchmark_id": "wildfire_early_smoke_vs_terrain_probe_v1",
+  "version": "1.0.0",
+  "schema_version": 1.0,
+  "benchmark_type": "probe",
+  "domain": "wildfire",
+  "created": "2026-04-16",
+  "pair_id": "early_smoke_vs_terrain",
+  "class_a": "early_smoke_signature",
+  "class_b": "near_ignition_terrain",
+  "source_dataset": "FIgLib (HPWREN/ALERTWildfire)",
+  "source_url": "https://github.com/brain-facens/FIgLib",
+  "pupil_model": null,
+  "n_per_class": 12,
+  "images_dir": "images/",
+  "description": "Fixed probe image set for PUPIL Domain Readiness Probe. 12 early_smoke_signature + 12 near_ignition_terrain frames from 4 HPWREN mountaintop camera sequences (FIgLib dataset). Positive frames span 0-360 s post-ignition (early optical smoke window). Negative frames span 60-360 s pre-ignition (same scene, no smoke). Difficulty reflects temporal distance from ignition: hard=0 s / -60 s, medium=180 s, easy=360 s.",
+  "sequences": [
+    "20160604_FIRE_rm-n-mobo-c",
+    "20161113_FIRE_bl-n-mobo-c",
+    "20170520_FIRE_lp-s-iqeye",
+    "20170613_FIRE_hp-n-mobo-c"
+  ],
+  "images": [
+    {
+      "image_id": "rm-n-mobo-c_20160604_+0000",
+      "filename": "rm-n-mobo-c_20160604_+0000-early_smoke_signature.jpg",
+      "true_class": "early_smoke_signature",
+      "difficulty": "hard",
+      "notes": "",
+      "metadata": {
+        "sequence": "20160604_FIRE_rm-n-mobo-c",
+        "camera": "rm-n-mobo-c",
+        "capture_date": "20160604",
+        "offset_s": 0,
+        "offset_label": "ignition_onset"
+      }
+    },
+    {
+      "image_id": "rm-n-mobo-c_20160604_+0180",
+      "filename": "rm-n-mobo-c_20160604_+0180-early_smoke_signature.jpg",
+      "true_class": "early_smoke_signature",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "sequence": "20160604_FIRE_rm-n-mobo-c",
+        "camera": "rm-n-mobo-c",
+        "capture_date": "20160604",
+        "offset_s": 180,
+        "offset_label": "3min_post_ignition"
+      }
+    },
+    {
+      "image_id": "rm-n-mobo-c_20160604_+0360",
+      "filename": "rm-n-mobo-c_20160604_+0360-early_smoke_signature.jpg",
+      "true_class": "early_smoke_signature",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {
+        "sequence": "20160604_FIRE_rm-n-mobo-c",
+        "camera": "rm-n-mobo-c",
+        "capture_date": "20160604",
+        "offset_s": 360,
+        "offset_label": "6min_post_ignition"
+      }
+    },
+    {
+      "image_id": "rm-n-mobo-c_20160604_-0360",
+      "filename": "rm-n-mobo-c_20160604_-0360-near_ignition_terrain.jpg",
+      "true_class": "near_ignition_terrain",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {
+        "sequence": "20160604_FIRE_rm-n-mobo-c",
+        "camera": "rm-n-mobo-c",
+        "capture_date": "20160604",
+        "offset_s": -360,
+        "offset_label": "6min_pre_ignition"
+      }
+    },
+    {
+      "image_id": "rm-n-mobo-c_20160604_-0180",
+      "filename": "rm-n-mobo-c_20160604_-0180-near_ignition_terrain.jpg",
+      "true_class": "near_ignition_terrain",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "sequence": "20160604_FIRE_rm-n-mobo-c",
+        "camera": "rm-n-mobo-c",
+        "capture_date": "20160604",
+        "offset_s": -180,
+        "offset_label": "3min_pre_ignition"
+      }
+    },
+    {
+      "image_id": "rm-n-mobo-c_20160604_-0060",
+      "filename": "rm-n-mobo-c_20160604_-0060-near_ignition_terrain.jpg",
+      "true_class": "near_ignition_terrain",
+      "difficulty": "hard",
+      "notes": "",
+      "metadata": {
+        "sequence": "20160604_FIRE_rm-n-mobo-c",
+        "camera": "rm-n-mobo-c",
+        "capture_date": "20160604",
+        "offset_s": -60,
+        "offset_label": "1min_pre_ignition"
+      }
+    },
+    {
+      "image_id": "bl-n-mobo-c_20161113_+0000",
+      "filename": "bl-n-mobo-c_20161113_+0000-early_smoke_signature.jpg",
+      "true_class": "early_smoke_signature",
+      "difficulty": "hard",
+      "notes": "",
+      "metadata": {
+        "sequence": "20161113_FIRE_bl-n-mobo-c",
+        "camera": "bl-n-mobo-c",
+        "capture_date": "20161113",
+        "offset_s": 0,
+        "offset_label": "ignition_onset"
+      }
+    },
+    {
+      "image_id": "bl-n-mobo-c_20161113_+0180",
+      "filename": "bl-n-mobo-c_20161113_+0180-early_smoke_signature.jpg",
+      "true_class": "early_smoke_signature",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "sequence": "20161113_FIRE_bl-n-mobo-c",
+        "camera": "bl-n-mobo-c",
+        "capture_date": "20161113",
+        "offset_s": 180,
+        "offset_label": "3min_post_ignition"
+      }
+    },
+    {
+      "image_id": "bl-n-mobo-c_20161113_+0360",
+      "filename": "bl-n-mobo-c_20161113_+0360-early_smoke_signature.jpg",
+      "true_class": "early_smoke_signature",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {
+        "sequence": "20161113_FIRE_bl-n-mobo-c",
+        "camera": "bl-n-mobo-c",
+        "capture_date": "20161113",
+        "offset_s": 360,
+        "offset_label": "6min_post_ignition"
+      }
+    },
+    {
+      "image_id": "bl-n-mobo-c_20161113_-0360",
+      "filename": "bl-n-mobo-c_20161113_-0360-near_ignition_terrain.jpg",
+      "true_class": "near_ignition_terrain",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {
+        "sequence": "20161113_FIRE_bl-n-mobo-c",
+        "camera": "bl-n-mobo-c",
+        "capture_date": "20161113",
+        "offset_s": -360,
+        "offset_label": "6min_pre_ignition"
+      }
+    },
+    {
+      "image_id": "bl-n-mobo-c_20161113_-0180",
+      "filename": "bl-n-mobo-c_20161113_-0180-near_ignition_terrain.jpg",
+      "true_class": "near_ignition_terrain",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "sequence": "20161113_FIRE_bl-n-mobo-c",
+        "camera": "bl-n-mobo-c",
+        "capture_date": "20161113",
+        "offset_s": -180,
+        "offset_label": "3min_pre_ignition"
+      }
+    },
+    {
+      "image_id": "bl-n-mobo-c_20161113_-0060",
+      "filename": "bl-n-mobo-c_20161113_-0060-near_ignition_terrain.jpg",
+      "true_class": "near_ignition_terrain",
+      "difficulty": "hard",
+      "notes": "",
+      "metadata": {
+        "sequence": "20161113_FIRE_bl-n-mobo-c",
+        "camera": "bl-n-mobo-c",
+        "capture_date": "20161113",
+        "offset_s": -60,
+        "offset_label": "1min_pre_ignition"
+      }
+    },
+    {
+      "image_id": "lp-s-iqeye_20170520_+0000",
+      "filename": "lp-s-iqeye_20170520_+0000-early_smoke_signature.jpg",
+      "true_class": "early_smoke_signature",
+      "difficulty": "hard",
+      "notes": "",
+      "metadata": {
+        "sequence": "20170520_FIRE_lp-s-iqeye",
+        "camera": "lp-s-iqeye",
+        "capture_date": "20170520",
+        "offset_s": 0,
+        "offset_label": "ignition_onset"
+      }
+    },
+    {
+      "image_id": "lp-s-iqeye_20170520_+0180",
+      "filename": "lp-s-iqeye_20170520_+0180-early_smoke_signature.jpg",
+      "true_class": "early_smoke_signature",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "sequence": "20170520_FIRE_lp-s-iqeye",
+        "camera": "lp-s-iqeye",
+        "capture_date": "20170520",
+        "offset_s": 180,
+        "offset_label": "3min_post_ignition"
+      }
+    },
+    {
+      "image_id": "lp-s-iqeye_20170520_+0360",
+      "filename": "lp-s-iqeye_20170520_+0360-early_smoke_signature.jpg",
+      "true_class": "early_smoke_signature",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {
+        "sequence": "20170520_FIRE_lp-s-iqeye",
+        "camera": "lp-s-iqeye",
+        "capture_date": "20170520",
+        "offset_s": 360,
+        "offset_label": "6min_post_ignition"
+      }
+    },
+    {
+      "image_id": "lp-s-iqeye_20170520_-0360",
+      "filename": "lp-s-iqeye_20170520_-0360-near_ignition_terrain.jpg",
+      "true_class": "near_ignition_terrain",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {
+        "sequence": "20170520_FIRE_lp-s-iqeye",
+        "camera": "lp-s-iqeye",
+        "capture_date": "20170520",
+        "offset_s": -360,
+        "offset_label": "6min_pre_ignition"
+      }
+    },
+    {
+      "image_id": "lp-s-iqeye_20170520_-0180",
+      "filename": "lp-s-iqeye_20170520_-0180-near_ignition_terrain.jpg",
+      "true_class": "near_ignition_terrain",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "sequence": "20170520_FIRE_lp-s-iqeye",
+        "camera": "lp-s-iqeye",
+        "capture_date": "20170520",
+        "offset_s": -180,
+        "offset_label": "3min_pre_ignition"
+      }
+    },
+    {
+      "image_id": "lp-s-iqeye_20170520_-0060",
+      "filename": "lp-s-iqeye_20170520_-0060-near_ignition_terrain.jpg",
+      "true_class": "near_ignition_terrain",
+      "difficulty": "hard",
+      "notes": "",
+      "metadata": {
+        "sequence": "20170520_FIRE_lp-s-iqeye",
+        "camera": "lp-s-iqeye",
+        "capture_date": "20170520",
+        "offset_s": -60,
+        "offset_label": "1min_pre_ignition"
+      }
+    },
+    {
+      "image_id": "hp-n-mobo-c_20170613_+0000",
+      "filename": "hp-n-mobo-c_20170613_+0000-early_smoke_signature.jpg",
+      "true_class": "early_smoke_signature",
+      "difficulty": "hard",
+      "notes": "",
+      "metadata": {
+        "sequence": "20170613_FIRE_hp-n-mobo-c",
+        "camera": "hp-n-mobo-c",
+        "capture_date": "20170613",
+        "offset_s": 0,
+        "offset_label": "ignition_onset"
+      }
+    },
+    {
+      "image_id": "hp-n-mobo-c_20170613_+0180",
+      "filename": "hp-n-mobo-c_20170613_+0180-early_smoke_signature.jpg",
+      "true_class": "early_smoke_signature",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "sequence": "20170613_FIRE_hp-n-mobo-c",
+        "camera": "hp-n-mobo-c",
+        "capture_date": "20170613",
+        "offset_s": 180,
+        "offset_label": "3min_post_ignition"
+      }
+    },
+    {
+      "image_id": "hp-n-mobo-c_20170613_+0360",
+      "filename": "hp-n-mobo-c_20170613_+0360-early_smoke_signature.jpg",
+      "true_class": "early_smoke_signature",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {
+        "sequence": "20170613_FIRE_hp-n-mobo-c",
+        "camera": "hp-n-mobo-c",
+        "capture_date": "20170613",
+        "offset_s": 360,
+        "offset_label": "6min_post_ignition"
+      }
+    },
+    {
+      "image_id": "hp-n-mobo-c_20170613_-0360",
+      "filename": "hp-n-mobo-c_20170613_-0360-near_ignition_terrain.jpg",
+      "true_class": "near_ignition_terrain",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {
+        "sequence": "20170613_FIRE_hp-n-mobo-c",
+        "camera": "hp-n-mobo-c",
+        "capture_date": "20170613",
+        "offset_s": -360,
+        "offset_label": "6min_pre_ignition"
+      }
+    },
+    {
+      "image_id": "hp-n-mobo-c_20170613_-0180",
+      "filename": "hp-n-mobo-c_20170613_-0180-near_ignition_terrain.jpg",
+      "true_class": "near_ignition_terrain",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "sequence": "20170613_FIRE_hp-n-mobo-c",
+        "camera": "hp-n-mobo-c",
+        "capture_date": "20170613",
+        "offset_s": -180,
+        "offset_label": "3min_pre_ignition"
+      }
+    },
+    {
+      "image_id": "hp-n-mobo-c_20170613_-0060",
+      "filename": "hp-n-mobo-c_20170613_-0060-near_ignition_terrain.jpg",
+      "true_class": "near_ignition_terrain",
+      "difficulty": "hard",
+      "notes": "",
+      "metadata": {
+        "sequence": "20170613_FIRE_hp-n-mobo-c",
+        "camera": "hp-n-mobo-c",
+        "capture_date": "20170613",
+        "offset_s": -60,
+        "offset_label": "1min_pre_ignition"
+      }
+    }
+  ]
+}
