@@ -104,6 +104,9 @@ Examples:
     p.add_argument("--save-precomputed", action="store_true",
                    help="Regenerate TUTOR/VALIDATOR outputs and write them back into the manifest "
                         "(populates the precomputed section so future contributors need only PUPIL credentials)")
+    p.add_argument("--use-expert-rules", action="store_true",
+                   help="Substitute human-authored expert rules (manifest precomputed.expert_rules) "
+                        "for model-generated seed_rules in Step 4. Bypasses TUTOR model for rule injection.")
     p.add_argument("--output",         default="",
                    help="Output path for result JSON (default: auto under results/)")
     p.add_argument("--list-benchmarks", action="store_true")
@@ -155,6 +158,7 @@ async def main():
         validator_model  = args.validator_model,
         recompute_tutor  = args.recompute_tutor,
         save_precomputed = args.save_precomputed,
+        use_expert_rules = args.use_expert_rules,
         anthropic_key    = anthropic_key,
         openrouter_key   = openrouter_key,
         cache_dir        = CACHE_DIR,

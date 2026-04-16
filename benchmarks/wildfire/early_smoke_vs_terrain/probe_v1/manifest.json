@@ -622,6 +622,37 @@
         ],
         "favors": "near_ignition_terrain"
       }
+    },
+    "expert_rules": {
+      "early_smoke_signature": {
+        "rule": "A localized atmospheric opacity anomaly originating from a single discrete point on the chaparral terrain surface. Against dark hillside vegetation, early chaparral smoke appears blue-white to white due to Rayleigh scattering from fine combustion particles (NWCG IRPG 2025; S-190). The anomaly rises as a buoyant vertical column under unstable conditions, or drifts as a structurally coherent plume under inversions. Four critical discriminators separate early smoke from look-alikes: (1) single identifiable point source at a specific ground location — not a broad swath or uniform layer; (2) blue-white to white colour against dark backgrounds — not yellow-brown (dust), purely transparent (heat shimmer), or uniformly diffuse white (ground fog); (3) structural coherence that persists and grows over time — ground fog dissipates upward, heat shimmer ceases with heating cycles, dust disperses erratically; (4) a local opacity anomaly against an otherwise clear visual field — regional atmospheric haze forms a uniform horizontal layer without any identifiable point of origin on the terrain surface.",
+        "preconditions": [
+          "Image is captured from a fixed HPWREN/ALERTWildfire mountaintop surveillance camera overlooking semi-arid Southern California chaparral terrain",
+          "Daylight conditions with sufficient visibility to assess atmospheric features against terrain and sky"
+        ],
+        "favors": "early_smoke_signature",
+        "sources": [
+          "NWCG Incident Response Pocket Guide (IRPG) 2025, PMS 461 — Interpret the Smoke Column",
+          "NWCG S-190 Module 3: Monitoring Fire Behavior — unstable atmosphere smoke column indicators",
+          "NWCG S-290 Intermediate Wildland Fire Behavior — stable vs. unstable smoke behaviour",
+          "NC OSFM Reading Smoke: Color (May 2009) — white smoke as moisture-release indicator",
+          "Rayleigh scattering physics — blue-white appearance of fine smoke particles against dark backgrounds"
+        ]
+      },
+      "near_ignition_terrain": {
+        "rule": "The scene shows uniformly clear atmospheric conditions with no anomalous opacity feature at any single ground location. Acceptable background conditions — which do NOT indicate fire — include: regional atmospheric haze (diffuse, layered, no point source, uniform across entire horizon), heat shimmer (transparent near-ground distortion with no colour or opacity), dust (yellow-brown, originates from broad ground swath or erratic dust devil rotation, disperses quickly), or ground fog/mist in drainages (white and diffuse, arises from valley floor, dissipates upward as temperature rises). None of these appear as a discrete buoyant column or coherent drifting plume originating from a single identifiable terrain point. The terrain surface is visible without any localized opacity anomaly consistent with active smouldering or flaming combustion.",
+        "preconditions": [
+          "Image is captured from a fixed HPWREN/ALERTWildfire mountaintop surveillance camera",
+          "Sufficient daylight and atmospheric visibility to assess terrain and sky conditions"
+        ],
+        "favors": "near_ignition_terrain",
+        "sources": [
+          "NWCG IRPG 2025 — haze as stable atmosphere indicator (uniform layered, no point source)",
+          "NWCG S-290 — fog layers as stable atmosphere visual indicator",
+          "Fire lookout training — 'waterdogs' (post-rain valley mist) dissipate upward vs. smoke which grows",
+          "SmokeD documentation — dust: yellow-brown broad-base vs. smoke: blue-white point-source"
+        ]
+      }
     }
   }
 }

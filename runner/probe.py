@@ -602,6 +602,7 @@ async def run_probe(
     validator_model:  str  = "claude-sonnet-4-6",
     recompute_tutor:  bool = False,
     save_precomputed: bool = False,
+    use_expert_rules: bool = False,
     anthropic_key:    str  = "",
     openrouter_key:   str  = "",
     cache_dir:        Optional[Path] = None,
@@ -713,6 +714,10 @@ async def run_probe(
         (img, pred) for img, pred in zip(manifest.images, zs_results)
         if pred != img.true_class
     ]
+    # Use human-expert rules if requested and available; otherwise model-generated.
+    if use_expert_rules and manifest.precomputed and manifest.precomputed.expert_rules:
+        seed_rules = manifest.precomputed.expert_rules
+        _print("    [dim]Using human-expert rules (--use-expert-rules)[/dim]")
     failure_rules = dict(seed_rules)  # start from seed rules as fallback
     if failures:
         for true_class in (class_a, class_b):

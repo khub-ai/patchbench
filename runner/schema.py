@@ -70,6 +70,11 @@ class Precomputed:
     # class_name -> rule dict, one per class (preferred)
     seed_rule:         Optional[dict]             = None
     # legacy single-rule field — superseded by seed_rules
+    expert_rules:      Optional[Dict[str, dict]]  = None
+    # human-authored rules (same format as seed_rules) sourced from domain
+    # expertise / published guidelines rather than model-generated descriptions.
+    # Use --use-expert-rules in run_probe.py to substitute these for seed_rules
+    # in Step 4, bypassing the TUTOR model entirely.
 
 
 @dataclass
@@ -159,6 +164,7 @@ class BenchmarkManifest:
                 validator_answers  = pc.get("validator_answers", {}),
                 seed_rules         = pc.get("seed_rules"),
                 seed_rule          = pc.get("seed_rule"),
+                expert_rules       = pc.get("expert_rules"),
             )
 
         return cls(
