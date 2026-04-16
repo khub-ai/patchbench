@@ -1,6 +1,6 @@
 # PatchBench Leaderboard
 
-> Generated 2026-04-16 · 14 result(s)
+> Generated 2026-04-16 · 16 result(s)
 
 Sorted by perception score descending. See [CONTRIBUTING.md](../CONTRIBUTING.md) to submit your model's results.
 
@@ -10,6 +10,8 @@ Sorted by perception score descending. See [CONTRIBUTING.md](../CONTRIBUTING.md)
 | 🟢 go | `google/gemma-4-26b-a4b-it` | [dermatology](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) | [melanoma vs nevus](https://github.com/khub-ai/patchbench/tree/main/benchmarks/dermatology/melanoma_vs_nevus) | 0.81 | 0.32 | 0.67 | +0.33 | 1.00 |
 | 🔴 no-go | `openai/gpt-4o` | [dermatology](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) | [melanoma vs nevus](https://github.com/khub-ai/patchbench/tree/main/benchmarks/dermatology/melanoma_vs_nevus) | 0.81 | 0.22 | 0.79 | +0.04 | 0.40 |
 | 🟢 go | `claude-haiku-4-5-20251001` | [dermatology](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) | [melanoma vs nevus](https://github.com/khub-ai/patchbench/tree/main/benchmarks/dermatology/melanoma_vs_nevus) | 0.78 | 0.32 | 0.54 | +0.21 | 1.00 |
+| 🟢 go | `claude-sonnet-4-6` | wildfire | [early smoke vs terrain](https://github.com/khub-ai/patchbench/tree/main/benchmarks/wildfire/early_smoke_vs_terrain) | 0.78 | 0.60 | 0.67 | +0.29 | 1.00 |
+| 🟢 go | `claude-sonnet-4-6` | wildfire | [early smoke vs terrain](https://github.com/khub-ai/patchbench/tree/main/benchmarks/wildfire/early_smoke_vs_terrain) | 0.78 | 0.58 | 0.67 | +0.29 | 1.00 |
 | 🟢 go | `qwen/qwen3-vl-8b-instruct` | [road_surface](https://github.com/ztsrxh/RSCD-Road_Surface_Classification_Dataset) | [dry vs wet](https://github.com/khub-ai/patchbench/tree/main/benchmarks/road_surface/dry_vs_wet) | 0.78 | 0.32 | 0.62 | +0.33 | 1.00 |
 | 🟡 partial | `claude-haiku-4-5-20251001` | [road_surface](https://github.com/ztsrxh/RSCD-Road_Surface_Classification_Dataset) | [dry vs wet](https://github.com/khub-ai/patchbench/tree/main/benchmarks/road_surface/dry_vs_wet) | 0.76 | 0.38 | 0.62 | +0.04 | 1.00 |
 | 🟡 partial | `claude-opus-4-6` | wildfire | [early smoke vs terrain](https://github.com/khub-ai/patchbench/tree/main/benchmarks/wildfire/early_smoke_vs_terrain) | 0.75 | 0.57 | 0.67 | +0.12 | 1.00 |
