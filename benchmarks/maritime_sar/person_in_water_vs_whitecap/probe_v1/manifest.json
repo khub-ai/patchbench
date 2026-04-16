@@ -1,0 +1,614 @@
+{
+  "benchmark_id": "maritime_sar_person_in_water_vs_whitecap_probe_v1",
+  "version": "1.0.0",
+  "schema_version": "1.0",
+  "domain": "maritime_sar",
+  "created": "2026-04-16",
+  "pair_id": "person_in_water_vs_whitecap",
+  "class_a": "person_in_water",
+  "class_b": "whitecap",
+  "source_dataset": "SeaDronesSee",
+  "source_url": "https://github.com/Ben93kie/SeaDronesSee",
+  "images_dir": "images/",
+  "description": "Fixed probe image set for PUPIL Domain Readiness Probe. 12 person_in_water + 12 whitecap frames from the SeaDronesSee validation split. The confusable pair captures the core failure mode: a person in the water appears as a small dark ellipse (~2–45 pixels, 0.002–0.45% of frame) against variable sea surface, easily confused with whitecap foam or wave crests. Difficulty for person_in_water is determined by person_fraction (bounding-box area / image area): hard <8e-5, medium 8e-5 to 1.5e-4, easy >2.5e-4. Difficulty for whitecap is distributed evenly in thirds (no sea-state metadata available).",
+  "images": [
+    {
+      "image_id": "piw_hard_01",
+      "filename": "piw_hard_01.jpg",
+      "true_class": "person_in_water",
+      "difficulty": "hard",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 2782,
+        "person_fraction": 2.26e-05,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "piw_hard_02",
+      "filename": "piw_hard_02.jpg",
+      "true_class": "person_in_water",
+      "difficulty": "hard",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 3071,
+        "person_fraction": 5.15e-05,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "piw_hard_03",
+      "filename": "piw_hard_03.jpg",
+      "true_class": "person_in_water",
+      "difficulty": "hard",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 6091,
+        "person_fraction": 7.52e-05,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "piw_hard_04",
+      "filename": "piw_hard_04.jpg",
+      "true_class": "person_in_water",
+      "difficulty": "hard",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 8641,
+        "person_fraction": 7.84e-05,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "piw_medium_05",
+      "filename": "piw_medium_05.jpg",
+      "true_class": "person_in_water",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 12018,
+        "person_fraction": 8.74e-05,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "piw_medium_06",
+      "filename": "piw_medium_06.jpg",
+      "true_class": "person_in_water",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 5311,
+        "person_fraction": 9.09e-05,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "piw_medium_07",
+      "filename": "piw_medium_07.jpg",
+      "true_class": "person_in_water",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 9812,
+        "person_fraction": 0.000119,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "piw_medium_08",
+      "filename": "piw_medium_08.jpg",
+      "true_class": "person_in_water",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 10750,
+        "person_fraction": 0.000122,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "piw_easy_09",
+      "filename": "piw_easy_09.jpg",
+      "true_class": "person_in_water",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 14085,
+        "person_fraction": 0.000276,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "piw_easy_10",
+      "filename": "piw_easy_10.jpg",
+      "true_class": "person_in_water",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 4882,
+        "person_fraction": 0.00028,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "piw_easy_11",
+      "filename": "piw_easy_11.jpg",
+      "true_class": "person_in_water",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 13950,
+        "person_fraction": 0.000417,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "piw_easy_12",
+      "filename": "piw_easy_12.jpg",
+      "true_class": "person_in_water",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 12566,
+        "person_fraction": 0.000449,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "wc_hard_01",
+      "filename": "wc_hard_01.jpg",
+      "true_class": "whitecap",
+      "difficulty": "hard",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 7220,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "wc_hard_02",
+      "filename": "wc_hard_02.jpg",
+      "true_class": "whitecap",
+      "difficulty": "hard",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 4025,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "wc_hard_03",
+      "filename": "wc_hard_03.jpg",
+      "true_class": "whitecap",
+      "difficulty": "hard",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 3247,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "wc_hard_04",
+      "filename": "wc_hard_04.jpg",
+      "true_class": "whitecap",
+      "difficulty": "hard",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 7183,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "wc_medium_05",
+      "filename": "wc_medium_05.jpg",
+      "true_class": "whitecap",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 7215,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "wc_medium_06",
+      "filename": "wc_medium_06.jpg",
+      "true_class": "whitecap",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 3078,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "wc_medium_07",
+      "filename": "wc_medium_07.jpg",
+      "true_class": "whitecap",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 3157,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "wc_medium_08",
+      "filename": "wc_medium_08.jpg",
+      "true_class": "whitecap",
+      "difficulty": "medium",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 7195,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "wc_easy_09",
+      "filename": "wc_easy_09.jpg",
+      "true_class": "whitecap",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 1560,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "wc_easy_10",
+      "filename": "wc_easy_10.jpg",
+      "true_class": "whitecap",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 3189,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "wc_easy_11",
+      "filename": "wc_easy_11.jpg",
+      "true_class": "whitecap",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 7199,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    },
+    {
+      "image_id": "wc_easy_12",
+      "filename": "wc_easy_12.jpg",
+      "true_class": "whitecap",
+      "difficulty": "easy",
+      "notes": "",
+      "metadata": {
+        "source_image_id": 179,
+        "dataset": "SeaDronesSee",
+        "split": "val"
+      }
+    }
+  ],
+  "precomputed": {
+    "tutor_model": "claude-opus-4-6",
+    "validator_model": "claude-sonnet-4-6",
+    "generated": "2026-04-16",
+    "tutor_descriptions": {
+      "piw_hard_01": "# Visual Analysis: Person in Water\n\nThis aerial/nadir image shows a **small, discrete object** in the upper-right quadrant of the frame, positioned near a white motorboat. Unlike whitecaps, which present as elongated, irregular streaks of foam aligned with wave crests and distributed across broad surface areas, this object appears as a **compact, isolated point** with a distinct yellow/bright-colored element — consistent with a person wearing a life vest or flotation device.\n\nThe object lacks the **diffuse, frothy texture and linear morphology** characteristic of wind-driven whitecaps; instead, it has a well-defined, roughly circular footprint with sharp contrast against the surrounding water. The surrounding water surface exhibits gentle ripple texture with specular highlights but no significant wave breaking or foam patterns, further distinguishing this feature from whitecap activity. The spatial context — proximity to a stationary or slow-moving recreational vessel in calm, shallow green-tinted coastal water — strongly supports identification as a **person in the water** rather than a hydrodynamic surface phenomenon.",
+      "piw_hard_02": "## Analysis: Person in Water\n\nIn this high-altitude aerial/nadir image, the key feature distinguishing a **person in water** from a whitecap is visible in the upper-left quadrant near the stationary white motorboat. A small, dark, irregularly shaped object can be detected in the water near the vessel — consistent with a human figure partially submerged, presenting a compact, low-contrast silhouette against the turbid olive-green water surface.\n\nUnlike **whitecaps**, which appear as bright, high-reflectivity, elongated streaks or patches with frothy texture aligned with wind-driven wave propagation, this feature is **dark and point-like**, lacking the characteristic specular brightness and linear foam patterning. The surrounding water exhibits gentle surface ripples with diffuse solar glint concentrated in the upper-left corner, but no wind-driven breaking waves or foam trails are present, further ruling out whitecap formation. The spatial proximity to the anchored boat — which shows no wake pattern indicating it is stationary — provides strong contextual evidence of a person swimming or floating near the vessel, consistent with recreational water activity.",
+      "piw_hard_03": "# Visual Analysis: Person in Water\n\nThis aerial/nadir view reveals a **person in water**, distinguishable from whitecaps by several key features. The subject exhibits a **compact, asymmetric form** with discernible body geometry — a dark elongated shape consistent with a human torso and limbs — rather than the diffuse, amorphous foam pattern characteristic of wave-generated whitecaps. The splash pattern surrounding the figure shows **directional turbulence** radiating outward from a central point of active locomotion, whereas whitecaps produce linearly distributed, wind-aligned streaks of aerated water. The figure's **high-contrast reflectivity** — particularly the dark core (body/wetsuit) surrounded by localized white water disturbance — differs from whitecaps, which present as uniformly bright, transient foam patches lacking a solid central mass. Additionally, nearby contextual elements such as the red rescue buoy/flotation device and other swimmers confirm this is an open-water activity scene with multiple persons present.",
+      "piw_hard_04": "# Visual Analysis: Person in Water\n\nThis aerial/nadir drone image shows several **persons in water** distinguishable by their characteristic visual signatures. Unlike whitecaps, which present as diffuse, elongated streaks of bright white foam with irregular, feathered edges following wave propagation patterns, the figures here appear as **small, compact, dark-toned clusters** with occasional bright spots from flotation devices or swim gear (visible orange and red buoys/floats nearby).\n\nThe persons in water create **localized, radial disturbance patterns** in the water surface—concentric ripples emanating from a central point—rather than the linear, wind-driven texture associated with whitecaps. Their **reflectivity is low and heterogeneous**, combining the dark tones of submerged bodies with intermittent specular highlights from splashing, contrasting with whitecaps' uniformly high-albedo, aerated foam texture.\n\nThe spatial distribution is also telling: these objects are **clustered in a semi-organized grouping** between two support boats, consistent with an open-water swim event, whereas whitecaps would appear stochastically across the water surface aligned with prevailing wind direction. The surrounding water is notably calm and murky green with minimal wave action, further confirming the absence of conditions that would produce whitecaps.",
+      "piw_medium_05": "# Visual Analysis: Person in Water\n\nThis aerial/drone image shows a **person in water** identifiable by several distinguishing features. Near the upper-center of the frame, there are small but distinctly **red/orange-colored objects** — likely a swim buoy or personal flotation device — that exhibit a **solid, saturated chromatic signature** sharply contrasting with the surrounding water, unlike whitecaps which present as diffuse, irregular white streaks aligned with wave propagation. The person and associated gear create a **compact, discrete cluster of high-contrast pixels** with defined edges, whereas whitecaps (visible faintly across the surface, particularly toward the right side) appear as **elongated, transient streaks of specular white** that follow the wind-driven wave texture. The figure at the top edge appears to be on a paddleboard or small watercraft, maintaining a **consistent spatial position and coherent form**, unlike the stochastic, rapidly dissipating foam patterns of whitecaps. The surrounding water surface shows a green-teal turbid coloration with gentle chop, providing context that the red markers and human figure are anomalous, persistent objects against the natural surface texture.",
+      "piw_medium_06": "# Visual Analysis: Person in Water\n\nThis aerial/nadir drone image shows several small figures in calm, turquoise-green water that are distinguishable as **persons in water** rather than whitecaps based on several key visual properties.\n\nThe objects exhibit **discrete, compact forms with irregular but anthropomorphic silhouettes**, appearing as small dark or colored specks with defined edges against the uniform water surface — consistent with human bodies partially submerged. Unlike whitecaps, which present as **diffuse, bright white patches of foam with feathered, amorphous edges** caused by wave breaking, these figures show **no associated turbulence patterns, no streaking, and no frothy texture**. The water surrounding the figures is notably calm with only gentle surface ripples, lacking the wind-driven chop or wave energy that generates whitecaps. Several figures are positioned in spatial proximity to small boats (appearing white with red/pink interiors), which provides contextual evidence of recreational swimming activity. The subtle wake disturbances around the figures are **concentric and localized**, characteristic of human movement through still water, rather than the linear, wind-aligned foam streaks typical of whitecap formation.",
+      "piw_medium_07": "## Analysis: Person in Water\n\nThis aerial/drone image shows several **persons in water**, identifiable by their distinct characteristics that differentiate them from whitecaps. The figures display **concentrated, high-chroma orange/red coloration** from life vests or swim caps, creating compact, saturated color spots that contrast sharply with the muted green-gray water surface — whitecaps, by contrast, appear as diffuse, elongated white streaks with feathered edges following wave dynamics.\n\nThe persons exhibit **roughly circular or irregular blob-like morphology** with consistent spatial scale (approximately human head/torso sized), and several appear in a loose cluster suggesting coordinated open-water swimming activity. Unlike whitecaps, which show linear or crescent-shaped foam patterns with high reflectivity and gradient dissipation at their edges, these objects have **sharp, well-defined boundaries** with minimal surrounding disturbance to the water surface. The small splashes visible near some figures show localized, asymmetric turbulence patterns characteristic of human limb movement rather than the rhythmic, wave-driven foam production of whitecaps.",
+      "piw_medium_08": "# Visual Analysis: Person in Water\n\nThis aerial/drone image shows a **person in the water** located centrally between the three recreational boats, identifiable as a small, discrete, dark-toned form with irregular organic geometry distinct from the surrounding water surface. Unlike **whitecaps**, which present as diffuse, elongated streaks of bright white foam with feathered edges following wave propagation patterns, this object exhibits a **compact, roughly oval silhouette** with a slightly darker albedo than the ambient water, consistent with a human body partially submerged.\n\nNearby, an **orange ring buoy** (life ring/throwable PFD) is visible, providing contextual confirmation that someone is swimming or has entered the water from one of the adjacent boats. The person's form creates a subtle localized disturbance in the water's surface texture — a small wake or displacement pattern — rather than the periodic, wind-driven crest formations characteristic of whitecaps. The **reflectivity profile** is muted and body-like rather than the high-specularity, transient bright patches that whitecaps produce as breaking wave crests catch ambient light.",
+      "piw_easy_09": "# Visual Analysis: Person in Water\n\nThis aerial/nadir image shows several **persons in water**, distinguishable by their compact, roughly circular or ovoid silhouettes with high-contrast color signatures — notably **red, orange, and yellow life vests or flotation devices** that create saturated chromatic points against the muted olive-green water surface. Unlike whitecaps, which present as **irregular, elongated streaks of diffuse white foam** with feathered edges and gradual opacity falloff (visible in the upper-left portion of the frame), these objects exhibit **well-defined, discrete boundaries** and maintain consistent spatial coherence rather than dissipating along wave fronts.\n\nThe persons produce minimal localized turbulence patterns — subtle radial disturbance rings — rather than the linear, wind-driven foam trails characteristic of whitecaps. Their **reflectivity is heterogeneous**, combining the specular highlights of wet neoprene or clothing with the matte, highly saturated surfaces of safety gear, whereas whitecaps display **uniformly high-albedo, aerated water** with a frothy, stochastic texture. The spatial distribution of these figures appears non-random and clustered, consistent with swimmers or participants in an open-water event, rather than the meteorologically driven, wave-crest-aligned patterning of whitecaps.",
+      "piw_easy_10": "# Visual Analysis: Person in Water\n\nThis aerial image shows a **person in water** identifiable by several distinguishing features. Near the center-bottom of the frame, there are small, distinct **red-colored objects** with irregular but compact morphology — consistent with a person wearing a red life jacket or flotation device — contrasting sharply against the green-tinted water surface. Unlike whitecaps, which present as **diffuse, elongated streaks of aerated foam** with high-albedo, feathered edges aligned with wind direction, these red features are **discrete, concentrated points** with consistent chromatic saturation (vivid red/orange hue) that does not match the white spectral signature of breaking wave crests. The surrounding water shows minimal surface disturbance radiating outward in concentric ripple patterns, indicative of a **localized displacement source** (i.e., a body) rather than the linear wave-breaking patterns characteristic of whitecaps. Additionally, a nearby **red navigation buoy** and a **motorboat executing a turning maneuver** (visible from its curved wake pattern) provide contextual evidence of a possible rescue or recreational swimming scenario.",
+      "piw_easy_11": "# Visual Analysis: Person in Water\n\nThis aerial image shows multiple **persons in water**, distinguishable from whitecaps by several key visual features. The individuals appear as **small, discrete, high-contrast elements** with distinct color signatures—notably **bright yellow/orange and red hues** from safety gear or wetsuits—that are chromatically distinct from the monochromatic white of wave foam. Unlike whitecaps, which exhibit **diffuse, irregular, transient frothy textures** with high reflectivity spread across a broader area (visible in the upper-left corner), the persons present as **compact, roughly circular or elongated shapes** with defined boundaries and consistent spatial persistence. The surrounding water shows subtle **localized disturbance patterns** radiating from each figure, indicating interaction with a solid body rather than the linear, wind-driven streak patterns characteristic of whitecaps. Additionally, the persons maintain **relatively stable positions** in a loose cluster formation, whereas whitecaps would appear as ephemeral, randomly distributed surface phenomena aligned with wave propagation direction.",
+      "piw_easy_12": "# Visual Analysis: Person in Water\n\nThis aerial/nadir drone image shows two small figures in turbid, green-hued coastal water, identifiable as **persons in water** rather than whitecaps based on several distinguishing features. The figures exhibit **discrete, saturated chromatic signatures**—notably red, yellow, and dark tones—consistent with swimwear, life vests, or flotation devices, whereas whitecaps would present as diffuse, achromatic (white/pale) foam patterns with irregular, elongated morphology following wave crests. The subjects appear as **compact, roughly symmetrical clusters of pixels** with sharp contrast against the surrounding water, lacking the characteristic streaky, wind-aligned texture and feathered edges that define whitecap foam. The surrounding water surface shows gentle, low-amplitude ripples with specular highlights but no active wave breaking or spindrift, further confirming the absence of whitecap-generating conditions. The spatial relationship between the two figures—close proximity with independent positioning—suggests intentional human activity (e.g., open-water swimming), as whitecaps would instead appear distributed along wave trains in repeating, meteorologically driven patterns.",
+      "wc_hard_01": "## Whitecap Analysis\n\nThis aerial/drone image captures a broad expanse of open ocean under clear skies, with the distinguishing **whitecap** features visible along the distant horizon line as irregular, bright white streaks and patches of foam caused by wave breaking. Unlike a **person_in_water**, which would present as a discrete, compact, darker object with irregular organic geometry and potentially visible limbs or head creating localized disturbance patterns, these whitecaps exhibit a **linear, elongated distribution pattern** that follows the natural wave crest orientation across a wide swath of the sea surface.\n\nThe whitecaps display characteristic **high-reflectivity, diffuse white patches** with ephemeral, frothy textures that contrast against the surrounding darker teal-green water, consistent with aerated surface foam from wind-driven wave breaking. Their spatial distribution is stochastic yet broadly uniform across the mid-to-far field, lacking the concentrated focal point that a human presence would create. The surface properties show typical **Beaufort scale 3-4 conditions**, with the shallow nearshore waters appearing calmer and more turbid (greenish hue from suspended sediment), while the offshore zone exhibits the characteristic whitecapping associated with increased fetch and wind exposure.",
+      "wc_hard_02": "# Visual Analysis: Whitecap Identification\n\nThis image shows an expansive open water seascape viewed from an elevated vantage point, where the surface exhibits characteristic **wind-driven chop** with subtle, distributed surface texture rather than any localized disturbance pattern. The water displays a **gradient of turquoise to dark green-gray tonal variation**, with lighter patches near the horizon consistent with shallow reef or sandbar areas where wave energy creates **diffuse, linear bands of white water** — the hallmark of whitecaps formed by wind shearing wave crests. Unlike a person in water, which would present as a **discrete, roughly symmetrical dark object with irregular motion artifacts** and often a visible wake or splash pattern, the bright features here are **elongated, ephemeral foam streaks** that follow prevailing wind direction across broad swaths of the surface. The surface reflectivity shows **specular highlights distributed stochastically** across the fetch, consistent with Beaufort scale 3–4 conditions producing scattered whitecaps rather than the concentrated, persistent disturbance a human body would create. Several vessels and navigation markers are visible at mid-range, providing scale context that confirms the white features are ocean-surface phenomena rather than anthropogenic objects.",
+      "wc_hard_03": "# Visual Analysis: Whitecap Classification\n\nThis aerial/nadir image shows a vast expanse of green-tinged coastal water with a single motorboat in the upper-left quadrant executing what appears to be a turning maneuver, evidenced by the curved wake pattern. The key distinguishing feature here is the **diffuse, irregularly distributed bright patches** on the water surface, particularly visible in the lower-right portion of the frame — these exhibit the characteristic **broad, streaky reflectivity patterns** of wind-driven whitecaps rather than the compact, localized disturbance signature associated with a person in water. Whitecaps present as **elongated, transient foam streaks** with high albedo that blend gradually into the surrounding water texture, lacking the distinct contrast boundary or concentrated splashing pattern a swimmer would produce. The water surface shows a uniformly textured chop with small-scale capillary waves and **specular highlights from sun glint**, consistent with moderate wind conditions that generate whitecapping. No isolated, persistent disturbance point or dark silhouette form — hallmarks of a human body in water — is observable anywhere in the scene.",
+      "wc_hard_04": "## Analysis: Whitecap\n\nThis image shows an aerial/elevated view of a coastal ocean scene with a broad expanse of open water. Along the distant horizon line (right side), there are visible **whitecaps** — irregular, bright white streaks and patches formed by wave crests breaking due to wind action. These features exhibit a characteristic **diffuse, linear, and elongated morphology** that follows the prevailing wave direction, distinguishing them from the more compact, rounded signature a person in water would present.\n\nWhitecaps display a **high-reflectivity, frothy texture** created by entrained air bubbles at the sea surface, appearing as discontinuous bright patches distributed stochastically across the wave field rather than as a single concentrated point source. Unlike a person in water — who would typically appear as a small, dark, roughly symmetrical object with possible limb articulation and localized disturbance patterns — these features are **spatially distributed, lack defined edges**, and are consistent with wind-driven wave breaking across a fetch. The surrounding water surface shows varying turbidity gradients (greener nearshore, bluer offshore), and the whitecap signatures align naturally with the wind-sea state visible across the scene.",
+      "wc_medium_05": "## Analysis: Whitecap Identification\n\nThis aerial/drone image captures a broad expanse of shallow coastal water with a clearly visible **whitecap** zone along the distant horizon, where wave crests break and produce characteristic **bright, linear streaks of white foam** contrasting against the darker blue-green water surface. Unlike a person in water—which would appear as a small, discrete, dark irregular shape with localized water disturbance patterns—whitecaps manifest as **elongated, discontinuous bands of high-reflectivity foam** distributed across a wide area following wave propagation patterns.\n\nThe surface texture transitions from calm, glassy nearshore water with low specular reflectivity in the foreground to increasingly textured, wind-roughened water in the mid-ground and background, where the whitecaps emerge as **diffuse, high-albedo patches** consistent with air-water mixing at wave crests. The foam patterns are spatially distributed in a stochastic yet directionally coherent manner, aligned with prevailing wind fetch, rather than showing the concentrated, point-source disturbance signature (splashing, wake turbulence, limb silhouettes) characteristic of a person in water. Several black rectangular occlusions obscure portions of the image, likely redacting vessels or identifying features, but the remaining visible whitecap formations display the classic **ephemeral, frothy texture** with rapid luminance falloff at their edges.",
+      "wc_medium_06": "This image shows an aerial/nadir view of a water surface with a predominantly olive-green, turbid appearance. In the upper-right quadrant, there is a zone of **specular reflection** where sunlight creates a characteristic pattern of small, bright, irregular patches distributed across wind-driven surface capillary waves — these are **whitecaps** or wind-generated micro-foam patches that appear as clustered, high-reflectivity textures against the darker water. Unlike a person in water, which would present as a compact, roughly human-shaped feature with distinct edges, possible limb articulation, and often a visible wake or disturbance pattern, these bright patches are **diffuse, distributed, and lack coherent morphology**, following the stochastic pattern of wind-wave interaction. The small red/orange object in the upper-left is likely a mooring buoy, not the feature of interest. The whitecap texture transitions gradually from the calmer, smoother water on the left to the more textured, glinting surface on the right, consistent with variable wind fetch across the water surface.",
+      "wc_medium_07": "# Visual Analysis: Whitecap\n\nThis aerial/nadir image shows an expansive body of turbid, greenish water with a generally low sea state characterized by small-scale surface ripples and chop rather than organized wave trains. The scattered bright patches visible across the water surface — particularly in the lower half of the frame — exhibit the diffuse, irregularly shaped reflectivity patterns characteristic of **whitecaps**: localized areas of wave breaking that produce transient foam and aerated water, creating high-albedo patches with indistinct, feathered edges that blend into the surrounding water surface. Unlike a person in water, which would present as a compact, roughly elliptical or elongated object with consistent spatial coherence, defined body contours, and often a visible wake or disturbance pattern, these bright features are amorphous, spatially dispersed, and lack any anthropometric structure or purposeful orientation.\n\nThe small red-orange object in the upper-left quadrant appears to be a mooring buoy or navigation marker, providing scale reference and confirming this is a coastal or harbor environment with sufficient fetch and current to generate wind-driven whitecapping. The water's green-brown turbidity and the specular highlights scattered across the surface further indicate active surface agitation consistent with whitecap formation rather than any human presence.",
+      "wc_medium_08": "# Visual Analysis: Whitecap Identification\n\nThis image shows an aerial/elevated view of an open ocean surface under fair-weather conditions. The feature in question exhibits characteristics consistent with **whitecap** rather than person_in_water: the surface displays scattered bright, high-reflectivity patches along the water surface that are diffuse and irregularly distributed, consistent with wind-driven wave cresting and foam formation. Unlike a person_in_water, which would present as a compact, darker object with distinct contrast against the surrounding water and potentially discernible anatomical form or splashing disturbance patterns, these bright features are transient surface phenomena with a frothy, aerated texture that blends into the surrounding wave field.\n\nThe water surface itself shows characteristic micro-texture from wind ripple patterns, with specular sun glint visible in the lower-left quadrant, and the whitecaps appear as elongated or patchy streaks of white foam aligned with prevailing wave direction. The absence of any concentrated disturbance signature, wake pattern, or dark silhouette further distinguishes this as natural surface aeration — classic whitecapping produced by moderate wind speeds breaking wave crests.",
+      "wc_easy_09": "# Visual Analysis: Whitecap Identification\n\nThis aerial/nadir image shows a vast expanse of calm, dark teal-green water with two small watercraft visible in the right portion of the frame. The key distinguishing features here relate to **surface reflectivity and texture patterns**: the small bright white features near the vessels exhibit the characteristic high-albedo, diffuse reflectance typical of whitecaps—aerated, turbulent water surfaces that scatter light omnidirectionally—rather than the more compact, discrete spectral signature of a person's head or body in water. A person in water would typically present as a small, dark or flesh-toned object with a consistent rounded morphology and potentially associated shadow, whereas these bright patches show irregular, elongated shapes consistent with foam and wave breaking around vessel wakes. The surrounding water surface displays a uniformly smooth micro-texture with subtle specular highlights from ambient light, providing strong contrast against the bright, frothy whitecap formations that lack the structured geometric form expected of a human figure.",
+      "wc_easy_10": "# Visual Analysis: Whitecap\n\nThis image, captured from a **nadir (top-down) aerial perspective**, shows a broad expanse of turbid, olive-green coastal water with varying degrees of surface agitation. The key distinguishing feature is the **distributed pattern of specular highlights and foam streaks** visible across the lower-center portion of the frame, where wind-driven surface chop produces small-scale whitecapping — irregular, transient patches of aerated water that create localized high-reflectance textures against the otherwise matte, sediment-laden water surface.\n\nUnlike a person in water, which would present as a **coherent, compact object with distinct chromatic contrast** (skin tone, swimwear color) and possibly limb-like geometry, the whitecap features here are **diffuse, amorphous, and spatially distributed** without a defined centroid or anthropomorphic morphology. The small red-orange object visible in the lower-right corner appears to be a **navigational buoy or mooring marker**, not a swimmer — it lacks the irregular shape and splashing disturbance pattern typical of a human subject. The overall surface texture gradient from calm, glassy water in the upper frame to increasingly rippled, light-scattering texture below is consistent with **wind fetch development** producing incipient whitecapping rather than any localized human disturbance.",
+      "wc_easy_11": "## Analysis: Whitecap\n\nThis image shows an **aerial/drone perspective** of a coastal ocean scene with several vessels visible on the water surface. The key distinguishing features of **whitecaps** versus a person in water are clearly observable here:\n\nThe distant horizon line reveals scattered **irregular patches of white, foamy turbulence** along the water's surface, particularly visible in the upper-right quadrant where breaking wave crests create bright, high-albedo streaks against the darker teal-green water. These whitecap formations exhibit a characteristic **elongated, diffuse morphology** with feathered edges that follow wind-driven wave propagation patterns, lacking the compact, rounded signature that a person's head or body would produce. The surface reflectivity shows **specular highlights** from sunlight that transition gradually across wave faces, contrasting with the sharper, more localized disturbance pattern a swimmer would create. The whitecaps appear as naturally distributed, **stochastic clusters** consistent with Beaufort scale 3–4 wind conditions, with no associated wake patterns, splashing asymmetry, or dark central mass that would indicate a human presence in the water.",
+      "wc_easy_12": "## Analysis: Whitecap Identification\n\nThis aerial/nadir image shows a large expanse of open water with subtle surface texture variations. In the upper-left quadrant, two small white features are visible — these exhibit the characteristic **high-reflectivity, diffuse bright patches** consistent with whitecaps rather than persons in water. Whitecaps typically present as **irregular, amorphous bright spots** with soft, feathered edges that blend into the surrounding water surface, lacking the defined body contour, limb articulation, or shadow signatures that a person in water would produce.\n\nThe surrounding water surface displays a complex pattern of **low-amplitude capillary waves and wind-driven ripple textures**, with a notable tonal gradient from lighter (shallower/more reflective) on the left to darker (deeper/less reflective) on the right. The white features lack any **coherent geometric structure, wake pattern, or consistent aspect ratio** — distinguishing them from a human subject, which would typically show a more elongated form with discernible head/torso separation and often a localized disturbance pattern radiating outward. The brightness here is consistent with **foam or aerated water from wave breaking**, producing specular, transient surface reflectance."
+    },
+    "feature_queries": [
+      {
+        "feature_id": "visible_human_body",
+        "question": "Is there a recognizable human body or body parts (such as arms, legs, or head) visible in the image?",
+        "diagnostic_for": "person_in_water",
+        "difficulty": "easy"
+      },
+      {
+        "feature_id": "foamy_white_crest",
+        "question": "Is there a broad, foamy white crest forming along the top of a wave?",
+        "diagnostic_for": "whitecap",
+        "difficulty": "easy"
+      },
+      {
+        "feature_id": "human_face_visible",
+        "question": "Is there a human face visible above or at the water surface?",
+        "diagnostic_for": "person_in_water",
+        "difficulty": "easy"
+      },
+      {
+        "feature_id": "uniform_wave_pattern",
+        "question": "Is the white disturbance part of a repeating, uniform wave pattern across the water surface?",
+        "diagnostic_for": "whitecap",
+        "difficulty": "easy"
+      },
+      {
+        "feature_id": "localized_splash_pattern",
+        "question": "Is there a localized, irregular splash pattern inconsistent with natural wave breaking?",
+        "diagnostic_for": "person_in_water",
+        "difficulty": "medium"
+      },
+      {
+        "feature_id": "skin_tone_contrast",
+        "question": "Is there an area of skin-toned coloring contrasting against the surrounding blue or green water?",
+        "diagnostic_for": "person_in_water",
+        "difficulty": "medium"
+      },
+      {
+        "feature_id": "elongated_crest_line",
+        "question": "Is the white formation elongated along a linear crest line parallel to the wave front?",
+        "diagnostic_for": "whitecap",
+        "difficulty": "medium"
+      },
+      {
+        "feature_id": "wind_driven_foam_streaks",
+        "question": "Are there wind-driven foam streaks or spindrift trailing downwind from the white area?",
+        "diagnostic_for": "whitecap",
+        "difficulty": "medium"
+      },
+      {
+        "feature_id": "asymmetric_wake_disturbance",
+        "question": "Is there an asymmetric wake or V-shaped water disturbance suggesting directed movement through the water?",
+        "diagnostic_for": "person_in_water",
+        "difficulty": "hard"
+      },
+      {
+        "feature_id": "entrained_air_bubble_plume",
+        "question": "Is there a subsurface entrained air bubble plume visible beneath the white surface disturbance, consistent with wave breaking turbulence?",
+        "diagnostic_for": "whitecap",
+        "difficulty": "hard"
+      },
+      {
+        "feature_id": "treading_water_posture",
+        "question": "Is there a vertically oriented dark mass just below the surface consistent with a person treading water in an upright posture?",
+        "diagnostic_for": "person_in_water",
+        "difficulty": "hard"
+      },
+      {
+        "feature_id": "phase_speed_foam_decay",
+        "question": "Does the white formation exhibit a diffuse, decaying foam patch (stage B whitecap residual) characteristic of post-breaking wave dissipation?",
+        "diagnostic_for": "whitecap",
+        "difficulty": "hard"
+      }
+    ],
+    "validator_answers": {
+      "piw_hard_01": {
+        "visible_human_body": false,
+        "foamy_white_crest": false,
+        "human_face_visible": false,
+        "uniform_wave_pattern": false,
+        "localized_splash_pattern": true,
+        "skin_tone_contrast": false,
+        "elongated_crest_line": false,
+        "wind_driven_foam_streaks": false,
+        "asymmetric_wake_disturbance": true,
+        "entrained_air_bubble_plume": false,
+        "treading_water_posture": false,
+        "phase_speed_foam_decay": false
+      },
+      "piw_hard_02": {
+        "visible_human_body": false,
+        "foamy_white_crest": false,
+        "human_face_visible": false,
+        "uniform_wave_pattern": false,
+        "localized_splash_pattern": false,
+        "skin_tone_contrast": false,
+        "elongated_crest_line": false,
+        "wind_driven_foam_streaks": false,
+        "asymmetric_wake_disturbance": false,
+        "entrained_air_bubble_plume": false,
+        "treading_water_posture": false,
+        "phase_speed_foam_decay": false
+      },
+      "piw_hard_03": {
+        "visible_human_body": true,
+        "foamy_white_crest": false,
+        "human_face_visible": true,
+        "uniform_wave_pattern": false,
+        "localized_splash_pattern": true,
+        "skin_tone_contrast": true,
+        "elongated_crest_line": false,
+        "wind_driven_foam_streaks": false,
+        "asymmetric_wake_disturbance": true,
+        "entrained_air_bubble_plume": false,
+        "treading_water_posture": true,
+        "phase_speed_foam_decay": true
+      },
+      "piw_hard_04": {
+        "visible_human_body": false,
+        "foamy_white_crest": false,
+        "human_face_visible": false,
+        "uniform_wave_pattern": false,
+        "localized_splash_pattern": true,
+        "skin_tone_contrast": false,
+        "elongated_crest_line": false,
+        "wind_driven_foam_streaks": false,
+        "asymmetric_wake_disturbance": true,
+        "entrained_air_bubble_plume": false,
+        "treading_water_posture": true,
+        "phase_speed_foam_decay": false
+      },
+      "piw_medium_05": {
+        "visible_human_body": true,
+        "foamy_white_crest": false,
+        "human_face_visible": true,
+        "uniform_wave_pattern": false,
+        "localized_splash_pattern": false,
+        "skin_tone_contrast": true,
+        "elongated_crest_line": false,
+        "wind_driven_foam_streaks": false,
+        "asymmetric_wake_disturbance": true,
+        "entrained_air_bubble_plume": false,
+        "treading_water_posture": false,
+        "phase_speed_foam_decay": false
+      },
+      "piw_medium_06": {
+        "visible_human_body": true,
+        "foamy_white_crest": false,
+        "human_face_visible": false,
+        "uniform_wave_pattern": false,
+        "localized_splash_pattern": true,
+        "skin_tone_contrast": true,
+        "elongated_crest_line": false,
+        "wind_driven_foam_streaks": false,
+        "asymmetric_wake_disturbance": false,
+        "entrained_air_bubble_plume": false,
+        "treading_water_posture": true,
+        "phase_speed_foam_decay": false
+      },
+      "piw_medium_07": {
+        "visible_human_body": true,
+        "foamy_white_crest": false,
+        "human_face_visible": false,
+        "uniform_wave_pattern": false,
+        "localized_splash_pattern": true,
+        "skin_tone_contrast": true,
+        "elongated_crest_line": false,
+        "wind_driven_foam_streaks": false,
+        "asymmetric_wake_disturbance": true,
+        "entrained_air_bubble_plume": false,
+        "treading_water_posture": true,
+        "phase_speed_foam_decay": false
+      },
+      "piw_medium_08": {
+        "visible_human_body": true,
+        "foamy_white_crest": false,
+        "human_face_visible": true,
+        "uniform_wave_pattern": true,
+        "localized_splash_pattern": true,
+        "skin_tone_contrast": true,
+        "elongated_crest_line": false,
+        "wind_driven_foam_streaks": false,
+        "asymmetric_wake_disturbance": false,
+        "entrained_air_bubble_plume": false,
+        "treading_water_posture": true,
+        "phase_speed_foam_decay": false
+      },
+      "piw_easy_09": {
+        "visible_human_body": true,
+        "foamy_white_crest": false,
+        "human_face_visible": false,
+        "uniform_wave_pattern": false,
+        "localized_splash_pattern": true,
+        "skin_tone_contrast": false,
+        "elongated_crest_line": true,
+        "wind_driven_foam_streaks": true,
+        "asymmetric_wake_disturbance": true,
+        "entrained_air_bubble_plume": false,
+        "treading_water_posture": true,
+        "phase_speed_foam_decay": true
+      },
+      "piw_easy_10": {
+        "visible_human_body": false,
+        "foamy_white_crest": false,
+        "human_face_visible": false,
+        "uniform_wave_pattern": false,
+        "localized_splash_pattern": true,
+        "skin_tone_contrast": false,
+        "elongated_crest_line": false,
+        "wind_driven_foam_streaks": false,
+        "asymmetric_wake_disturbance": true,
+        "entrained_air_bubble_plume": true,
+        "treading_water_posture": true,
+        "phase_speed_foam_decay": false
+      }
+    },
+    "seed_rules": {
+      "person_in_water": {
+        "rule": "A compact, discrete object with a dark or solid central mass surrounded by localized radial splash/turbulence, appearing as an isolated point-like feature with sharp contrast boundaries against the water — often near a stationary vessel — rather than elongated, diffuse, wind-aligned streaks of bright foam distributed broadly across the surface.",
+        "preconditions": [
+          "Image is an aerial or elevated view of a water surface",
+          "There are small bright or dark features visible on the water that could be either a person or whitecaps",
+          "Sufficient resolution to distinguish compact point-like objects from elongated foam streaks"
+        ],
+        "favors": "person_in_water"
+      },
+      "whitecap": {
+        "rule": "Bright white features on the water surface appear as elongated, diffuse foam streaks or patches distributed broadly across the scene following wave/wind orientation, lacking any compact dark central mass or concentrated point-source disturbance pattern.",
+        "preconditions": [
+          "Aerial or elevated view of open water is visible",
+          "Bright white features are present on the water surface"
+        ],
+        "favors": "whitecap"
+      }
+    },
+    "expert_rules": {
+      "person_in_water": {
+        "rule": "A small, compact discrete object appearing as a rounded or oval dark mass resting on the water surface. At typical drone altitudes (50-150 m AGL), a person in the water subtends roughly 2-30 pixels across. Four single-frame discriminators from whitecap: (1) SHAPE: compact circular-to-oval silhouette with a reasonably well-defined boundary — not diffuse, not elongated along wave-crest geometry; (2) SURFACE TEXTURE AT TARGET: dark and non-foamy — no white foam crown, no spray halo surrounding the object (foam may be present if victim was just submerged, but the central mass remains dark); (3) COLOUR: predominantly dark tone (skin, hair, wetsuit, dark clothing) consistent across the compact mass; life-jacket wearers may show an orange or yellow component adjacent to the dark head mass — this bicolour pattern (dark rounded mass + adjacent high-vis colour) is strongly diagnostic; (4) CONTRAST POLARITY: object is darker than the surrounding water surface (dark-on-light), opposite to whitecap which is light-on-dark. Note: a person-in-water target will often be the ONLY isolated compact dark spot in the image — multiple similar objects appearing simultaneously in the same image favour floating debris rather than a lone victim.",
+        "preconditions": [
+          "Aerial image from drone or manned aircraft looking downward at open water surface",
+          "Sufficient image resolution to distinguish objects 2+ pixels wide (altitude < 250 m AGL)",
+          "Target object located within the water surface, not on a vessel or shore structure"
+        ],
+        "favors": "person_in_water",
+        "sources": [
+          "IAMSAR Vol. III (2022 ed.) Chapter 5 — Visual Search Techniques",
+          "USCG Addendum to IAMSAR (2022) Annex F — Survivor Appearance",
+          "USCG SAR Coordinator Training Manual (COMDTINST M16130.2F) Chapter 8",
+          "UK MCA SRR Operational Guidance OG-037 — Aerial Search Visual Cues"
+        ]
+      },
+      "whitecap": {
+        "rule": "A bright-white, geometrically irregular patch on the water surface produced by wave breaking (foam and entrained air). Four single-frame discriminators from person_in_water: (1) LUMINANCE: uniformly high brightness throughout — bright white to light grey with no compact dark central core; the entire feature is luminous, not dark-centred; (2) SHAPE AND EDGES: diffuse and irregular, often elongated along the local wave-crest direction (perpendicular to wave propagation); edges are soft and indistinct rather than sharply bounded like a solid object; (3) TEXTURE: foamy or bubbled micro-texture visible at sufficient resolution; may show streaks or filaments of foam radiating from the breaking crest; (4) MULTIPLICITY: in any given sea state, whitecaps appear as a population — multiple similar white patches visible at similar scales across the image; a lone isolated bright-white patch is less common (isolated foam may indicate vessel wake or propeller wash). IMPORTANT single-frame caveat: because whitecaps are transient (< 15 s lifespan), a single frame may capture the object at any stage from breaking crest to dissipating foam streak; early-stage whitecap (bright compact mass) superficially resembles a life jacket; distinguish by confirming absence of any dark central core and presence of foam texture.",
+        "preconditions": [
+          "Aerial image from drone or manned aircraft looking downward at open water surface",
+          "Sea state sufficient to produce wave breaking (Beaufort 3+ or local fetch-driven chop)",
+          "White features appear on water surface (not vessel superstructure or equipment)"
+        ],
+        "favors": "whitecap",
+        "sources": [
+          "IAMSAR Vol. III (2022 ed.) Chapter 5 — Visual Search Techniques",
+          "USCG Addendum to IAMSAR (2022) Annex F — Sea Surface Clutter Description",
+          "WMO No. 306 / Beaufort Scale — Sea State Visual Criteria",
+          "UK MCA SRR Operational Guidance OG-037 — Aerial Search Visual Cues"
+        ]
+      }
+    }
+  }
+}
