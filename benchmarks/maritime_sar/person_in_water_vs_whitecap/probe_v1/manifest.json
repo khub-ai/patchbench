@@ -609,6 +609,54 @@
           "UK MCA SRR Operational Guidance OG-037 — Aerial Search Visual Cues"
         ]
       }
+    },
+    "human_directive_rules": {
+      "person_in_water": {
+        "rule": "OPERATIONAL SAR DIRECTIVE (human expert override): In active maritime search-and-rescue operations, classify as person_in_water whenever ANY small orange, red, or high-visibility coloured object is visible floating on open water. Rationale: such objects are either (a) a person wearing a PFD, immersion suit, or survival coverall, or (b) SAR equipment — life ring, EPIRB, flare case, survival pack — that was deployed toward a person who is either currently in the water or was very recently. Under the USCG / IMO SAR doctrine of \"rescue first, confirm later\", both cases require the same immediate response: classify as person_in_water and dispatch resources. The asymmetry of consequences (missed victim vs. unnecessary dispatch) mandates this bias. Also classify as person_in_water any compact dark object adjacent to orange/red equipment, as this may be the victim alongside the deployed appliance.",
+        "preconditions": [
+          "Aerial SAR operational context — active search for missing persons",
+          "Image shows open water surface from drone or aircraft"
+        ],
+        "favors": "person_in_water",
+        "sources": [
+          "Human SAR coordinator operational directive (policy override)",
+          "USCG SAR doctrine: rescue first, confirm later",
+          "IMO SOLAS Chapter V — Safety of Navigation, Reg. 33"
+        ]
+      },
+      "whitecap": {
+        "rule": "OPERATIONAL SAR DIRECTIVE: Classify as whitecap ONLY when the feature is clearly diffuse white foam or spray with absolutely NO orange, red, or high-visibility coloured component, no compact floating object of any colour, and the feature is geometrically consistent with wave breaking (irregular, elongated, no defined boundary). If any doubt exists between whitecap and person_in_water, the mandatory operational default is person_in_water — a missed victim is an unacceptable outcome; an unnecessary dispatch is not.",
+        "preconditions": [
+          "Aerial SAR operational context",
+          "Feature shows clear foam/spray characteristics with no object-like component"
+        ],
+        "favors": "whitecap",
+        "sources": [
+          "Human SAR coordinator operational directive (policy override)"
+        ]
+      }
+    },
+    "human_conservative_rules": {
+      "person_in_water": {
+        "rule": "OPERATIONAL DIRECTIVE (conservative override): Classify as person_in_water ONLY when you can clearly identify a compact solid object with a well-defined boundary that is distinctly darker than the surrounding water AND shows NO foam, spray, or diffuse edge texture. If there is ANY ambiguity -- if the object could be foam, glare, a wave crest, or surface texture -- classify as whitecap. This directive exists to minimise false alarms in a high-traffic area where unnecessary dispatches are operationally costly. Orange or red colouring alone is NOT sufficient -- life rings, buoys, and equipment are common in this area and must not trigger a PIW alert without a clearly visible human body form. When in doubt, classify as whitecap.",
+        "preconditions": [
+          "Aerial image of open water surface"
+        ],
+        "favors": "person_in_water",
+        "sources": [
+          "Human operator conservative directive (false-alarm reduction policy)"
+        ]
+      },
+      "whitecap": {
+        "rule": "OPERATIONAL DIRECTIVE (conservative override): Classify as whitecap whenever the image does not show a clearly defined solid compact object with a dark body and sharp boundary. This includes: foam patches, wave crests, glare, surface texture, isolated orange/red equipment without an attached human body form, and any ambiguous small objects. The default classification is whitecap -- person_in_water requires positive evidence of a human form, not merely a suspicious object.",
+        "preconditions": [
+          "Aerial image of open water surface"
+        ],
+        "favors": "whitecap",
+        "sources": [
+          "Human operator conservative directive (false-alarm reduction policy)"
+        ]
+      }
     }
   }
 }

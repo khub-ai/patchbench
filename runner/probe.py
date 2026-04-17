@@ -603,6 +603,8 @@ async def run_probe(
     recompute_tutor:  bool = False,
     save_precomputed: bool = False,
     use_expert_rules: bool = False,
+    use_human_directive: bool = False,
+    use_human_conservative: bool = False,
     anthropic_key:    str  = "",
     openrouter_key:   str  = "",
     cache_dir:        Optional[Path] = None,
@@ -715,7 +717,13 @@ async def run_probe(
         if pred != img.true_class
     ]
     # Use human-expert rules if requested and available; otherwise model-generated.
-    if use_expert_rules and manifest.precomputed and manifest.precomputed.expert_rules:
+    if use_human_conservative and manifest.precomputed and manifest.precomputed.human_conservative_rules:
+        seed_rules = manifest.precomputed.human_conservative_rules
+        _print("    [dim]Using human conservative directive (--use-human-conservative)[/dim]")
+    elif use_human_directive and manifest.precomputed and manifest.precomputed.human_directive_rules:
+        seed_rules = manifest.precomputed.human_directive_rules
+        _print("    [dim]Using human operational directive (--use-human-directive)[/dim]")
+    elif use_expert_rules and manifest.precomputed and manifest.precomputed.expert_rules:
         seed_rules = manifest.precomputed.expert_rules
         _print("    [dim]Using human-expert rules (--use-expert-rules)[/dim]")
     failure_rules = dict(seed_rules)  # start from seed rules as fallback

@@ -75,6 +75,15 @@ class Precomputed:
     # expertise / published guidelines rather than model-generated descriptions.
     # Use --use-expert-rules in run_probe.py to substitute these for seed_rules
     # in Step 4, bypassing the TUTOR model entirely.
+    human_directive_rules: Optional[Dict[str, dict]] = None
+    # operational directives authored by a human expert that intentionally
+    # override model-generated or domain-knowledge rules with explicit policy
+    # judgements (e.g. "bias toward person_in_water in SAR operations").
+    # Use --use-human-directive in run_probe.py to activate.
+    human_conservative_rules: Optional[Dict[str, dict]] = None
+    # conservative policy override — opposite direction: default to negative class,
+    # require positive evidence before triggering high-cost action.
+    # Use --use-human-conservative in run_probe.py to activate.
 
 
 @dataclass
@@ -162,9 +171,11 @@ class BenchmarkManifest:
                 tutor_descriptions = pc.get("tutor_descriptions", {}),
                 feature_queries    = queries,
                 validator_answers  = pc.get("validator_answers", {}),
-                seed_rules         = pc.get("seed_rules"),
-                seed_rule          = pc.get("seed_rule"),
-                expert_rules       = pc.get("expert_rules"),
+                seed_rules             = pc.get("seed_rules"),
+                seed_rule              = pc.get("seed_rule"),
+                expert_rules           = pc.get("expert_rules"),
+                human_directive_rules    = pc.get("human_directive_rules"),
+                human_conservative_rules = pc.get("human_conservative_rules"),
             )
 
         return cls(

@@ -107,6 +107,13 @@ Examples:
     p.add_argument("--use-expert-rules", action="store_true",
                    help="Substitute human-authored expert rules (manifest precomputed.expert_rules) "
                         "for model-generated seed_rules in Step 4. Bypasses TUTOR model for rule injection.")
+    p.add_argument("--use-human-conservative", action="store_true",
+                   help="Inject a conservative policy directive (default-to-negative) to test "
+                        "whether the PUPIL's prior can be overridden by human instruction.")
+    p.add_argument("--use-human-directive", action="store_true",
+                   help="Substitute a human operational directive (manifest precomputed.human_directive_rules) "
+                        "for model-generated seed_rules in Step 4. Encodes explicit policy judgements rather "
+                        "than domain knowledge — e.g. 'bias toward person_in_water in SAR operations'.")
     p.add_argument("--output",         default="",
                    help="Output path for result JSON (default: auto under results/)")
     p.add_argument("--list-benchmarks", action="store_true")
@@ -158,7 +165,9 @@ async def main():
         validator_model  = args.validator_model,
         recompute_tutor  = args.recompute_tutor,
         save_precomputed = args.save_precomputed,
-        use_expert_rules = args.use_expert_rules,
+        use_expert_rules         = args.use_expert_rules,
+        use_human_directive      = args.use_human_directive,
+        use_human_conservative   = args.use_human_conservative,
         anthropic_key    = anthropic_key,
         openrouter_key   = openrouter_key,
         cache_dir        = CACHE_DIR,
