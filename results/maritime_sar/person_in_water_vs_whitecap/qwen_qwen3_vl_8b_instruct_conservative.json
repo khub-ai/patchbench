@@ -1,0 +1,307 @@
+{
+  "benchmark_id": "maritime_sar_person_in_water_vs_whitecap_probe_v1",
+  "benchmark_version": "1.0.0",
+  "schema_version": "1.0",
+  "submitted": "2026-04-17T11:33:39",
+  "pupil_model": "qwen/qwen3-vl-8b-instruct",
+  "tutor_model": "claude-opus-4-6",
+  "validator_model": "claude-sonnet-4-6",
+  "verdict": "partial",
+  "perception_score": 0.775,
+  "vocabulary_overlap": 0.3875,
+  "zero_shot_accuracy": 0.625,
+  "rule_aided_accuracy": 0.5,
+  "rule_comprehension_delta": -0.125,
+  "consistency_score": 1.0,
+  "feature_detection_by_difficulty": {
+    "easy": 0.725,
+    "medium": 0.775,
+    "hard": 0.825
+  },
+  "feature_profile": {
+    "visible_human_body_easy": 0.4,
+    "foamy_white_crest_easy": 0.9,
+    "human_face_visible_easy": 0.7,
+    "uniform_wave_pattern_easy": 0.9,
+    "localized_splash_pattern_medium": 0.5,
+    "skin_tone_contrast_medium": 0.7,
+    "elongated_crest_line_medium": 0.9,
+    "wind_driven_foam_streaks_medium": 1.0,
+    "asymmetric_wake_disturbance_hard": 0.6,
+    "entrained_air_bubble_plume_hard": 0.9,
+    "treading_water_posture_hard": 0.8,
+    "phase_speed_foam_decay_hard": 1.0
+  },
+  "weak_points": [],
+  "recommendations": [
+    "Rule injection not improving accuracy — try shorter, more directive rule phrasing."
+  ],
+  "costs": {
+    "PUPIL": {
+      "input_tokens": 1227287,
+      "output_tokens": 15325,
+      "api_calls": 207,
+      "cost_usd": 0.12502745
+    },
+    "VALIDATOR": {
+      "input_tokens": 26695,
+      "output_tokens": 3222,
+      "api_calls": 30,
+      "cost_usd": 0.128415
+    },
+    "TUTOR": {
+      "input_tokens": 971,
+      "output_tokens": 170,
+      "api_calls": 1,
+      "cost_usd": 0.027315
+    }
+  },
+  "total_cost_usd": 0.280757,
+  "rule_gate_accuracy": 0.6667,
+  "rule_gate_passed": false,
+  "per_image_zero_shot": [
+    {
+      "image_id": "piw_hard_01",
+      "true": "person_in_water",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "piw_hard_02",
+      "true": "person_in_water",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "piw_hard_03",
+      "true": "person_in_water",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "piw_hard_04",
+      "true": "person_in_water",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "piw_medium_05",
+      "true": "person_in_water",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "piw_medium_06",
+      "true": "person_in_water",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "piw_medium_07",
+      "true": "person_in_water",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "piw_medium_08",
+      "true": "person_in_water",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "piw_easy_09",
+      "true": "person_in_water",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "piw_easy_10",
+      "true": "person_in_water",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "piw_easy_11",
+      "true": "person_in_water",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "piw_easy_12",
+      "true": "person_in_water",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "wc_hard_01",
+      "true": "whitecap",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "wc_hard_02",
+      "true": "whitecap",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "wc_hard_03",
+      "true": "whitecap",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "wc_hard_04",
+      "true": "whitecap",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "wc_medium_05",
+      "true": "whitecap",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "wc_medium_06",
+      "true": "whitecap",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "wc_medium_07",
+      "true": "whitecap",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "wc_medium_08",
+      "true": "whitecap",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "wc_easy_09",
+      "true": "whitecap",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "wc_easy_10",
+      "true": "whitecap",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "wc_easy_11",
+      "true": "whitecap",
+      "predicted": "person_in_water"
+    },
+    {
+      "image_id": "wc_easy_12",
+      "true": "whitecap",
+      "predicted": "person_in_water"
+    }
+  ],
+  "per_image_rule_aided": [
+    {
+      "image_id": "piw_hard_01",
+      "true": "person_in_water",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "piw_hard_02",
+      "true": "person_in_water",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "piw_hard_03",
+      "true": "person_in_water",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "piw_hard_04",
+      "true": "person_in_water",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "piw_medium_05",
+      "true": "person_in_water",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "piw_medium_06",
+      "true": "person_in_water",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "piw_medium_07",
+      "true": "person_in_water",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "piw_medium_08",
+      "true": "person_in_water",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "piw_easy_09",
+      "true": "person_in_water",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "piw_easy_10",
+      "true": "person_in_water",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "piw_easy_11",
+      "true": "person_in_water",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "piw_easy_12",
+      "true": "person_in_water",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "wc_hard_01",
+      "true": "whitecap",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "wc_hard_02",
+      "true": "whitecap",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "wc_hard_03",
+      "true": "whitecap",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "wc_hard_04",
+      "true": "whitecap",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "wc_medium_05",
+      "true": "whitecap",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "wc_medium_06",
+      "true": "whitecap",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "wc_medium_07",
+      "true": "whitecap",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "wc_medium_08",
+      "true": "whitecap",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "wc_easy_09",
+      "true": "whitecap",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "wc_easy_10",
+      "true": "whitecap",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "wc_easy_11",
+      "true": "whitecap",
+      "predicted": "whitecap"
+    },
+    {
+      "image_id": "wc_easy_12",
+      "true": "whitecap",
+      "predicted": "whitecap"
+    }
+  ],
+  "notes": ""
+}
